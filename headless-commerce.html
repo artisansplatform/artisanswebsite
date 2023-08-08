@@ -278,7 +278,13 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="bg-light rounded  p-md-5 p-4 h-100">
-                           <form action="email.php" method="post">
+                           <form action="https://api.web3forms.com/submit" method="post">
+                                <input type="hidden" name="page" value="headless-commerce">
+                                <input type="hidden" name="access_key" value="d082e756-9d9f-4750-bda0-10769f1253c6">
+                                <input type="hidden" name="redirect" value="https://artisanscloud.com/thank-you">
+                                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                                <input type="hidden" name="subject" value="artisans Commerce Cloud inquiry">
+
                                 <div class="form-row">
                                     <div class="form-group col-12">
                                         <input type="text" class="form-control person-icon" placeholder="First Name" autocomplete="off" name="fname" required>
