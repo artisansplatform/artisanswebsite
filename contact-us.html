@@ -104,7 +104,12 @@
                         <div class="pl-md-3 p-0 mb-4">
                             <h2 class="mb-4">Request a <span class="gradiant-text">Demo</span>
                             </h2>
-                            <form action="email.php" method="post" autocomplete="off">
+                            <form action="https://api.web3forms.com/submit" method="post" autocomplete="off">
+                                <input type="hidden" name="access_key" value="d082e756-9d9f-4750-bda0-10769f1253c6">
+                                <input type="hidden" name="redirect" value="https://artisanscloud.com/thank-you">
+                                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                                <input type="hidden" name="subject" value="artisans Commerce Cloud inquiry">
+
                                 <div class="form-row">
                                     <div class="form-group col-12 col-lg-6">
                                         <input type="text" class="form-control person-icon" placeholder="First Name"name="fname" autocomplete="off" required>
