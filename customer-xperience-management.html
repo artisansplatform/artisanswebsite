@@ -455,7 +455,7 @@
 						<p><a href="#">Terms & Conditions</a> <span class="gradiant-text px-2">|</span> <a href="#">Privacy Policy</a></p>
 						</div>
 						<div class="col-12 col-md-4  pb-md-0 pb-2">
-							<p class="text-center">© 2023 Artisans. All right reserved.</p>
+							<p class="text-center">© <span id="copyright-year">2023</span> Artisans. All right reserved.</p>
 						</div>
 						<div class="col-12 col-md-4">
 							<ul class="social-icons">
@@ -580,6 +580,9 @@
 				// responsiveDropdown: true,
 				preferredCountries: ['us']
 			});
+
+            const copyrightYearElement = document.getElementById('copyright-year');
+            copyrightYearElement.textContent = new Date().getFullYear();
 		</script>
     </body>
 </html>
