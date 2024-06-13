@@ -1692,3 +1692,18 @@ form span.dropdown-toggle {
     }
 	header .nav-link  {font-size:16px;}
 }
+
+.card-shadow{box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; border-radius:15px;}
+
+.check-list-features {
+    width: 100%;
+    float: none;
+    display: flow-root;
+    padding-left: 20px;
+}
+
+.check-list-features li{
+    list-style:square;
+	font-size:1.1rem;
+	list-style-position: outside;
+}
