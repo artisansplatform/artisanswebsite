@@ -336,7 +336,7 @@ header.fixed-top nav.navbar.navbar-expand-md {
     right: 0;
     position: absolute;
     top: 10%;
-     
+
     margin: auto;
     height: 118vh;
     width: 100%;
@@ -467,7 +467,7 @@ header.fixed-top nav.navbar.navbar-expand-md {
     border: 1px solid transparent;
 
     /*  background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%);
-    
+
     width: calc(100% + 3px);
     height: calc(100% + 3px);
     z-index: -1;
@@ -487,7 +487,7 @@ header.fixed-top nav.navbar.navbar-expand-md {
     padding: 0 15%;
     font-family: "Nunito Sans", sans-serif;
 }
- 
+
 .testimonial-sec .carousel-item p b {
     color: rgba(0, 0, 0, 1);
     font-weight: 700;
@@ -960,7 +960,7 @@ form span.dropdown-toggle {
 .solution-list .purple-shade .list-icon { background: #EED7F6;}
 .purple-shade .read-more {color:#C26EDF;}
 
-   
+
 .dropdown-menu {
     background: linear-gradient(90deg, #12d9e3 10%, #8d67f5 60%, #f74ddd 80%);
     color: #fff;
@@ -973,11 +973,11 @@ form span.dropdown-toggle {
 }
 .dropdown-menu a {color:#fff;font-size:14px;}
 .logo-box {
-    
+
     background-color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     height: 100%;
-    
+
     align-items: center;
     justify-content: space-evenly;
     display: flex;
@@ -994,14 +994,14 @@ form span.dropdown-toggle {
     height: 8px;
         background: linear-gradient(100deg, #12d9e3 10%, #f74ddd 60%, #8d67f5 80%);
     color: #fff;
-    
+
     transition: width .3s ease-out;
 }
 .logo-section .col-6  {margin-bottom:30px;}
 .logo-box img {
         max-height: 50px;
-		
-		   
+
+
 }
 @media (min-width: 2401px) and (max-width: 100000px) {
 	section.blue-bg {
@@ -1021,7 +1021,7 @@ form span.dropdown-toggle {
 	.solution-list p{font-size:18px;}
 }
 
- 
+
 @media (min-width: 1800px) and (max-width: 2400px) {
     .container {
         max-width: 1470px;
@@ -1107,7 +1107,7 @@ form span.dropdown-toggle {
     }
 	::marker {
     font-size: 28px;
-     
+
 }
 }
 @media (min-width: 1300px) and (max-width: 1499px) {
@@ -1428,8 +1428,8 @@ form span.dropdown-toggle {
     }
     .blue-bg {
         height: auto !important;
-        padding-bottom: 130px;
-        margin-bottom: 20px;
+        padding-bottom: 140px;
+        margin-bottom: -65px;
     }
     p {
         font-size: 16px;
@@ -1706,4 +1706,10 @@ form span.dropdown-toggle {
     list-style:square;
 	font-size:1.1rem;
 	list-style-position: outside;
+}
+@media (max-width: 576px) {
+    .carousel-indicators {
+        position: absolute;
+        bottom: -40px;
+    }
 }
