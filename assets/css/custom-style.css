@@ -1170,6 +1170,17 @@ form span.dropdown-toggle {
 
 
 }
+.custom-blue-bg {
+background: url("../images/banner-bg.png");
+height: 680px;
+background-size: cover;
+background-position: bottom left;
+}
+.tab-sec-custom {
+padding: 20vh 0 !important;
+background: url("../images/tab-bg.png");
+background-size: 100% 100%;
+}
 
 @media (min-width: 2401px) and (max-width: 100000px) {
     section.blue-bg {

@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Merchandise Planning & Open-to-Buy: Streamline Your Retail
+            Success</title>
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <link
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://kit.fontawesome.com/706b9f1865.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/countrySelect.css">
+
+        <link rel="stylesheet"
+            href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+        <script
+            src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+        <link rel="stylesheet" href="./assets/css/custom-style.css">
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+ html,
+      body {
+        overflow-x: hidden;
+      }
+.custom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+    width: 78%;
+    margin: 0 auto;
+}
+
+.custom-item {
+    display: flex;
+    align-items: center;
+}
+
+.custom-circle {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.custom-inner-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    background: conic-gradient(from 45deg, #2a2a72, #009ffd, #8d67f5, #f74ddd, #12d9e3, #2a2a72);
+    position: relative;
+    z-index: 1;
+}
+
+.custom-inner-circle:before {
+    content: '';
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.custom-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+.custom-image {
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+}
+
+.custom-carousel-container{
+padding: auto;
+}
+
+.custom-carousel {
+position: relative;
+margin-top: 20%;
+margin-left: 50%
+
+}
+
+.custom-carousel__item {
+  height:460px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  position: absolute;
+  transform: translate(-50%,-50%) scale(.1);
+  z-index: 0;
+  transition: all .2s linear;
+  background: #fff;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-carousel__item img {
+  width: 30%;
+  height: 30vh;
+  object-fit: cover;
+  margin: 20px auto;
+}
+.custom-carousel__item .carousel__text {
+  padding: 20px;
+}
+
+.custom-carousel__item .carousel__text h4 {
+  margin-top: 0;
+}
+
+.custom-carousel__item--main {
+  transform: translate(-50%,-50%) scale(1);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.custom-carousel__item--left {
+  transform: translate(-110%,-50%) scale(.9);
+  z-index: 1;
+}
+
+.custom-carousel__item--right {
+  transform: translate(10%,-50%) scale(.9);
+  z-index: 1;
+}
+
+.custom-carousel__item--right:hover {
+  transform: translate(10%,-50%) scale(1.0);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.custom-carousel__item--left:hover {
+  transform: translate(-110%,-50%) scale(1.0);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.custom-carousel__item--main:hover {
+  transform: translate(-50%,-50%) scale(1.0);
+}
+
+.custom-carousel__item:hover > .custom-carousel__text {
+  opacity: 1;
+}
+
+.custom-carousel__item:hover img {
+  filter: grayscale(0%);
+}
+
+.custom-carousel__btns {
+    margin-left: 25%;
+  position: relative;
+  transform: translate(-50%, 22rem);
+  display: flex;
+  gap: 2rem;
+}
+
+.custom-carousel__btn {
+   margin-top: -90px;
+  background-color: transparent;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border:1px solid currentColor;
+  color: white;
+  cursor: pointer;
+}
+
+.custom-carousel__btn svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.custom-carousel__btn:hover {
+  color: #aaa;
+}
+@media (width: 414px) and (height: 896px) {
+    .custom-container {
+        margin-top: 20% !important;
+        height: 80vh;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .text-container-sec4{
+        margin-top: -30%;
+    }
+
+.merchandise-section3  div{
+    margin-top: 110% !important;
+}
+
+.custom-carousel__item {
+  height: 73vh !important;
+  margin-top: 80% !important;
+}
+.custom-carousel__item {
+  margin-top: 100% !important;
+}
+.custom-carousel__btns {
+    margin-top: 2% !important;
+    padding-top: 58% !important;
+    z-index: 5;
+}
+}
+@media (max-width: 576px) {
+   .custom-blue-bg {
+     height: 130vh;
+}
+.custom-container {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 78%;
+    margin: 0 auto;
+      align-items: center;
+    margin-top: -16% !important;
+}
+.merchandise-section3  div{
+    margin-top: 100%;
+}
+.custom-item {
+    margin: 4px 0;
+}
+.tab-sec-custom {
+    padding: 30% 0 !important;
+    height: 110vh !important;
+    background-size: cover !important;
+
+}
+.custom-carousel__item {
+  height: 60vh;
+  width: 280px;
+  margin-top: 50px;
+}
+.custom-carousel__btns {
+    margin-left: 2%;
+  transform: translate(-50%, 22rem);
+  display: flex;
+  gap: 2rem;
+}
+.merchandise-section4{
+margin-top: -10% !important;
+margin-bottom: 40px !important;
+}
+ .data-driven-section .how-img img {
+        float: none !important;
+        margin: 0 auto !important;
+    }
+}
+
+ </style>
+    </head>
+
+    <body>
+        <section class="custom-blue-bg">
+            <header>
+                <div class="container">
+                    <nav
+                        class="navbar navbar-expand-md py-4 fadeInAnimation active">
+                        <a class="navbar-brand" href="index">
+                            <img src="./assets/images/logo.png" alt="logo"
+                                width="300">
+                        </a>
+                        <button class="navbar-toggler collapsed" type="button"
+                            data-toggle="collapse"
+                            data-target="#navbarNavDropdown"
+                            aria-controls="navbarNavDropdown"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <i class="fa fa-bars" aria-hidden="true"></i>
+                            <i class="fa fa-close" aria-hidden="true"></i>
+                        </button>
+                        <div class="collapse navbar-collapse"
+                            id="navbarNavDropdown">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#"
+                                        id="navbarDropdown2" role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"> Products </a>
+                                    <div class="dropdown-menu"
+                                        aria-labelledby="navbarDropdown2">
+                                        <a class="dropdown-item"
+                                            href="artisans-commerce-cloud">artisans
+                                            Commerce Cloud</a>
+                                        <a class="dropdown-item"
+                                            href="merchandise-planning">Merchandise Planning
+                                            </a>
+                                            <a class="dropdown-item"
+                                            href="POS">Enterprise Point of
+                                            Sales</a>
+                                        <a class="dropdown-item"
+                                            href="product-xperience-management">Product
+                                            Xperience Management</a>
+                                        <a class="dropdown-item"
+                                            href="distributed-order-management">Distributed
+                                            Order Management</a>
+                                        <a class="dropdown-item"
+                                            href="customer-xperience-management">Customer
+                                            Xperience Management</a>
+                                        <a class="dropdown-item"
+                                            href="d2c-ecommerce"> D2C
+                                            eCommerce</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+
+                                    <a class="nav-link dropdown-toggle" href="#"
+                                        id="navbarDropdown3" role="button"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false"> Use Cases </a>
+                                    <div class="dropdown-menu"
+                                        aria-labelledby="navbarDropdown3">
+                                        <a class="dropdown-item"
+                                            href="solution">Composable
+                                            Commerce</a>
+                                        <a class="dropdown-item"
+                                            href="unified-commerce">Unified
+                                            Commerce</a>
+                                        <a class="dropdown-item"
+                                            href="headless-commerce">Headless
+                                            Commerce</a>
+
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link"
+                                        href="Integrations">Integrations</a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about">About
+                                        Us</a>
+                                </li>
+                            </ul>
+                            <div class="icons">
+                                <a class="btn btn-gradiant"
+                                    href="contact-us">TALK TO US</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <div class="banner-sec">
+                <div class="container">
+                    <div class="row p-4">
+                        <div
+                            class="col-12 col-md-7 text-white fadeInAnimation active">
+                            <h1>
+                                Confidently Plan and Purchase. <span
+                                    class="gradiant-text">Know What to Buy and
+                                    When to Buy It.</span>
+                            </h1>
+                            <p>
+                                Effortlessly track, analyze, and manage your
+                                merchandise financials and Open-to-Buy, all in
+                                one place.
+                            </p>
+                            <a class="btn btn-primary my-2"
+                                href="contact-us">Schedule a Demo</a>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <img src="./assets/images/banner-img-catelog.png"
+                                alt="Merchandise Planning"
+                                class="w-100 fadeInAnimation active">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="custom-container mt-5">
+                <div class="custom-item">
+                    <div class="custom-circle">
+                        <div class="custom-inner-circle">99.9%</div>
+                    </div>
+                    <p class="custom-text">In-Stock <br> Percentage</p>
+                </div>
+                <div class="custom-item">
+                    <div class="custom-circle">
+                        <div class="custom-inner-circle">50%</div>
+                    </div>
+                    <p class="custom-text">Reduction <br> in Lost Sales</p>
+                </div>
+                <div class="custom-item">
+                    <div class="custom-circle">
+                        <div class="custom-inner-circle">30%</div>
+                    </div>
+                    <p class="custom-text">Reduction <br> in Inventory Cost</p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="artisans-sec pt-md-5 mt-0 pt-0 text-center merchandise-section3"
+            style="margin-top: 0;">
+            <div class="container">
+                <div class="col-12 pb-5 m-auto">
+                    <h2 class="mb-3">Comprehensive Merchandise Planning for
+                        <span class="gradiant-text"> Complex Retail
+                            Operations</span></h2>
+                    <p>Transform top-level goals into detailed, actionable
+                        merchandise plans. Any changes made at the store,
+                        department, promotion, or purchasing levels are
+                        automatically reflected in overall merchandise and
+                        financial plans. This gives a unified view with
+                        unmatched clarity. Our Open-to-Buy plan serves as a
+                        strategic guide for purchasing decisions, helping you
+                        manage inventory levels efficiently across all sales
+                        channels to maximize both profitability and inventory
+                        turnover.</p>
+                </div>
+            </div>
+        </section>
+
+<section class="left-right-image-sec data-driven-section">
+    <div class="container">
+        <!-- First Row -->
+        <div class="row align-items-center">
+            <div class="col-md-6 how-img order-md-2">
+                <img src="./assets/images/data-driven-planning.webp" alt="Data-Driven Planning" class="custom-image" style="float: right; margin-right: 20px;">
+            </div>
+            <div class="col-md-6 pr-5">
+                <h2 class="pt-md-0 pt-4">Drive Success in Every Category with Data-Driven Planning</h2>
+                <p><b>Review past performance and align it with strategic direction.</b> Create a detailed open-to-buy plan by channel, ensuring transparency at every hierarchy level.</p>
+                <p><b>Spot opportunities within categories to scale up or scale down,</b> driven by trends and forecasts.</p>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6 how-img">
+                <img src="./assets/images/enhance-purchasing-decisions.webp" alt="Enhance Purchasing Decisions" class="custom-image" style="float: left; margin-right: 200px;">
+            </div>
+            <div class="col-md-6 pr-5">
+                <h2 class="pt-md-0 pt-4">Enhance Purchasing Decisions</h2>
+                <p><b>Integrate inventory strategy with sales objectives,</b> whether for individual channels or across your entire retail operation, for enhanced flexibility and insight.</p>
+                <p><b>Factor in markdowns and reductions directly</b> into your inventory and purchasing plans.</p>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6 how-img order-md-2">
+                <img src="./assets/images/increase-margins.webp" alt="Increase Margins" class="custom-image" style="float: right;">
+            </div>
+            <div class="col-md-6 pr-5">
+                <h2 class="pt-md-0 pt-4">Increase Margins</h2>
+                <p><b>Maintain real-time visibility into key margin metrics</b> for each channel and the entire business, ensuring your merchandise strategy aligns with profitability targets.</p>
+                <p><b>Build detailed plans for promotional and permanent markdowns</b> to sustain profitability.</p>
+                <p><b>Maintain real-time visibility into key margin metrics</b> for each channel and the entire business, ensuring your merchandise strategy aligns with profitability targets.</p>
+            </div>
+        </div>
+
+        <!-- Fourth Row -->
+        <div class="row align-items-center mt-5">
+            <div class="col-md-6 how-img">
+                <img src="./assets/images/pre-season-in-season-planning.webp" alt="Pre-season and In-Season Planning" class="custom-image" style="display: block; margin-left: -1;">
+            </div>
+            <div class="col-md-6 pr-5">
+                <h2 class="pt-md-0 pt-4">Pre-season and In-Season Planning</h2>
+                <p><b>Streamline your planning process with powerful plan seeding tools</b> and effortless integration with in-season data, minimizing manual intervention.</p>
+                <p><b>Adapt your in-season open-to-buy strategy with ease,</b> responding swiftly to evolving business conditions.</p>
+                <p><b>Enterprise-level approval workflows:</b> Multiple users, managers, and an efficient approval process.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section>
+            <div
+                class="custom-carousel-container tab-sec-custom mt-md-5 mt-0 pt-0 text-center"
+               style="min-height: 900px; height: 900px;">
+                <div class="container">
+                    <div class="col-12 col-md-10 pb-2 m-auto">
+                        <h2 class="text-center text-white text-container-sec4">
+                            Benefits of Merchandise & <span
+                                class="gradiant-text">OTB Planning</span>
+                        </h2>
+                    </div>
+                    <div class="custom-carousel">
+                        <!-- Carousel items -->
+                        <div
+                            class="custom-carousel__item custom-carousel__item--left">
+                            <img class="img-fluid rounded-circle mb-4"
+                                src="./assets/images/flexibility.png"
+                                alt="Flexibility"
+                                style="width: 80px; height: 80px;" />
+                            <div class="carousel__text">
+                                <h4>Flexibility</h4>
+                                <p>Open-to-Buy planning empowers retailers to
+                                    carefully manage inventory levels, striking
+                                    the right balance between overstock and
+                                    shortages. Achieving this equilibrium
+                                    minimizes markdowns and ensures retailers
+                                    can capitalize on sales opportunities.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="custom-carousel__item custom-carousel__item--main">
+                            <img class="img-fluid rounded-circle mb-4"
+                                src="./assets/images/cash-flow.png"
+                                alt="Enhanced Cash Flow"
+                                style="width: 80px; height: 80px;" />
+                            <div class="carousel__text">
+                                <h4>Enhanced Cash Flow</h4>
+                                <p>By optimizing Open-to-Buy planning,
+                                    businesses avoid locking up capital in
+                                    excess inventory. This allows retailers to
+                                    reallocate financial resources to other
+                                    vital areas like marketing and business
+                                    expansion.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="custom-carousel__item custom-carousel__item--right">
+                            <img class="img-fluid rounded-circle mb-4"
+                                src="./assets/images/customer-satisfaction.png"
+                                alt="Customer Satisfaction"
+                                style="width: 80px; height: 80px;" />
+                            <div class="carousel__text">
+                                <h4>Increased Customer Satisfaction</h4>
+                                <p>Open-to-Buy planning helps retailers
+                                    consistently meet customer demand by
+                                    ensuring products are readily available.
+                                    This reliability strengthens customer
+                                    loyalty and promotes repeat purchases, which
+                                    are critical for growth in today’s
+                                    competitive retail environment.</p>
+                            </div>
+                        </div>
+                        <div class="custom-carousel__item">
+                            <img class="img-fluid rounded-circle mb-4"
+                                src="./assets/images/decision_making.png"
+                                alt="Enhanced Decision-Making"
+                                style="width: 80px; height: 80px;" />
+                            <div class="carousel__text">
+                                <h4>Enhanced Decision-Making</h4>
+                                <p>OTB provides retailers with a structured
+                                    framework for inventory planning and
+                                    purchasing decisions. This allows retailers
+                                    to focus on products that align with sales
+                                    targets, allowing for data-driven and
+                                    informed choices.</p>
+                            </div>
+                        </div>
+
+                        <div class="custom-carousel__item">
+                            <img class="img-fluid rounded-circle mb-4"
+                                src="./assets/images/increased-profitability.png"
+                                alt="Increased Profitability"
+                                style="width: 80px; height: 80px;" />
+                            <div class="carousel__text">
+                                <h4>Increased Profitability</h4>
+                                <p>By optimizing inventory and reducing
+                                    markdowns, retailers can improve profit
+                                    margins. Proper use of OTB contributes to
+                                    more efficient inventory turnover, which
+                                    ultimately drives profitability.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="custom-carousel__btns">
+                            <button class="custom-carousel__btn" id="leftBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        fill-rule="evenodd"
+                                        d="m15 4l2 2l-6 6l6 6l-2 2l-8-8z" />
+                                </svg>
+                            </button>
+                            <button class="custom-carousel__btn" id="rightBtn">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                        fill-rule="evenodd"
+                                        d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="col-12 text-center mt-5 merchandise-section4" style="height: 30vh;">
+                <h2 class="pt-md-0">Want to see OTB in action?</h2>
+                <p>Book a free demo. Learn how to increase efficiency,
+                    elevate productivity, and expand your business with
+                    smarter merchandise planning.</p>
+                <a class="btn btn-primary mt-3" href="contact-us">Book a 30
+                    minutes Demo</a>
+            </div>
+
+        </section>
+
+        <section class="contect-sec text-white">
+            <div class="text-right top-to-bottom">
+
+                <h2>The right open-to-buy solution <br> can help to measure productivity, <br>keep stock, provide recommendations, <br>factor in market trends, trigger notifications <br> and guide purchasing and markdown decisions.</h2>
+                <p>Contact us to learn more about open-to-buy planning and how it can transform retail operations.</p>
+                <a class="btn btn-white" href="contact-us">
+                    <span class="gradiant-text">Contact Us</span>
+                </a>
+
+            </div>
+        </section>
+
+        <footer class="text-white">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-12 mt-5">
+                        <a class="navbar-brand mb-5" href="#">
+                            <img src="./assets/images/logo.png" alt="logo"
+                                width="300">
+                        </a>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <p>
+                            <i class="fa fa-map-marker mr-2"
+                                aria-hidden="true"></i>
+                            A-33-1, Menara UOA Bangsar<br> Jalan Bangsar,
+                            Kuala Lumpur - 59100
+                        </p>
+                        <p>
+                            <i class="fa fa-map-marker mr-2"
+                                aria-hidden="true"></i>
+                            205, Time Square, Ayodhya Chowk,<br> 150ft Ring
+                            Road, Rajkot - 360006
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope mr-2"
+                                aria-hidden="true"></i>
+                            <a href="mailto:support@artisanscloud.com"
+                                class="text-white">support@artisanscloud.com</a>
+                        </p>
+                        <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                            <a href="tel:+60 (3) 6412 7632"
+                                class="text-white">+60 (3) 6412 7632</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <p>
+                            <b>Platforms</b>
+                        </p>
+                        <ul>
+                            <li><a href="artisans-commerce-cloud">artisans
+                                    Commerce Cloud</a></li>
+                            <li>
+
+                                <li>
+                                    <a
+                                        href="product-xperience-management">Product
+                                        Xperience Management</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="distributed-order-management">Distributed
+                                        Order Management</a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="customer-xperience-management">Customer
+                                        Xperience Management</a>
+                                </li>
+                                <li>
+                                    <a href="d2c-ecommerce"> D2C
+                                        eCommerce</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-3">
+                            <p>
+                                <b>Solutions</b>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="solution">Composable
+                                        Commerce</a>
+                                </li>
+                                <li>
+                                    <a href="unified-commerce">Unified
+                                        Commerce</a>
+                                </li>
+                                <li>
+                                    <a href="headless-commerce">Headless
+                                        Commerce</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-12 col-sm-2">
+                            <p>
+                                <b>Company</b>
+                            </p>
+                            <ul>
+                                <li>
+                                    <a href="about">About artisans</a>
+                                </li>
+                                <li>
+                                    <a href="Integrations">Integrations</a>
+                                </li>
+                                <li>
+                                    <a href="contact-us">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-footer">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-4 pb-md-0 pb-2">
+                                <p><a href="#">Terms & Conditions</a> <span
+                                        class="gradiant-text px-2">|</span>
+                                    <a href="#">Privacy Policy</a>
+                                </p>
+                            </div>
+                            <div class="col-12 col-md-4  pb-md-0 pb-2">
+                                <p class="text-center">© <span
+                                        id="copyright-year">2024</span>
+                                    artisans. All right reserved.</p>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <ul class="social-icons">
+                                    <li><a href="#"><i
+                                                class="fa fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i
+                                                class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i
+                                                class="fa fa-youtube"></i></a></li>
+                                    <li><a href="#"><i
+                                                class="fa fa-instagram"></i></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="content-btn">
+                <a href="contact-us">Contact Us</a>
+            </div>
+
+            <script>
+            'use strict';
+
+document.querySelector('.custom-carousel-container').addEventListener('click', function (event) {
+  const carouselItems = this.querySelectorAll('.custom-carousel__item');
+  let currentItem = this.querySelector('.custom-carousel__item--main');
+  const leftBtn = this.querySelector('#leftBtn');
+  const rightBtn = this.querySelector('#rightBtn');
+
+  if (event.target.closest('#rightBtn')) {
+    currentItem = this.querySelector('.custom-carousel__item--right');
+    const leftItem = this.querySelector('.custom-carousel__item--main');
+    carouselItems.forEach(item => {
+      item.classList = 'custom-carousel__item';
+    });
+    currentItem.classList.add('custom-carousel__item--main');
+    leftItem.classList.add('custom-carousel__item--left');
+    const currentId = Array.from(carouselItems).indexOf(currentItem);
+    const rightItem = currentId === carouselItems.length - 1 ? carouselItems[0] : carouselItems[currentId + 1];
+    rightItem.classList.add('custom-carousel__item--right');
+  } else if (event.target.closest('#leftBtn')) {
+    currentItem = this.querySelector('.custom-carousel__item--left');
+    const rightItem = this.querySelector('.custom-carousel__item--main');
+    carouselItems.forEach(item => {
+      item.classList = 'custom-carousel__item';
+    });
+    currentItem.classList.add('custom-carousel__item--main');
+    rightItem.classList.add('custom-carousel__item--right');
+    const currentId = Array.from(carouselItems).indexOf(currentItem);
+    const leftItem = currentId === 0 ? carouselItems[carouselItems.length - 1] : carouselItems[currentId - 1];
+    leftItem.classList.add('custom-carousel__item--left');
+  }
+});
+
+let autoplayInterval = setInterval(function() {
+  console.log('Triggering right button click...');
+  rightBtn.click();
+}, 3000);
+
+document.querySelector('.custom-carousel-container').addEventListener('mouseover', function() {
+  clearInterval(autoplayInterval);
+});
+
+document.querySelector('.custom-carousel-container').addEventListener('mouseout', function() {
+  autoplayInterval = setInterval(function() {
+    console.log('Triggering right button click...');
+    rightBtn.click();
+  }, 3000);
+});
+        </script>
+
+            <script type="text/javascript">
+        $(document).ready(function () {
+            var stickyNavTop = $('header').offset().top;
+            var stickyNav = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > 1) {
+                    $('header').addClass('fixed-top');
+                    $('header').addClass('sticky');
+                } else {
+                    $('header').removeClass('fixed-top');
+                    $('header').removeClass('sticky');
+                }
+            };
+            stickyNav();
+            $(window).scroll(function () {
+                stickyNav();
+            });
+            const $dropdown = $(".dropdown");
+            const $dropdownToggle = $(".dropdown-toggle");
+            const $dropdownMenu = $(".dropdown-menu");
+            const showClass = "show";
+            $(window).on("load resize", function () {
+                if (this.matchMedia("(min-width: 768px)").matches) {
+                    $dropdown.hover(function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    }, function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    });
+                } else {
+                    $dropdown.off("mouseenter mouseleave");
+                }
+            });
+        });
+
+        function fadeInAnimation() {
+            var reveals = document.querySelectorAll(".fadeInAnimation");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    //reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", fadeInAnimation);
+    </script>
+            <script src="https://code.jquery.com/jquery-2.2.0.min.js"
+                type="text/javascript"></script>
+            <script src="./assets/js/slider.js" type="text/javascript"
+                charset="utf-8"></script>
+            <link rel="stylesheet" href="./assets/css/slider.css">
+            <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.center').slick({
+                centerMode: true,
+                dots: false,
+                centerPadding: '0',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+            <script src="assets/js/countrySelect.js"></script>
+            <script>
+        var input = document.querySelector("#tel");
+        window.intlTelInput(input, {
+            separateDialCode: true
+        });
+
+        $("#country_selector").countrySelect({
+            // defaultCountry: "jp",
+            // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+            // responsiveDropdown: true,
+            preferredCountries: ['us']
+        });
+
+        const copyrightYearElement = document.getElementById('copyright-year');
+        copyrightYearElement.textContent = new Date().getFullYear();
+    </script>
+        </body>
+    </html>
