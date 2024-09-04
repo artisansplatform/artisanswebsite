@@ -31,9 +31,8 @@
             src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
         <link rel="stylesheet" href="./assets/css/custom-style.css">
         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
-
- html,
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+html,
       body {
         overflow-x: hidden;
       }
@@ -204,83 +203,134 @@ margin-left: 50%
 .custom-carousel__btn:hover {
   color: #aaa;
 }
-@media (width: 414px) and (height: 896px) {
+
+@media (max-width: 640px) {
+    .custom-blue-bg {
+        height: 100vh;
+    }
     .custom-container {
-        margin-top: 20% !important;
-        height: 80vh;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40%;
+        margin: 0 auto;
+        align-items: center;
+        height: 20vh;
+        margin-top: -15% !important;
+    }
+    .merchandise-section3 div {
+        margin-top: 100%;
+    }
+    .custom-item {
+        margin: 4px 0;
+    }
+    .tab-sec-custom {
+        padding: 30% 0 !important;
+        height: 110vh !important;
+        background-size: cover !important;
+    }
+    .custom-carousel__item {
+        height: 60vh;
+        width: 280px;
+        margin-top: 50px;
+    }
+    .custom-carousel__btns {
+        margin-left: 2%;
+        transform: translate(-50%, 22rem);
+        display: flex;
+        gap: 2rem;
+    }
+    .merchandise-section4 {
+        margin-top: -10%;
+        margin-bottom: 20%;
+        height: 30vh;
+    }
+    .data-driven-section .how-img img {
+        float: none !important;
+        margin: 0 auto;
     }
 }
 
-
-@media (max-width: 767px) {
-
-    .text-container-sec4{
-        margin-top: -30%;
+@media (max-width: 700px) {
+    .custom-blue-bg {
+        height: auto !important;
+        padding-bottom: 140px;
+        margin-bottom: -65px;
+    }
+    .custom-carousel-container{
+    height: auto !important;
+}
+.custom-carousel__item {
+    margin-top: 190px !important;
+height: 500px !important;
+}
+.text-container-sec4{
+margin-top: -80px !important;
+}
+.custom-carousel__btn {
+margin-top: 120px;
+}
+ .merchandise-section4 {
+        margin-bottom: 10%;
+          height: 30vh;
     }
 
-.merchandise-section3  div{
-    margin-top: 110% !important;
 }
 
-.custom-carousel__item {
-  height: 73vh !important;
-  margin-top: 80% !important;
+@media (max-width: 815px) {
+    .custom-blue-bg {
+        height: 100vh;
+    }
+    .merchandise-section3 div {
+        margin-top: 110%;
+    }
 }
-.custom-carousel__item {
-  margin-top: 100% !important;
+
+@media (max-width: 851px) {
+    .custom-blue-bg {
+        height: 115vh;
+    }
+    .merchandise-section3 div {
+        margin-top: 120%;
+    }
 }
-.custom-carousel__btns {
-    margin-top: 2% !important;
-    padding-top: 58% !important;
-    z-index: 5;
+@media (max-width: 900px){
+    .custom-blue-bg {
+        height: 105vh;
+    }
+    .merchandise-section3 div {
+        margin-top: 120%;
+    }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+    .custom-blue-bg {
+        height: 58vh;
+    }
+ .custom-container {
+    height: 10vh;
+    width: 100%;
+    flex-flow: wrap;
+    justify-content: space-around;
 }
-@media (max-width: 576px) {
-   .custom-blue-bg {
-     height: 130vh;
-}
-.custom-container {
-    flex-direction: column;
-    justify-content: space-between;
-    width: 78%;
-    margin: 0 auto;
-      align-items: center;
-    margin-top: -16% !important;
-}
-.merchandise-section3  div{
-    margin-top: 100%;
-}
-.custom-item {
-    margin: 4px 0;
+.merchandise-section3 div {
+    margin-top: 35%;
 }
 .tab-sec-custom {
-    padding: 30% 0 !important;
-    height: 110vh !important;
-    background-size: cover !important;
-
+    padding: 15vh 0 !important;
+    background-size: cover;
+}
+.custom-carousel__btn {
+    margin-top: 0%;
 }
 .custom-carousel__item {
-  height: 60vh;
-  width: 280px;
-  margin-top: 50px;
+    margin-top: 100px;
 }
-.custom-carousel__btns {
-    margin-left: 2%;
-  transform: translate(-50%, 22rem);
-  display: flex;
-  gap: 2rem;
+.merchandise-section4 {
+    height: 20vh;
+    margin-top: -12px !important;
 }
-.merchandise-section4{
-margin-top: -10% !important;
-margin-bottom: 40px !important;
 }
- .data-driven-section .how-img img {
-        float: none !important;
-        margin: 0 auto !important;
-    }
-}
+</style>
 
- </style>
     </head>
 
     <body>
@@ -317,9 +367,10 @@ margin-bottom: 40px !important;
                                             href="artisans-commerce-cloud">artisans
                                             Commerce Cloud</a>
                                         <a class="dropdown-item"
-                                            href="merchandise-planning">Merchandise Planning
-                                            </a>
-                                            <a class="dropdown-item"
+                                            href="merchandise-planning">Merchandise
+                                            Planning
+                                        </a>
+                                        <a class="dropdown-item"
                                             href="POS">Enterprise Point of
                                             Sales</a>
                                         <a class="dropdown-item"
@@ -449,65 +500,102 @@ margin-bottom: 40px !important;
             </div>
         </section>
 
-<section class="left-right-image-sec data-driven-section">
-    <div class="container">
-        <!-- First Row -->
-        <div class="row align-items-center">
-            <div class="col-md-6 how-img order-md-2">
-                <img src="./assets/images/data-driven-planning.webp" alt="Data-Driven Planning" class="custom-image" style="float: right; margin-right: 20px;">
-            </div>
-            <div class="col-md-6 pr-5">
-                <h2 class="pt-md-0 pt-4">Drive Success in Every Category with Data-Driven Planning</h2>
-                <p><b>Review past performance and align it with strategic direction.</b> Create a detailed open-to-buy plan by channel, ensuring transparency at every hierarchy level.</p>
-                <p><b>Spot opportunities within categories to scale up or scale down,</b> driven by trends and forecasts.</p>
-            </div>
-        </div>
+        <section class="left-right-image-sec data-driven-section">
+            <div class="container">
+                <!-- First Row -->
+                <div class="row align-items-center">
+                    <div class="col-md-6 how-img order-md-2">
+                        <img src="./assets/images/data-driven-planning.webp"
+                            alt="Data-Driven Planning" class="custom-image"
+                            style="float: right; margin-right: 20px;">
+                    </div>
+                    <div class="col-md-6 pr-5">
+                        <h2 class="pt-md-0 pt-4">Drive Success in Every Category
+                            with Data-Driven Planning</h2>
+                        <p><b>Review past performance and align it with
+                                strategic direction.</b> Create a detailed
+                            open-to-buy plan by channel, ensuring transparency
+                            at every hierarchy level.</p>
+                        <p><b>Spot opportunities within categories to scale up
+                                or scale down,</b> driven by trends and
+                            forecasts.</p>
+                    </div>
+                </div>
 
-        <!-- Second Row -->
-        <div class="row align-items-center mt-5">
-            <div class="col-md-6 how-img">
-                <img src="./assets/images/enhance-purchasing-decisions.webp" alt="Enhance Purchasing Decisions" class="custom-image" style="float: left; margin-right: 200px;">
-            </div>
-            <div class="col-md-6 pr-5">
-                <h2 class="pt-md-0 pt-4">Enhance Purchasing Decisions</h2>
-                <p><b>Integrate inventory strategy with sales objectives,</b> whether for individual channels or across your entire retail operation, for enhanced flexibility and insight.</p>
-                <p><b>Factor in markdowns and reductions directly</b> into your inventory and purchasing plans.</p>
-            </div>
-        </div>
+                <!-- Second Row -->
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-6 how-img">
+                        <img
+                            src="./assets/images/enhance-purchasing-decisions.webp"
+                            alt="Enhance Purchasing Decisions"
+                            class="custom-image"
+                            style="float: left; margin-right: 200px;">
+                    </div>
+                    <div class="col-md-6 pr-5">
+                        <h2 class="pt-md-0 pt-4">Enhance Purchasing
+                            Decisions</h2>
+                        <p><b>Integrate inventory strategy with sales
+                                objectives,</b> whether for individual channels
+                            or across your entire retail operation, for enhanced
+                            flexibility and insight.</p>
+                        <p><b>Factor in markdowns and reductions directly</b>
+                            into your inventory and purchasing plans.</p>
+                    </div>
+                </div>
 
-        <!-- Third Row -->
-        <div class="row align-items-center mt-5">
-            <div class="col-md-6 how-img order-md-2">
-                <img src="./assets/images/increase-margins.webp" alt="Increase Margins" class="custom-image" style="float: right;">
-            </div>
-            <div class="col-md-6 pr-5">
-                <h2 class="pt-md-0 pt-4">Increase Margins</h2>
-                <p><b>Maintain real-time visibility into key margin metrics</b> for each channel and the entire business, ensuring your merchandise strategy aligns with profitability targets.</p>
-                <p><b>Build detailed plans for promotional and permanent markdowns</b> to sustain profitability.</p>
-                <p><b>Maintain real-time visibility into key margin metrics</b> for each channel and the entire business, ensuring your merchandise strategy aligns with profitability targets.</p>
-            </div>
-        </div>
+                <!-- Third Row -->
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-6 how-img order-md-2">
+                        <img src="./assets/images/increase-margins.webp"
+                            alt="Increase Margins" class="custom-image"
+                            style="float: right;">
+                    </div>
+                    <div class="col-md-6 pr-5">
+                        <h2 class="pt-md-0 pt-4">Increase Margins</h2>
+                        <p><b>Maintain real-time visibility into key margin
+                                metrics</b> for each channel and the entire
+                            business, ensuring your merchandise strategy aligns
+                            with profitability targets.</p>
+                        <p><b>Build detailed plans for promotional and permanent
+                                markdowns</b> to sustain profitability.</p>
+                        <p><b>Maintain real-time visibility into key margin
+                                metrics</b> for each channel and the entire
+                            business, ensuring your merchandise strategy aligns
+                            with profitability targets.</p>
+                    </div>
+                </div>
 
-        <!-- Fourth Row -->
-        <div class="row align-items-center mt-5">
-            <div class="col-md-6 how-img">
-                <img src="./assets/images/pre-season-in-season-planning.webp" alt="Pre-season and In-Season Planning" class="custom-image" style="display: block; margin-left: -1;">
+                <!-- Fourth Row -->
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-6 how-img">
+                        <img
+                            src="./assets/images/pre-season-in-season-planning.webp"
+                            alt="Pre-season and In-Season Planning"
+                            class="custom-image"
+                            style="display: block; margin-left: -1;">
+                    </div>
+                    <div class="col-md-6 pr-5">
+                        <h2 class="pt-md-0 pt-4">Pre-season and In-Season
+                            Planning</h2>
+                        <p><b>Streamline your planning process with powerful
+                                plan seeding tools</b> and effortless
+                            integration with in-season data, minimizing manual
+                            intervention.</p>
+                        <p><b>Adapt your in-season open-to-buy strategy with
+                                ease,</b> responding swiftly to evolving
+                            business conditions.</p>
+                        <p><b>Enterprise-level approval workflows:</b> Multiple
+                            users, managers, and an efficient approval
+                            process.</p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6 pr-5">
-                <h2 class="pt-md-0 pt-4">Pre-season and In-Season Planning</h2>
-                <p><b>Streamline your planning process with powerful plan seeding tools</b> and effortless integration with in-season data, minimizing manual intervention.</p>
-                <p><b>Adapt your in-season open-to-buy strategy with ease,</b> responding swiftly to evolving business conditions.</p>
-                <p><b>Enterprise-level approval workflows:</b> Multiple users, managers, and an efficient approval process.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+        </section>
 
         <section>
             <div
                 class="custom-carousel-container tab-sec-custom mt-md-5 mt-0 pt-0 text-center"
-               style="min-height: 900px; height: 900px;">
+                style="min-height: 900px; height: 900px;">
                 <div class="container">
                     <div class="col-12 col-md-10 pb-2 m-auto">
                         <h2 class="text-center text-white text-container-sec4">
@@ -623,7 +711,7 @@ margin-bottom: 40px !important;
         </section>
 
         <section>
-            <div class="col-12 text-center mt-5 merchandise-section4" style="height: 30vh;">
+            <div class="col-12 text-center mt-md-5 merchandise-section4">
                 <h2 class="pt-md-0">Want to see OTB in action?</h2>
                 <p>Book a free demo. Learn how to increase efficiency,
                     elevate productivity, and expand your business with
@@ -637,8 +725,12 @@ margin-bottom: 40px !important;
         <section class="contect-sec text-white">
             <div class="text-right top-to-bottom">
 
-                <h2>The right open-to-buy solution <br> can help to measure productivity, <br>keep stock, provide recommendations, <br>factor in market trends, trigger notifications <br> and guide purchasing and markdown decisions.</h2>
-                <p>Contact us to learn more about open-to-buy planning and how it can transform retail operations.</p>
+                <h2>The right open-to-buy solution <br> can help to measure
+                    productivity, <br>keep stock, provide recommendations,
+                    <br>factor in market trends, trigger notifications <br> and
+                    guide purchasing and markdown decisions.</h2>
+                <p>Contact us to learn more about open-to-buy planning and how
+                    it can transform retail operations.</p>
                 <a class="btn btn-white" href="contact-us">
                     <span class="gradiant-text">Contact Us</span>
                 </a>
