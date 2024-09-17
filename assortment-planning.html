@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>artisans Commerce Cloud: Next-Gen Composable Commerce Platform</title>
+    <title>Optimize Retail Performance with Precision Assortment Planning</title>
     <meta name="description"
         content="Empower your retail business with artisans Commerce Cloud. Our composable, headless commerce platform offers flexible APIs, microservices, and modules for seamless omnichannel experiences.">
     <meta property="og:title" content="artisans Commerce Cloud | Composable Commerce Platform">
@@ -36,167 +36,79 @@
             color: #f74ddd !important;
             font-size: 22px;
         }
-        .stats-container {
-            display: flex;
-            justify-content: space-between;
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
 
-        .stat-item {
+        .card {
             display: flex;
-            width: 300px;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(90deg, #8e2de2, #4a00e0);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            margin: 0 10px;
+            width: 230px;
+            height: 260px;
+            max-height: 330px;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+                -4px -4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            cursor: pointer;
             box-sizing: border-box;
+            padding: 10px;
         }
 
-        .stat-item i {
-            font-size: 36px;
-            color: #fff;
-            margin-bottom: 15px;
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+                -4px -4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        .stat-heading {
-            font-weight: bold;
-            font-size: 1.4em;
-            color: #fff;
-            margin-bottom: 10px;
+        .card-image-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 180px;
+            margin-bottom: 12px;
+            max-height: 130px;
+            overflow: hidden;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
         }
 
-        .stat-description {
-            font-size: 1em;
-            color: #e0e0e0;
+        .card-title {
+            margin: 0;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: default;
+            line-clamp: 1;
         }
 
-
-        @media (max-width: 768px) {
-            .stats-container {
-                flex-direction: column;
-            }
-
-            .stat-item {
-                margin: 10px 0;
-            }
-
-            .stat-item i {
-                font-size: 28px;
-            }
-
-            .stat-heading {
-                font-size: 1.2em;
-            }
-
-            .stat-description {
-                font-size: 0.9em;
-            }
+        .card-des {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            margin: 0;
+            font-size: 15px;
+            cursor: default;
         }
-        /* .card {
-  width: 280px;
-  height: 350px;
-  border-radius: 2em;
-  padding: 10px;
-  background: linear-gradient(100deg, #12d9e3 10%, #f74ddd 60%, #8d67f5 80%);
 
-}
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 50vh;
+        }
 
-.profileimage {
-  background-color: transparent;
-  border: none;
-  margin-top: 20px;
-  border-radius: 5em;
-  width: 80px;
-  height: 80px;
-}
+        .custom-blue-bg {
+            height: 600px;
+        }
 
-.pfp {
-  border-radius: 35em;
-  fill: white;
-}
-
-.Name {
-  color: white;
-  padding: 15px;
-  font-size: 20px;
-  margin-top: 10px;
-}
-.card-container{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 80vh;
-} */
-/* From Uiverse.io by akshat-patel28 */
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 230px;
-  height: 280px;
-  max-height: 330px;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
-    -4px -4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: all 0.3s;
-  cursor: pointer;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
-    -4px -4px 12px rgba(0, 0, 0, 0.08);
-}
-
-.card-image-container {
-  width: 100%;
-  height: 50%;
-  border-radius: 20px;
-  margin-bottom: 12px;
-  overflow: hidden;
-  /* background-color: #FF3CAC; */
-  background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card-title {
-  margin: 0;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: default;
-  line-clamp: 1;
-}
-
-.card-des {
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-  margin: 0;
-  font-size: 18px;
-  cursor: default;
-}
-.card-container{
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 60vh;
-}
+        .tab-sec {
+            padding: 20vh 0 !important;
+            background-size: 100% 95%;
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 
@@ -265,14 +177,14 @@
             <div class="container">
                 <div class="row p-4">
                     <div class="col-12 col-md-7 text-white  fadeInAnimation active">
-                        <br><br>
+                        <br>
                         <h1>Curate the Perfect Mix for<span class="gradiant-text"> Every Store</span>
                         </h1>
                         <p>Deliver the right products, at the right time, to the right store.</p>
                         <a class="btn btn-primary my-2" href="contact-us">Schedule a Demo</a>
                     </div>
                     <div class="col-12 col-md-5">
-                        <img src="./assets/images/banner-img-catelog.png" alt="logo"
+                        <img src="./assets/images/assortment-banner.webp" alt="logo"
                             class="w-100 fadeInAnimation active">
                     </div>
                 </div>
@@ -281,299 +193,73 @@
     </section>
 
 
-        <!-- two pending -->
-<!-- <section class="artisans-sec mt-5 pt-5 text-center">
-    <div class="container">
-        <div class="row justify-content-center">
+    <section class="card-container">
 
-            <div class="col-12 col-lg-2 d-flex justify-content-center mb-4">
-                <article class="card card-team-overlay position-relative h-100">
-                    <a href="#">
-                        <div class="card-img-top position-relative rounded overflow-hidden">
-                            <img src="./assets/images/icon.png" alt="Sales Performance Improvement" class="img-fluid">
-                        </div>
-                        <div class="card-body mt-n5">
-                            <div class="text-container">
-                                <div class="cont text-center">
-                                    <h5 class="card-title">Sales Performance Improvement</h5>
-                                    <p>Increase Sales by up to 25% with Optimized Assortments.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+        <div class="card">
+            <div class="card-image-container" style="background-color: #12d9e3;">
+                <i class="fas fa-chart-line" style="font-size: 45px;"></i>
             </div>
+            <p class="card-title">Sales Performance Improvement</p>
+            <p class="card-des">
+                Increase Sales by up to 25% with Optimized Assortments
+            </p>
+        </div>
 
-
-            <div class="col-12 col-lg-2 d-flex justify-content-center mb-4">
-                <article class="card card-team-overlay position-relative h-100">
-                    <a href="#">
-                        <div class="card-img-top position-relative rounded overflow-hidden">
-                            <img src="./assets/images/icon-3.png" alt="Inventory Turnover" class="img-fluid">
-                        </div>
-                        <div class="card-body mt-n5">
-                            <div class="text-container">
-                                <div class="cont text-center">
-                                    <h5 class="card-title">Inventory Turnover</h5>
-                                    <p>Reduce Overstock by 30% with Intelligent Assortment Planning.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+        <div class="card">
+            <div class="card-image-container" style="background-color: #784BA0;">
+                <i class="fas fa-sync-alt" style="font-size: 45px;"></i>
             </div>
+            <p class="card-title">Inventory Turnover</p>
+            <p class="card-des">
+                Reduce Overstock by 30% with Intelligent Assortment Planning
+            </p>
+        </div>
 
-
-            <div class="col-12 col-lg-2 d-flex justify-content-center mb-4">
-                <article class="card card-team-overlay position-relative h-100">
-                    <a href="#">
-                        <div class="card-img-top position-relative rounded overflow-hidden">
-                            <img src="./assets/images/icon-2.png" alt="Customer Satisfaction" class="img-fluid">
-                        </div>
-                        <div class="card-body mt-n5">
-                            <div class="text-container">
-                                <div class="cont text-center">
-                                    <h5 class="card-title">Customer Satisfaction</h5>
-                                    <p>Enhance Customer Satisfaction by 20% with the Right Product Mix.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+        <div class="card">
+            <div class="card-image-container" style="background-color: #f74ddd;">
+                <i class="fas fa-smile" style="font-size: 45px;"></i>
             </div>
+            <p class="card-title">Customer Satisfaction </p>
+            <p class="card-des">
+                Enhance Customer Satisfaction by 20% with the Right Product Mix
+            </p>
+        </div>
 
-            <div class="col-12 col-lg-2 d-flex justify-content-center mb-4">
-                <article class="card card-team-overlay position-relative h-100">
-                    <a href="#">
-                        <div class="card-img-top position-relative rounded overflow-hidden">
-                            <img src="./assets/images/icon-4.png" alt="Reduction in Stockouts" class="img-fluid">
-                        </div>
-                        <div class="card-body mt-n5">
-                            <div class="text-container">
-                                <div class="cont text-center">
-                                    <h5 class="card-title">Reduction in Stockouts</h5>
-                                    <p>Reduce Stockouts by 40%.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+        <div class="card">
+            <div class="card-image-container" style="background-color: #12d9e3;">
+                <i class="fas fa-box-open" style="font-size: 45px;"></i>
             </div>
+            <p class="card-title">Reduction in Stockouts</p>
+            <p class="card-des">
+                Reduce Stockouts by 40%
+            </p>
+        </div>
 
+        <div class="card">
+            <div class="card-image-container" style="background-color: #8d67f5">
+                <i class="fas fa-check-circle" style="font-size: 45px;"></i>
+            </div>
+            <p class="card-title">Product Availability</p>
+            <p class="card-des">
+                Ensure 98% Product Availability
+            </p>
+        </div>
 
-            <div class="col-12 col-lg-2 d-flex justify-content-center mb-4">
-                <article class="card card-team-overlay position-relative h-100">
-                    <a href="#">
-                        <div class="card-img-top position-relative rounded overflow-hidden">
-                            <img src="./assets/images/icon.png" alt="Product Availability" class="img-fluid">
-                        </div>
-                        <div class="card-body mt-n5">
-                            <div class="text-container">
-                                <div class="cont text-center">
-                                    <h5 class="card-title">Product Availability</h5>
-                                    <p>Ensure 98% Product Availability.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </article>
+    </section>
+
+    <section class="artisans-sec pt-md-5 mt-0 pt-0 text-center merchandise-section3" style="margin-top: 0;">
+        <div class="container">
+            <div class="col-12 pb-5 m-auto">
+                <h2 class="mb-3">Transform Retail with Precision Assortment Planning <span class="gradiant-text">Deliver
+                        the Right Products, Drive Growth, and Enhance Customer Experience.</span>
+                </h2>
+                <p>Assortment Planning ensures that the right products are available at the right time and place. Our
+                    solution offers data-driven insights to help retailers curate the perfect product mix for every
+                    store, improving customer satisfaction and boosting profitability.</p>
             </div>
         </div>
-    </div>
-</section> -->
+    </section>
 
-<!-- <section class="card-container">
-    <div class="card">
-    <div class="profileimage">
-      <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-    </div>
-    <div class="Name">
-    <h4>  Sales Performance Improvement</h4>
-      <p>Increase Sales by up to 25% with Optimized Assortments</p>
-    </div>
-</div>
-  <div class="card">
-    <div class="profileimage">
-      <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-    </div>
-    <div class="Name">
-    <h4>  Sales Performance Improvement</h4>
-      <p>Increase Sales by up to 25% with Optimized Assortments</p>
-    </div>
-</div>
-  <div class="card">
-    <div class="profileimage">
-      <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-    </div>
-    <div class="Name">
-    <h4>  Sales Performance Improvement</h4>
-      <p>Increase Sales by up to 25% with Optimized Assortments</p>
-    </div>
-</div>
-  <div class="card">
-    <div class="profileimage">
-      <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-    </div>
-    <div class="Name">
-    <h4>  Sales Performance Improvement</h4>
-      <p>Increase Sales by up to 25% with Optimized Assortments</p>
-    </div>
-</div>
-  <div class="card">
-    <div class="profileimage">
-      <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-    </div>
-    <div class="Name">
-    <h4>  Sales Performance Improvement</h4>
-      <p>Increase Sales by up to 25% with Optimized Assortments</p>
-    </div>
-</div>
-</section> -->
-
-<section class="card-container">
-    <div class="card">
-  <div class="card-image-container">
-    <i class="fas fa-chart-line" style="font-size: 100px;"></i>
-  </div>
-  <p class="card-title">Sales Performance Improvement</p>
-  <p class="card-des">
-  Increase Sales by up to 25% with Optimized Assortments
-  </p>
-</div>
-
-   <div class="card">
-  <div class="card-image-container">
-    <i class="fas fa-sync-alt" style="font-size: 100px;"></i>
-  </div>
-  <p class="card-title">Inventory Turnover</p>
-  <p class="card-des">
-  Reduce Overstock by 30% with Intelligent Assortment Planning
-  </p>
-</div>
-
-   <div class="card">
-  <div class="card-image-container">
-    <i class="fas fa-smile" style="font-size: 100px;"></i>
-  </div>
-  <p class="card-title">Customer Satisfaction </p>
-  <p class="card-des">
-  Enhance Customer Satisfaction by 20% with the Right Product Mix
-  </p>
-</div>
-
-   <div class="card">
-  <div class="card-image-container">
-    <i class="fas fa-box-open" style="font-size: 100px;"></i>
-  </div>
-  <p class="card-title">Reduction in Stockouts</p>
-  <p class="card-des">
-  Reduce Stockouts by 40%
-  </p>
-</div>
-
-   <div class="card">
-  <div class="card-image-container">
-    <i class="fas fa-check-circle" style="font-size: 100px;"></i>
-  </div>
-  <p class="card-title">Product Availability</p>
-  <p class="card-des">
-  Ensure 98% Product Availability
-  </p>
-</div>
-</section>
-
- <section
-            class="artisans-sec pt-md-5 mt-0 pt-0 text-center merchandise-section3"
-            style="margin-top: 0;">
-            <div class="container">
-                <div class="col-12 pb-5 m-auto">
-                    <h2 class="mb-3">Transform Retail with Precision Assortment Planning <span class="gradiant-text">Deliver the Right Products, Drive Growth, and Enhance Customer Experience.</span>
-                        </h2>
-                    <p>Assortment Planning ensures that the right products are available at the right time and place. Our solution offers data-driven insights to help retailers curate the perfect product mix for every store, improving customer satisfaction and boosting profitability.</p>
-                </div>
-            </div>
-        </section>
-
-
-    <!-- four done -->
-    <!-- <section class="case-sec mt-md-5 mt-0">
-            <div class="container">
-                <div class="row">
-				     <div class="col-12 col-md-10 pb-5 m-auto ">
-                    <h2 class="mb-3 text-center"><em>Why Assortment Planning is Key to Retail Success</em></h2>
-                </div>
-                    <div class="col-md-12">
-                        <div class="center slider">
-                            <article class="card-news h-100">
-                                <div class="card-img-top position-relative overflow-hidden p-0">
-                                    <a href="solution">
-                                        <img class="w-100" src="./assets/images/case-img-1.png" alt="Latest News">
-                                    </a>
-                                </div>
-                                <div class="card-body position-relative text-dark pt-0">
-                                    <h4 class="mt-0 w-100">
-                                        <p class="text-pink">Drive Strategic Decision-Making</p>
-                                    </h4>
-                                    <p class="text-light">Leverage data-driven insights to make smarter business decisions. Assortment planning provides critical information about sales patterns, consumer behavior, and market trends, helping you make informed choices about product selections and promotional strategies.</p>
-                                </div>
-                            </article>
-                            <article class="card-news h-100">
-                                <div class="card-img-top position-relative overflow-hidden p-0">
-                                    <a href="unified-commerce">
-                                        <img class="w-100" src="./assets/images/case-img-2.png" alt="Latest News">
-                                    </a>
-                                </div>
-                                <div class="card-body position-relative text-dark pt-0">
-                                    <h4 class="mt-0 w-100">
-                                        <p class="text-pink">Focus on High-Performing Products</p>
-                                    </h4>
-                                    <p class="text-light">Assortment planning allows you to identify and prioritize high-performing products. By optimizing your inventory based on sales performance, you can enhance sales efficiency and focus on items that drive revenue.</p>
-                                </div>
-                            </article>
-                            <article class="card-news h-100">
-                                <div class="card-img-top position-relative overflow-hidden p-0">
-                                    <a href="headless-commerce">
-                                        <img class="w-100" src="./assets/images/case-img-3.png" alt="Latest News">
-                                    </a>
-                                </div>
-                                <div class="card-body position-relative text-dark pt-0">
-                                    <h4 class="mt-0 w-100">
-                                        <p class="text-pink">Optimize Store Performance</p>
-                                    </h4>
-                                    <p class="text-light">Tailored assortments for each store based on local market needs and demographics can significantly enhance store performance. By aligning product offerings with the specific preferences of customers in each location, you improve sales efficiency and boost store profitability.</p>
-                                </div>
-                            </article>
-                            <article class="card-news h-100">
-                                <div class="card-img-top position-relative overflow-hidden p-0">
-                                    <a href="d2c-ecommerce">
-                                        <img class="w-100" src="./assets/images/case-img-4.png" alt="Latest News">
-                                    </a>
-                                </div>
-                                <div class="card-body position-relative text-dark pt-0">
-                                    <h4 class="mt-0 w-100">
-                                        <p class="text-pink">Reduce Wastage and Costs</p>
-                                    </h4>
-                                    <p class="text-light">By optimizing your product mix and aligning inventory with actual demand, you can significantly reduce wastage and associated costs. Efficient assortment planning minimizes the risk of unsold stock and markdowns, contributing to a more sustainable and cost-effective retail operation.</p>
-                                </div>
-                            </article>
-                            <article class="card-news h-100">
-                                <div class="card-img-top position-relative overflow-hidden p-0">
-                                    <a href="solution">
-                                        <img class="w-100" src="./assets/images/case-img-1.png" alt="Latest News">
-                                    </a>
-                                </div>
-                                <div class="card-body position-relative text-dark pt-0">
-                                    <h4 class="mt-0 w-100">
-                                        <p class="text-pink">Drive Revenue Growth</p>
-                                    </h4>
-                                    <p class="text-light">Strategic assortment planning ensures that product mix aligns with customer preferences and purchasing trends. By offering right products at the right time, you boost sales, increase average transaction values, and drive overall revenue growth.</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
 
     <section class="tab-sec text-white">
         <div class="container">
@@ -607,7 +293,8 @@
                         <br>
                         <div class="tab-content pl-md-5 pl-0">
                             <div id="tab1" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <img src="./assets/images/drive-growth.png" alt="logo"
+                                    style="background-color: #8d67f5; border-radius: 100px; padding: 3px;">
                                 <h3>Drive Revenue Growth</h3>
                                 <p>Strategic assortment planning ensures that product mix aligns with customer
                                     preferences and purchasing trends. By offering right products at the right time, you
@@ -615,7 +302,8 @@
                                 </p>
                             </div>
                             <div id="tab2" class="tab-pane show active">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <img src="./assets/images/strategic-decision-making.png" alt="logo"
+                                    style="background-color: #f74ddd; border-radius: 100px; padding: 10px;">
                                 <h3>Drive Strategic Decision-Making</h3>
                                 <p>Leverage data-driven insights to make smarter business decisions. Assortment planning
                                     provides critical information about sales patterns, consumer behavior, and market
@@ -623,14 +311,16 @@
                                     strategies.</p>
                             </div>
                             <div id="tab3" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <img src="./assets/images/high-performing-product.png" alt="logo"
+                                    style="background-color: #784BA0; border-radius: 100px; padding: 10px;">
                                 <h3>Focus on High-Performing Products</h3>
                                 <p>Assortment planning allows you to identify and prioritize high-performing products.
                                     By optimizing your inventory based on sales performance, you can enhance sales
                                     efficiency and focus on items that drive revenue.</p>
                             </div>
                             <div id="tab4" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <img src="./assets/images/store-performance.png" alt="logo"
+                                    style="background-color: #12d9e3; border-radius: 100px; padding: 10px;">
                                 <h3>Optimize Store Performance</h3>
                                 <p>Tailored assortments for each store based on local market needs and demographics can
                                     significantly enhance store performance. By aligning product offerings with the
@@ -638,7 +328,8 @@
                                     boost store profitability.</p>
                             </div>
                             <div id="tab5" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <img src="./assets/images/reduce-wastage-cost.png" alt="logo"
+                                    style="background-color: #8d67f5; border-radius: 100px; padding: 10px;">
                                 <h3>Reduce Wastage and Costs</h3>
                                 <p>By optimizing your product mix and aligning inventory with actual demand, you can
                                     significantly reduce wastage and associated costs. Efficient assortment planning
@@ -653,7 +344,7 @@
     </section>
 
 
-    <section class="solution-sec mt-md-5 pt-md-5 mt-0 pt-0 text-center">
+    <section class="solution-sec mt-0 pt-0 text-center">
         <div class="container">
             <div class="tab-content text-left">
                 <div id="tab1" class="tab-pane show active"></div>
@@ -680,8 +371,10 @@
     <section class="contect-sec text-white">
         <div class="text-right top-to-bottom">
 
-            <h2>The right assortment planning tool <br> helps with product selection, optimize inventory, and align with market trends for superior retail performance.</h2>
-            <p>Reach out to explore how tailored assortment planning can refine your product mix and maximize your retail efficiency.</p>
+            <h2>The right assortment planning tool <br> helps with product selection, optimize inventory, and align with
+                market trends for superior retail performance.</h2>
+            <p>Reach out to explore how tailored assortment planning can refine your product mix and maximize your
+                retail efficiency.</p>
             <a class="btn btn-white" href="contact-us">
                 <span class="gradiant-text">Contact Us</span>
             </a>
@@ -870,8 +563,6 @@
 
     <script type="text/javascript">
         $(document).on('ready', function () {
-
-
             $('.center').slick({
                 centerMode: true,
                 dots: false,
@@ -897,20 +588,7 @@
             });
         });
     </script>
-    <script src="assets/js/countrySelect.js"></script>
     <script>
-        var input = document.querySelector("#tel");
-        window.intlTelInput(input, {
-            separateDialCode: true
-        });
-
-        $("#country_selector").countrySelect({
-            // defaultCountry: "jp",
-            // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-            // responsiveDropdown: true,
-            preferredCountries: ['us']
-        });
-
         const copyrightYearElement = document.getElementById('copyright-year');
         copyrightYearElement.textContent = new Date().getFullYear();
     </script>
