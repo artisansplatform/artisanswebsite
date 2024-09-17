@@ -18,16 +18,21 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/706b9f1865.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/countrySelect.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="./assets/css/custom-style.css">
     <style>
-          html,
-          body {
-               overflow-x: hidden;
-            }
+        html,
+        body {
+            overflow-x: hidden !important;
+        }
+
         .text-pink {
             margin-top: 8px;
             color: #f74ddd !important;
@@ -166,13 +171,16 @@
                 margin-bottom: 40px !important;
             }
         }
+
         @media (max-width: 768px) {
             .card-container {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 5px;
-                margin-left: 8px;
-                margin-right: 8px;
+                margin-left: 5px;
+                margin-right: 5px;
+                padding-left: 2px;
+                padding-right: 2px;
                 height: auto;
                 margin-top: -15%;
                 margin-bottom: 20px;
@@ -193,9 +201,9 @@
             }
 
             .card {
-                width: 180px;
-                height: 240px;
-                max-height: 250px;
+                width: 160px;
+                height: 290px;
+                max-height: 350px;
             }
 
             .custom-blue-bg {
@@ -377,7 +385,7 @@
 
     <section class="tab-sec text-white">
         <div class="container">
-            <h2 class="text-center font-3">Why Assortment Planning is Key to <span class="gradiant-text">Retail
+            <h2 class="text-center font-3">Why Assortment Planning is <span class="gradiant-text">Key to Retail
                     Success</span>
             </h2>
             <div class="row align-items-center py-md-5 py-2">
@@ -408,9 +416,10 @@
                         <div class="tab-content pl-md-5 pl-0">
                             <div id="tab1" class="tab-pane">
                                 <div
-                                    style="padding: 18px; background-color: #8d67f5; border-radius: 100px; display: inline-block;">
-                                    <img src="./assets/images/drive-growth.png" alt="logo" style="display: block;">
-                                </div>
+                                    style="padding: 20px; width: 80px; height: 80px; background-color: #8d67f5; border-radius: 100px; display: inline-block;">
+                                    <img src="./assets/images/drive-growth.png" alt="logo"
+                                        style="display: block;  width: 45px; height: 45px; padding-right: 2px;">
+                                </div><br><br>
                                 <h3>Drive Revenue Growth</h3>
                                 <p>Strategic assortment planning ensures that product mix aligns with customer
                                     preferences and purchasing trends. By offering right products at the right time, you
@@ -419,7 +428,7 @@
                             </div>
                             <div id="tab2" class="tab-pane show active">
                                 <img src="./assets/images/strategic-decision-making.png" alt="logo"
-                                    style="background-color: #f74ddd; border-radius: 100px; padding: 10px;">
+                                    style="background-color: #f74ddd; border-radius: 100px; padding: 10px;"><br><br>
                                 <h3>Drive Strategic Decision-Making</h3>
                                 <p>Leverage data-driven insights to make smarter business decisions. Assortment planning
                                     provides critical information about sales patterns, consumer behavior, and market
@@ -428,7 +437,7 @@
                             </div>
                             <div id="tab3" class="tab-pane">
                                 <img src="./assets/images/high-performing-product.png" alt="logo"
-                                    style="background-color: #784BA0; border-radius: 100px; padding: 10px;">
+                                    style="background-color: #784BA0; border-radius: 100px; padding: 10px;"><br><br>
                                 <h3>Focus on High-Performing Products</h3>
                                 <p>Assortment planning allows you to identify and prioritize high-performing products.
                                     By optimizing your inventory based on sales performance, you can enhance sales
@@ -436,7 +445,7 @@
                             </div>
                             <div id="tab4" class="tab-pane">
                                 <img src="./assets/images/store-performance.png" alt="logo"
-                                    style="background-color: #12d9e3; border-radius: 100px; padding: 10px;">
+                                    style="background-color: #12d9e3; border-radius: 100px; padding: 10px;"><br><br>
                                 <h3>Optimize Store Performance</h3>
                                 <p>Tailored assortments for each store based on local market needs and demographics can
                                     significantly enhance store performance. By aligning product offerings with the
@@ -445,7 +454,7 @@
                             </div>
                             <div id="tab5" class="tab-pane">
                                 <img src="./assets/images/reduce-wastage-cost.png" alt="logo"
-                                    style="background-color: #8d67f5; border-radius: 100px; padding: 10px;">
+                                    style="background-color: #8d67f5; border-radius: 100px; padding: 10px;"><br><br>
                                 <h3>Reduce Wastage and Costs</h3>
                                 <p>By optimizing your product mix and aligning inventory with actual demand, you can
                                     significantly reduce wastage and associated costs. Efficient assortment planning
@@ -459,27 +468,69 @@
         </div>
     </section>
 
-
-    <section class="solution-sec mt-0 pt-0 text-center">
+    <section class="pb-5 mb-5 solution-sec">
         <div class="container">
-            <div class="tab-content text-left">
-                <div id="tab1" class="tab-pane show active"></div>
-                <div class="row align-items-center pb-5 ">
-                    <div class="col-md-6 how-img">
-                        <img src="./assets/images/composable-img.png" alt="logo" class="w-100 fadeInAnimation active">
-                    </div>
-                    <div class="col-md-6 pr-5 fadeInAnimation active">
-                        <h2 class="pt-md-0 pt-4">Schedule Live Demo and see how we can help you to Perfect Product
-                            Curation</h2>
+            <div class="row pt-5">
+                <div class="col-12 col-md-6 mb-md-0 mb-4">
+                    <div class="bg-blue-light p-md-5 p-4 rounded h-100">
+                        <h2 class="mb-3">Schedule Live Demo and see how we can help you to<span class="gradiant-text">
+                                Perfect Product Curation</span>
+                        </h2>
                         <p>Explore how data-driven insights and smart curation lead to exceptional product mixes
                             tailored just for your needs. Don’t just imagine the possibilities - experience them
                             firsthand!</p>
-                        <a class="btn btn-primary my-2" href="contact-us">Experience It Now – Book a Demo</a>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="bg-light rounded p-md-5 p-4 h-100">
+                        <form action="https://api.web3forms.com/submit" method="post">
+                            <input type="hidden" name="page" value="artisans-commerce-cloud">
+                            <input type="hidden" name="access_key" value="d082e756-9d9f-4750-bda0-10769f1253c6">
+                            <input type="hidden" name="redirect" value="https://artisanscloud.com/thank-you">
+                            <input type="checkbox" name="botcheck" id="" style="display: none;">
+                            <input type="hidden" name="subject" value="artisans Commerce Cloud inquiry">
+
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control person-icon" placeholder="First Name"
+                                        autocomplete="off" name="fname" required>
+                                </div>
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control person-icon" placeholder="Last Name"
+                                        autocomplete="off" name="lname">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <input type="text" class="form-control company-icon" placeholder="Company Name"
+                                        autocomplete="off" name="cname" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <input type="email" class="form-control email-icon" placeholder="Email"
+                                        autocomplete="off" name="email" required>
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <input type="hidden" name="code" value="+1" id="pcode">
+                                    <input type="tel" id="tel" class="form-control ml-1" name="phone" autocomplete="off"
+                                        placeholder="Phone Number" value="+1" required>
+
+                                </div>
+                            </div>
+                            <button type="submit" id="submit" name="request"
+                                class="w-100 btn btn-pruple mt-3 text-white">Submit <img
+                                    src="./assets/images/button-img.png">
+                            </button>
+                            <p class="mt-4">By submitting your information you agree with our&nbsp;<a href="#"
+                                    class="text-secondary"> Terms of Use</a>&nbsp;and&nbsp;<a class="text-secondary"
+                                    href="#">Privacy Policy</a>.</p>
+                        </form>
                     </div>
                 </div>
             </div>
-
-        </div>
         </div>
     </section>
 
@@ -666,14 +717,52 @@
                 var elementVisible = 50;
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
-                } else {
-                    //reveals[i].classList.remove("active");
                 }
             }
         }
         window.addEventListener("scroll", fadeInAnimation);
     </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./assets/js/slider.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./assets/css/slider.css">
+
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.center').slick({
+                centerMode: true,
+                dots: false,
+                centerPadding: '0',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+    <script src="assets/js/countrySelect.js"></script>
     <script>
+        var input = document.querySelector("#tel");
+        window.intlTelInput(input, {
+            separateDialCode: true
+        });
+
+        $("#country_selector").countrySelect({
+            preferredCountries: ['us']
+        });
         const copyrightYearElement = document.getElementById('copyright-year');
         copyrightYearElement.textContent = new Date().getFullYear();
     </script>
