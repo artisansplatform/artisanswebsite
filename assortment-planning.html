@@ -40,8 +40,8 @@
         .card {
             display: flex;
             flex-direction: column;
-            width: 230px;
-            height: 260px;
+            width: 215px;
+            height: 240px;
             max-height: 330px;
             background-color: var(--white);
             border-radius: 10px;
@@ -50,7 +50,8 @@
             transition: all 0.3s;
             cursor: pointer;
             box-sizing: border-box;
-            padding: 10px;
+            padding: 10px !important;
+            text-align: center;
         }
 
         .card:hover {
@@ -75,7 +76,7 @@
 
         .card-title {
             margin: 0;
-            font-size: 17px;
+            font-size: 16px;
             font-weight: 600;
             cursor: default;
             line-clamp: 1;
@@ -98,6 +99,8 @@
             align-items: center;
             justify-content: space-evenly;
             height: 50vh;
+            margin-left: 100px;
+            margin-right: 100px;
         }
 
         .custom-blue-bg {
@@ -108,6 +111,10 @@
             padding: 20vh 0 !important;
             background-size: 100% 95%;
             background-repeat: no-repeat;
+        }
+        .icon {
+         display: flex;
+         justify-content: center;
         }
     </style>
 </head>
@@ -196,8 +203,10 @@
     <section class="card-container">
 
         <div class="card">
+             <div class="icon">
             <div class="card-image-container" style="background-color: #12d9e3;">
-                <i class="fas fa-chart-line" style="font-size: 45px;"></i>
+               <i class="fas fa-chart-line" style="font-size: 45px;"></i>
+            </div>
             </div>
             <p class="card-title">Sales Performance Improvement</p>
             <p class="card-des">
@@ -206,8 +215,10 @@
         </div>
 
         <div class="card">
-            <div class="card-image-container" style="background-color: #784BA0;">
+            <div class="icon">
+                <div class="card-image-container" style="background-color: #784BA0;">
                 <i class="fas fa-sync-alt" style="font-size: 45px;"></i>
+            </div>
             </div>
             <p class="card-title">Inventory Turnover</p>
             <p class="card-des">
@@ -216,8 +227,10 @@
         </div>
 
         <div class="card">
-            <div class="card-image-container" style="background-color: #f74ddd;">
+            <div class="icon">
+                <div class="card-image-container" style="background-color: #f74ddd;">
                 <i class="fas fa-smile" style="font-size: 45px;"></i>
+            </div>
             </div>
             <p class="card-title">Customer Satisfaction </p>
             <p class="card-des">
@@ -226,8 +239,10 @@
         </div>
 
         <div class="card">
-            <div class="card-image-container" style="background-color: #12d9e3;">
+            <div class="icon">
+                <div class="card-image-container" style="background-color: #12d9e3;">
                 <i class="fas fa-box-open" style="font-size: 45px;"></i>
+            </div>
             </div>
             <p class="card-title">Reduction in Stockouts</p>
             <p class="card-des">
@@ -236,8 +251,10 @@
         </div>
 
         <div class="card">
-            <div class="card-image-container" style="background-color: #8d67f5">
+            <div class="icon">
+                <div class="card-image-container" style="background-color: #8d67f5">
                 <i class="fas fa-check-circle" style="font-size: 45px;"></i>
+            </div>
             </div>
             <p class="card-title">Product Availability</p>
             <p class="card-des">
@@ -293,8 +310,9 @@
                         <br>
                         <div class="tab-content pl-md-5 pl-0">
                             <div id="tab1" class="tab-pane">
-                                <img src="./assets/images/drive-growth.png" alt="logo"
-                                    style="background-color: #8d67f5; border-radius: 100px; padding: 3px;">
+                                <div style="padding: 18px; background-color: #8d67f5; border-radius: 100px; display: inline-block;">
+                                    <img src="./assets/images/drive-growth.png" alt="logo" style="display: block;">
+                                </div>
                                 <h3>Drive Revenue Growth</h3>
                                 <p>Strategic assortment planning ensures that product mix aligns with customer
                                     preferences and purchasing trends. By offering right products at the right time, you
