@@ -644,13 +644,38 @@
 			<a href="contact-us">Contact Us</a>
 		</div>
         <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-            // Reference for slider: https://codepen.io/IHateSlugs/pen/powzRrw
+        // Debounce function to limit event handler calls
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                func.apply(this, args);
+            }, wait);
+            };
+        }
+
+        // Throttle function to limit event handler calls
+        function throttle(func, wait) {
+            let timeout;
+            return function (...args) {
+            if (!timeout) {
+                func.apply(this, args);
+                timeout = setTimeout(() => {
+                timeout = null;
+                }, wait);
+            }
+            };
+        }
+
+        // Carousel slider Reference: https://codepen.io/IHateSlugs/pen/powzRrw
+        const carousel = {
+            init: function() {
             const slideContainer = document.querySelector('.slide-container');
             const slides = document.querySelector('.slides');
             const nextBtn = document.getElementById('next-btn');
             const prevBtn = document.getElementById('prev-btn');
-            const interval = 3000;
+            const interval = 4000;
 
             let carouselSlides = document.querySelectorAll('.carousel-slide');
             let index = 1;
@@ -700,7 +725,7 @@
                 carouselSlides = getSlides();
                 if (index >= carouselSlides.length - 1) return;
                 index++;
-                slides.style.transition = '.6s ease-out';
+                slides.style.transition = '.8s ease-out';
                 slides.style.transform = `translateX(${-slideWidth * index}px)`;
             };
 
@@ -709,7 +734,7 @@
                 isTransitioning = true;
                 if (index <= 0) return;
                 index--;
-                slides.style.transition = '.6s ease-out';
+                slides.style.transition = '.8s ease-out';
                 slides.style.transform = `translateX(${-slideWidth * index}px)`;
             };
 
@@ -722,11 +747,16 @@
             prevBtn.addEventListener('click', moveToPreviousSlide);
 
             startSlide();
+            },
+        };
 
-            var stickyNavTop = document.querySelector("header").offsetTop;
+        // Sticky navigation
+        const stickyNav = {
+            init: function() {
+            const stickyNavTop = document.querySelector("header").offsetTop;
 
             function stickyNav() {
-                var scrollTop = window.scrollY;
+                const scrollTop = window.scrollY;
                 if (scrollTop > 1) {
                 document.querySelector("header").classList.add("fixed-top", "sticky");
                 } else {
@@ -735,8 +765,13 @@
             }
 
             stickyNav();
-            window.addEventListener("scroll", stickyNav);
+            window.addEventListener("scroll", debounce(stickyNav, 100));
+            },
+        };
 
+        // Dropdowns
+        const dropdowns = {
+            init: function() {
             function handleDropdowns() {
                 if (window.innerWidth >= 768) {
                 document.querySelectorAll(".dropdown").forEach(function (dropdown) {
@@ -752,11 +787,6 @@
                     });
                 });
                 } else {
-                document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                    dropdown.removeEventListener("mouseenter", null);
-                    dropdown.removeEventListener("mouseleave", null);
-                });
-
                 document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
                     dropdownToggle.addEventListener("click", function (e) {
                     e.preventDefault();
@@ -778,31 +808,75 @@
             }
 
             handleDropdowns();
-            window.addEventListener("resize", handleDropdowns);
+            window.addEventListener("resize", throttle(handleDropdowns, 200));
+            },
+        };
+        // Navbar toggle logic for small screens
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarMenu = document.querySelector("#navbarNavDropdown");
+        const navbarIcon = navbarToggler.querySelector("i");
 
-            const navbarToggler = document.querySelector(".navbar-toggler");
-            const navbarMenu = document.querySelector("#navbarNavDropdown");
-            const navbarIcon = navbarToggler.querySelector("i");
+        navbarToggler.addEventListener("click", function () {
+            const isExpanded = navbarMenu.classList.contains("show");
 
-            navbarToggler.addEventListener("click", function () {
-                const isExpanded = navbarMenu.classList.contains("show");
-
-                if (isExpanded) {
-                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                    menu.classList.remove("show");
-                });
-                navbarMenu.classList.remove("show");
-                navbarToggler.setAttribute("aria-expanded", "false");
-                navbarIcon.classList.remove("fa-times");
-                navbarIcon.classList.add("fa-bars");
-                } else {
-                navbarMenu.classList.add("show");
-                navbarToggler.setAttribute("aria-expanded", "true");
-                navbarIcon.classList.remove("fa-bars");
-                navbarIcon.classList.add("fa-times");
-                }
+            if (isExpanded) {
+            document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                menu.classList.remove("show");
             });
+            navbarMenu.classList.remove("show");
+            navbarToggler.setAttribute("aria-expanded", "false");
+            navbarIcon.classList.remove("fa-times");
+            navbarIcon.classList.add("fa-bars");
+            } else {
+            navbarMenu.classList.add("show");
+            navbarToggler.setAttribute("aria-expanded", "true");
+            navbarIcon.classList.remove("fa-bars");
+            navbarIcon.classList.add("fa-times");
+            }
+        });
 
+
+        // Accordion
+        const accordion = {
+            init: function() {
+            function handleAccordion() {
+                const accordionToggles = document.querySelectorAll('.accordion-toggle');
+                accordionToggles.forEach((toggle) => {
+                toggle.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.querySelector(targetId);
+
+                    if (targetContent.classList.contains('show')) {
+                    targetContent.classList.remove('show');
+                    this.classList.add('collapsed');
+                    } else {
+                    document.querySelectorAll('.accordion-content').forEach((content) => {
+                        content.classList.remove('show');
+                    });
+
+                    document.querySelectorAll('.accordion-toggle').forEach((toggle) => {
+                        toggle.classList.add('collapsed');
+                    });
+
+                    targetContent.classList.add('show');
+                    this.classList.remove('collapsed');
+                    }
+                });
+                });
+            }
+
+            handleAccordion();
+            },
+        };
+
+        // Initialize components
+        document.addEventListener('DOMContentLoaded', function() {
+            carousel.init();
+            stickyNav.init();
+            dropdowns.init();
+            accordion.init();
+
+            // Scroll reveal animation
             const scrollReveal = (elements, className) => {
             elements.forEach((element) => {
                 const windowHeight = window.innerHeight;
@@ -835,36 +909,12 @@
             };
 
             window.addEventListener("scroll", left);
-            window.addEventListener("scroll", right);
+            window.addEventListener("scroll ", right);
 
             const copyrightYearElement = document.getElementById('copyright-year');
             if (copyrightYearElement) {
             copyrightYearElement.textContent = new Date().getFullYear();
             }
-
-            const accordionToggles = document.querySelectorAll('.accordion-toggle');
-            accordionToggles.forEach((toggle) => {
-            toggle.addEventListener('click', function () {
-                const targetId = this.getAttribute('data-target');
-                const targetContent = document.querySelector(targetId);
-
-                if (targetContent.classList.contains('show')) {
-                targetContent.classList.remove('show');
-                this.classList.add('collapsed');
-                } else {
-                document.querySelectorAll('.accordion-content').forEach((content) => {
-                    content.classList.remove('show');
-                });
-
-                document.querySelectorAll('.accordion-toggle').forEach((toggle) => {
-                    toggle.classList.add('collapsed');
-                });
-
-                targetContent.classList.add('show');
-                this.classList.remove('collapsed');
-                }
-            });
-            });
         });
         </script>
     </body>
