@@ -175,8 +175,8 @@
         @media (max-width: 768px) {
             .card-container {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-gap: 5px;
+                grid-template-columns: 1fr;
+                grid-gap: 10px;
                 margin-left: 5px;
                 margin-right: 5px;
                 padding-left: 2px;
@@ -186,24 +186,14 @@
                 margin-bottom: 20px;
             }
 
-            .card-container .card:nth-child(2n+1) {
+            .card-container .card {
                 grid-column: span 1;
             }
-
-            .card-container .card:nth-child(2n) {
-                grid-column: span 1;
-            }
-
-
-            .card-container .card:nth-last-child(-n+2):nth-child(odd) {
-                grid-column: span 2;
-                justify-self: center;
-            }
-
+            
             .card {
-                width: 160px;
-                height: 290px;
-                max-height: 350px;
+                width: 90%;
+                height: auto;
+                max-height: 200px;
             }
 
             .custom-blue-bg {
@@ -373,7 +363,7 @@
     <section class="artisans-sec pt-md-5 mt-0 pt-0 text-center merchandise-section3" style="margin-top: 0;">
         <div class="container">
             <div class="col-12 pb-5 m-auto">
-                <h2 class="mb-3">Transform Retail with Precision Assortment Planning <span class="gradiant-text">Deliver
+                <h2 class="mb-3">Transform Retail with Precision Assortment Planning. <span class="gradiant-text">Deliver
                         the Right Products, Drive Growth, and Enhance Customer Experience.</span>
                 </h2>
                 <p>Assortment Planning ensures that the right products are available at the right time and place. Our
