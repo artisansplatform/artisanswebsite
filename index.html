@@ -675,7 +675,7 @@
             const slides = document.querySelector('.slides');
             const nextBtn = document.getElementById('next-btn');
             const prevBtn = document.getElementById('prev-btn');
-            const interval = 3000;
+            const interval = 4000;
 
             let carouselSlides = document.querySelectorAll('.carousel-slide');
             let index = 1;
@@ -725,7 +725,7 @@
                 carouselSlides = getSlides();
                 if (index >= carouselSlides.length - 1) return;
                 index++;
-                slides.style.transition = '.6s ease-out';
+                slides.style.transition = '.8s ease-out';
                 slides.style.transform = `translateX(${-slideWidth * index}px)`;
             };
 
@@ -734,7 +734,7 @@
                 isTransitioning = true;
                 if (index <= 0) return;
                 index--;
-                slides.style.transition = '.6s ease-out';
+                slides.style.transition = '.8s ease-out';
                 slides.style.transform = `translateX(${-slideWidth * index}px)`;
             };
 
@@ -765,7 +765,7 @@
             }
 
             stickyNav();
-            window.addEventListener("scroll", debounce(stickyNav, 100)); 
+            window.addEventListener("scroll", debounce(stickyNav, 100));
             },
         };
 
