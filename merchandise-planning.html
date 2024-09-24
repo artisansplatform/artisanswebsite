@@ -93,115 +93,6 @@ margin-left: 20px;
     max-height: 400px;
 }
 
-.custom-carousel-container{
-padding: auto;
-}
-
-.custom-carousel {
-position: relative;
-margin-top: 20%;
-margin-left: 50%
-
-}
-
-.custom-carousel__item {
-  height:460px;
-  width: 100%;
-  border-radius: 30px;
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  position: absolute;
-  transform: translate(-50%,-50%) scale(.1);
-  z-index: 0;
-  transition: all .2s linear;
-  background: #fff;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-}
-
-.custom-carousel__item img {
-  width: 30%;
-  height: 30vh;
-  object-fit: cover;
-  margin: 20px auto;
-}
-.custom-carousel__item .carousel__text {
-  padding: 20px;
-}
-
-.custom-carousel__item .carousel__text h4 {
-  margin-top: 0;
-}
-
-.custom-carousel__item--main {
-  transform: translate(-50%,-50%) scale(1);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.custom-carousel__item--left {
-  transform: translate(-110%,-50%) scale(.9);
-  z-index: 1;
-}
-
-.custom-carousel__item--right {
-  transform: translate(10%,-50%) scale(.9);
-  z-index: 1;
-}
-
-.custom-carousel__item--right:hover {
-  transform: translate(10%,-50%) scale(1.0);
-  z-index: 3;
-  cursor: pointer;
-}
-
-.custom-carousel__item--left:hover {
-  transform: translate(-110%,-50%) scale(1.0);
-  z-index: 3;
-  cursor: pointer;
-}
-
-.custom-carousel__item--main:hover {
-  transform: translate(-50%,-50%) scale(1.0);
-}
-
-.custom-carousel__item:hover > .custom-carousel__text {
-  opacity: 1;
-}
-
-.custom-carousel__item:hover img {
-  filter: grayscale(0%);
-}
-
-.custom-carousel__btns {
-    margin-left: 25%;
-  position: relative;
-  transform: translate(-50%, 22rem);
-  display: flex;
-  gap: 2rem;
-}
-
-.custom-carousel__btn {
-   margin-top: -90px;
-  background-color: transparent;
-  height: 4rem;
-  width: 4rem;
-  border-radius: 50%;
-  border:1px solid currentColor;
-  color: white;
-  cursor: pointer;
-}
-
-.custom-carousel__btn svg {
-  height: 1.8rem;
-  width: 1.8rem;
-}
-
-.custom-carousel__btn:hover {
-  color: #aaa;
-}
-
 @media (max-width: 640px) {
     .custom-blue-bg {
         height: 100vh;
@@ -221,31 +112,6 @@ margin-left: 50%
     .custom-item {
         margin: 4px 0;
     }
-    .tab-sec-custom {
-        padding: 30% 0 !important;
-        height: 110vh !important;
-        background-size: cover !important;
-    }
-    .custom-carousel__item {
-        height: 60vh;
-        width: 280px;
-        margin-top: 50px;
-    }
-    .custom-carousel__btns {
-        margin-left: 2%;
-        transform: translate(-50%, 22rem);
-        display: flex;
-        gap: 2rem;
-    }
-    .merchandise-section4 {
-        margin-top: -10%;
-        margin-bottom: 20%;
-        height: 30vh;
-    }
-    .data-driven-section .how-img img {
-        float: none !important;
-        margin: 0 auto;
-    }
 }
 
 @media (max-width: 700px) {
@@ -253,23 +119,6 @@ margin-left: 50%
         height: auto !important;
         padding-bottom: 140px;
         margin-bottom: -65px;
-    }
-    .custom-carousel-container{
-    height: auto !important;
-}
-.custom-carousel__item {
-    margin-top: 190px !important;
-height: 500px !important;
-}
-.text-container-sec4{
-margin-top: -80px !important;
-}
-.custom-carousel__btn {
-margin-top: 120px;
-}
- .merchandise-section4 {
-        margin-bottom: 10%;
-          height: 30vh;
     }
 
 }
@@ -311,20 +160,6 @@ margin-top: 120px;
 }
 .merchandise-section3 div {
     margin-top: 35%;
-}
-.tab-sec-custom {
-    padding: 15vh 0 !important;
-    background-size: cover;
-}
-.custom-carousel__btn {
-    margin-top: 0%;
-}
-.custom-carousel__item {
-    margin-top: 100px;
-}
-.merchandise-section4 {
-    height: 20vh;
-    margin-top: -12px !important;
 }
 }
 </style>
@@ -592,125 +427,8 @@ margin-top: 120px;
                 </div>
             </div>
         </section>
-<!--
-        <section>
-            <div
-                class="custom-carousel-container tab-sec-custom mt-md-5 mt-0 pt-0 text-center"
-                style="min-height: 900px; height: 900px;">
-                <div class="container">
-                    <div class="col-12 col-md-10 pb-2 m-auto">
-                        <h2 class="text-center text-white text-container-sec4">
-                            Benefits of Merchandise & <span
-                                class="gradiant-text">OTB Planning</span>
-                        </h2>
-                    </div>
-                    <div class="custom-carousel">
-                        <div
-                            class="custom-carousel__item custom-carousel__item--left">
-                            <img class="img-fluid rounded-circle mb-4"
-                                src="./assets/images/flexibility.png"
-                                alt="Flexibility"
-                                style="width: 80px; height: 80px;" />
-                            <div class="carousel__text">
-                                <h4>Flexibility</h4>
-                                <p>Open-to-Buy planning empowers retailers to
-                                    carefully manage inventory levels, striking
-                                    the right balance between overstock and
-                                    shortages. Achieving this equilibrium
-                                    minimizes markdowns and ensures retailers
-                                    can capitalize on sales opportunities.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="custom-carousel__item custom-carousel__item--main">
-                            <img class="img-fluid rounded-circle mb-4"
-                                src="./assets/images/cash-flow.png"
-                                alt="Enhanced Cash Flow"
-                                style="width: 80px; height: 80px;" />
-                            <div class="carousel__text">
-                                <h4>Enhanced Cash Flow</h4>
-                                <p>By optimizing Open-to-Buy planning,
-                                    businesses avoid locking up capital in
-                                    excess inventory. This allows retailers to
-                                    reallocate financial resources to other
-                                    vital areas like marketing and business
-                                    expansion.</p>
-                            </div>
-                        </div>
-                        <div
-                            class="custom-carousel__item custom-carousel__item--right">
-                            <img class="img-fluid rounded-circle mb-4"
-                                src="./assets/images/customer-satisfaction.png"
-                                alt="Customer Satisfaction"
-                                style="width: 80px; height: 80px;" />
-                            <div class="carousel__text">
-                                <h4>Increased Customer Satisfaction</h4>
-                                <p>Open-to-Buy planning helps retailers
-                                    consistently meet customer demand by
-                                    ensuring products are readily available.
-                                    This reliability strengthens customer
-                                    loyalty and promotes repeat purchases, which
-                                    are critical for growth in today’s
-                                    competitive retail environment.</p>
-                            </div>
-                        </div>
-                        <div class="custom-carousel__item">
-                            <img class="img-fluid rounded-circle mb-4"
-                                src="./assets/images/decision_making.png"
-                                alt="Enhanced Decision-Making"
-                                style="width: 80px; height: 80px;" />
-                            <div class="carousel__text">
-                                <h4>Enhanced Decision-Making</h4>
-                                <p>OTB provides retailers with a structured
-                                    framework for inventory planning and
-                                    purchasing decisions. This allows retailers
-                                    to focus on products that align with sales
-                                    targets, allowing for data-driven and
-                                    informed choices.</p>
-                            </div>
-                        </div>
 
-                        <div class="custom-carousel__item">
-                            <img class="img-fluid rounded-circle mb-4"
-                                src="./assets/images/increased-profitability.png"
-                                alt="Increased Profitability"
-                                style="width: 80px; height: 80px;" />
-                            <div class="carousel__text">
-                                <h4>Increased Profitability</h4>
-                                <p>By optimizing inventory and reducing
-                                    markdowns, retailers can improve profit
-                                    margins. Proper use of OTB contributes to
-                                    more efficient inventory turnover, which
-                                    ultimately drives profitability.</p>
-                            </div>
-
-                        </div>
-
-                        <div class="custom-carousel__btns">
-                            <button class="custom-carousel__btn" id="leftBtn">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                        fill-rule="evenodd"
-                                        d="m15 4l2 2l-6 6l6 6l-2 2l-8-8z" />
-                                </svg>
-                            </button>
-                            <button class="custom-carousel__btn" id="rightBtn">
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24">
-                                    <path fill="currentColor"
-                                        fill-rule="evenodd"
-                                        d="m9.005 4l8 8l-8 8L7 18l6.005-6L7 6z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section> -->
-
-                <section class="case-sec mt-md-5 mt-0">
+            <section class="case-sec mt-md-5 mt-0">
             <div class="container">
                 <h2 class="pt-md-0 pt-4 h2 font-3">Benefits of Merchandise &<br>
                     <span class="gradiant-text">OTB Planning</span>
@@ -724,7 +442,7 @@ margin-top: 120px;
                                     <img class="img-fluid rounded-circle mb-4 img-fixed-size"
                                 src="./assets/images/flexibility.png"
                                 alt="Flexibility"
-                                style="width: 80px; height: 80px;"/>
+                                style="width: 90px; height: 90px;"/>
                                 </div>
                                 <div
                                     class="card-body position-relative text-dark pt-0">
@@ -746,7 +464,7 @@ margin-top: 120px;
                                     <img class="img-fluid rounded-circle mb-4 img-fixed-size"
                                 src="./assets/images/cash-flow.png"
                                 alt="Enhanced Cash Flow"
-                                style="width: 80px; height: 80px;" />
+                                style="width: 90px; height: 90px;" />
                                 </div>
                                 <div
                                     class="card-body position-relative text-dark pt-0">
@@ -768,7 +486,7 @@ margin-top: 120px;
                                     <img class="img-fluid rounded-circle mb-4 img-fixed-size"
                                 src="./assets/images/customer-satisfaction.png"
                                 alt="Customer Satisfaction"
-                                style="width: 80px; height: 80px;" />
+                                style="width: 90px; height: 90px;" />
                                 </div>
                                 <div
                                     class="card-body position-relative text-dark pt-0">
@@ -791,7 +509,7 @@ margin-top: 120px;
                                    <img class="img-fluid rounded-circle mb-4 img-fixed-size"
                                 src="./assets/images/decision_making.png"
                                 alt="Enhanced Decision-Making"
-                                style="width: 80px; height: 80px;" />
+                                style="width: 90px; height: 90px;" />
                                 </div>
                                 <div
                                     class="card-body position-relative text-dark pt-0">
@@ -813,7 +531,7 @@ margin-top: 120px;
                                     <img class="img-fluid rounded-circle mb-4 img-fixed-size"
                                 src="./assets/images/increased-profitability.png"
                                 alt="Increased Profitability"
-                                style="width: 80px; height: 80px;" />
+                                style="width: 90px; height: 90px;" />
                                 </div>
                                 <div
                                     class="card-body position-relative text-dark pt-0">
@@ -999,12 +717,12 @@ margin-top: 120px;
             <div class="content-btn">
                 <a href="contact-us">Contact Us</a>
             </div>
- <script src="https://code.jquery.com/jquery-2.2.0.min.js"
+            <script src="https://code.jquery.com/jquery-2.2.0.min.js"
                 type="text/javascript"></script>
-             <script src="./assets/js/slider.js" type="text/javascript"
+            <script src="./assets/js/slider.js" type="text/javascript"
                 charset="utf-8"></script>
             <link rel="stylesheet" href="./assets/css/slider.css">
-                        <script type="text/javascript">
+            <script type="text/javascript">
             $(document).on('ready', function() {
                 $('.center').slick({
                     centerMode: true,
@@ -1030,58 +748,9 @@ margin-top: 120px;
                     }]
                 });
             });
-        </script>
-            <script>
-            'use strict';
-            document.querySelector('.custom-carousel-container').addEventListener('click', function (event) {
-            const carouselItems = this.querySelectorAll('.custom-carousel__item');
-            let currentItem = this.querySelector('.custom-carousel__item--main');
-            const leftBtn = this.querySelector('#leftBtn');
-            const rightBtn = this.querySelector('#rightBtn');
+            </script>
 
-            if (event.target.closest('#rightBtn')) {
-                currentItem = this.querySelector('.custom-carousel__item--right');
-                const leftItem = this.querySelector('.custom-carousel__item--main');
-                carouselItems.forEach(item => {
-                item.classList = 'custom-carousel__item';
-                });
-                currentItem.classList.add('custom-carousel__item--main');
-                leftItem.classList.add('custom-carousel__item--left');
-                const currentId = Array.from(carouselItems).indexOf(currentItem);
-                const rightItem = currentId === carouselItems.length - 1 ? carouselItems[0] : carouselItems[currentId + 1];
-                rightItem.classList.add('custom-carousel__item--right');
-            } else if (event.target.closest('#leftBtn')) {
-                currentItem = this.querySelector('.custom-carousel__item--left');
-                const rightItem = this.querySelector('.custom-carousel__item--main');
-                carouselItems.forEach(item => {
-                item.classList = 'custom-carousel__item';
-                });
-                currentItem.classList.add('custom-carousel__item--main');
-                rightItem.classList.add('custom-carousel__item--right');
-                const currentId = Array.from(carouselItems).indexOf(currentItem);
-                const leftItem = currentId === 0 ? carouselItems[carouselItems.length - 1] : carouselItems[currentId - 1];
-                leftItem.classList.add('custom-carousel__item--left');
-            }
-            });
-
-            let autoplayInterval = setInterval(function() {
-            console.log('Triggering right button click...');
-            rightBtn.click();
-            }, 3000);
-
-            document.querySelector('.custom-carousel-container').addEventListener('mouseover', function() {
-            clearInterval(autoplayInterval);
-            });
-
-            document.querySelector('.custom-carousel-container').addEventListener('mouseout', function() {
-            autoplayInterval = setInterval(function() {
-                console.log('Triggering right button click...');
-                rightBtn.click();
-            }, 3000);
-            });
-        </script>
-
-            <script type="text/javascript">
+        <script type="text/javascript">
         $(document).ready(function () {
             var stickyNavTop = $('header').offset().top;
             var stickyNav = function () {
