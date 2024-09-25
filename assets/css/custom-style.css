@@ -666,22 +666,20 @@ footer .bottom-footer ul li {
     padding-left: 10px;
 }
 
-footer .bottom-footer ul li .fa:hover {
+footer .bottom-footer ul li a img:hover {
     color: #f74ddd;
 }
 
-footer .bottom-footer ul li .fa {
-    color: #fff;
-    font-size: 18px;
+footer .bottom-footer ul li a img {
     background: url(../images/fa-bg.png);
     width: 41px;
     height: 40px;
     justify-content: center;
+    padding: 10px;
     display: flex;
     align-items: center;
     text-align: center;
     background-size: cover;
-    text-align: center;
 }
 
 @keyframes slideInFromLeft {
