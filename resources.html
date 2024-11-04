@@ -14,27 +14,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/custom-style.css">
     <style>
-        body, html {
-            margin: 0;
-            background-color: #fff;
-        }
-        .centered-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
+    body, html {
+        margin: 0;
+        background-color: #F3F2EF;
+    }
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    .iframe-container {
+        padding: 15px;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+    .iframe-container img {
+        width:100%;
+        height: 280px;
+        max-height: 500px;
+        object-fit: fill;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -2px rgba(0,0,0,.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+    .iframe-container img:hover {
+        transform: translateY(-7px);
+        box-shadow: 0px 10px 10px #9f9d9d6f;
+    }
+
+
+    @media (min-width: 600px) {
         .iframe-container {
-            padding: 15px;
+            width: 48%;
         }
-        .iframe-container img {
-            width: 100%;
-            height:auto;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 8px;
+    }
+    @media (min-width: 900px) {
+        .iframe-container {
+            width: 30%;
         }
-    </style>
+    }
+</style>
+
 </head>
 <body>
     <section>
@@ -47,25 +71,39 @@
         <div class="container my-5">
             <div class="row">
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article2.webp" alt="Optimize Inventory">
+                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7257964632168910849/" target="_blank">
+                    <img src="assets/images/lnkedin_article1.webp" alt="Optimize Inventory">
+                </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article6.webp" alt="Maximizing Sales">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7247130377113219072/" target="_blank">
+                        <img src="assets/images/lnkedin_article2.webp" alt="Maximizing Sales">
+                    </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article3.webp" alt="Data Analytics">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7221197029786468352/" target="_blank">
+                        <img src="assets/images/lnkedin_article3.webp" alt="Data Analytics">
+                    </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article4.webp" alt="Merchandise Finance Plan">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7206244368951726080/" target="_blank">
+                        <img src="assets/images/lnkedin_article4.webp" alt="Merchandise Finance Plan">
+                    </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article7.webp" alt="Markdown Optimization">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7196034828146757632/" target="_blank">
+                        <img src="assets/images/lnkedin_article6.webp" alt="Markdown Optimization">
+                    </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article5.webp" alt="Demand Forecasting">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7200167959049166849/" target="_blank">
+                        <img src="assets/images/lnkedin_article5.webp" alt="Demand Forecasting">
+                    </a>
                 </div>
                 <div class="col-md-4 iframe-container">
-                    <img src="assets/images/lnkedin_article1.webp" alt="Basket Analysis">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7194319602389065728/" target="_blank">
+                        <img src="assets/images/lnkedin_article7.webp" alt="Basket Analysis">
+                    </a>
                 </div>
             </div>
         </div>
