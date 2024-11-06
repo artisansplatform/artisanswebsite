@@ -126,6 +126,20 @@
       height: 680px;
     }
 
+    .custom-class {
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      margin-top: -30px;
+      margin-bottom: 20px;
+      padding: 10px;
+      width: 80px;
+      height: 80px;
+    }
+
     @media (min-width: 768px) and (max-width: 1180px) {
       .card-container {
         margin-top: 7% !important;
@@ -157,7 +171,12 @@
       .card-des {
         font-size: 16px;
       }
+
+      .nav-tabs {
+        margin-bottom: 20px;
+      }
     }
+
 
     @media (max-width: 768px) {
       .card-container {
@@ -180,6 +199,10 @@
       .card {
         width: 90%;
         height: 250px;
+      }
+
+      .nav-tabs {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -266,7 +289,7 @@
   </section>
   <section class="artisans-sec mt-md-5 pt-md-3 pt-0 text-center">
     <div class="container">
-      <div class="col-12 pb-5 pb-md-0 m-auto mb-md-0">
+      <div class="col-12 pb-md-0 m-auto mb-md-0">
         <p>Our low-code platform is made to simplify retail by making app development easy, working smoothly
           with existing systems, and improving operations. Perfect for retailers, it helps deliver better
           customer service, strengthens security, and supports compliance for a more efficient retail
@@ -389,8 +412,7 @@
             <br>
             <div class="tab-content pl-md-5 pl-0">
               <div id="tab1" class="tab-pane">
-                <div
-                  style="padding: 10px; width: 80px; height: 80px; background-color: #f74ddd; border-radius: 50%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 2; margin-top: -30px; margin-bottom: 20px;">
+                <div class="custom-class" style=" background-color: #f74ddd; ">
                   <img src="./assets/images/tailored_applications_and_platforms.webp" style="width: 60px; height: 65px;"
                     alt="logo">
                 </div>
@@ -400,8 +422,7 @@
               </div>
 
               <div id="tab2" class="tab-pane show active">
-                <div
-                  style="padding: 10px; width: 80px; height: 80px; background-color: #8d67f5; border-radius: 50%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 2; margin-top: -30px; margin-bottom: 20px;">
+                <div class="custom-class" style="background-color: #8d67f5;">
                   <img src="./assets/images/interactive_aii.webp" style="width: 50px; height: 55px;" alt="logo">
                 </div>
                 <h3>Interactive AI</h3>
@@ -410,8 +431,7 @@
               </div>
 
               <div id="tab3" class="tab-pane">
-                <div
-                  style="padding: 10px; width: 80px; height: 80px; background-color: #12d9e3; border-radius: 50%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 2; margin-top: -30px; margin-bottom: 20px;">
+                <div class="custom-class" style="background-color: #12d9e3;">
                   <img src="./assets/images/smart_recognition_technologies.webp"
                     style="width: 60px; height: 55px; padding-left: 6px;" alt="logo">
                 </div>
@@ -750,22 +770,20 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      $("#country-codes li a").on("click", function () {
-        $("#country-codes #tel").val($(this).attr("value"));
-      });
-      $("#country-name li a").on("click", function () {
-        $("#country-name #country").val($(this).attr("value"));
+      $('#submit').on('click', function () {
+        $("#pcode").val($('.iti__selected-dial-code').text());
       });
 
-      var stickyNavTop = $("header").offset().top;
+
+      var stickyNavTop = $('header').offset().top;
       var stickyNav = function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 1) {
-          $("header").addClass("fixed-top");
-          $("header").addClass("sticky");
+          $('header').addClass('fixed-top');
+          $('header').addClass('sticky');
         } else {
-          $("header").removeClass("fixed-top");
-          $("header").removeClass("sticky");
+          $('header').removeClass('fixed-top');
+          $('header').removeClass('sticky');
         }
       };
       stickyNav();
@@ -778,20 +796,17 @@
       const showClass = "show";
       $(window).on("load resize", function () {
         if (this.matchMedia("(min-width: 768px)").matches) {
-          $dropdown.hover(
-            function () {
-              const $this = $(this);
-              $this.addClass(showClass);
-              $this.find($dropdownToggle).attr("aria-expanded", "true");
-              $this.find($dropdownMenu).addClass(showClass);
-            },
-            function () {
-              const $this = $(this);
-              $this.removeClass(showClass);
-              $this.find($dropdownToggle).attr("aria-expanded", "false");
-              $this.find($dropdownMenu).removeClass(showClass);
-            }
-          );
+          $dropdown.hover(function () {
+            const $this = $(this);
+            $this.addClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "true");
+            $this.find($dropdownMenu).addClass(showClass);
+          }, function () {
+            const $this = $(this);
+            $this.removeClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "false");
+            $this.find($dropdownMenu).removeClass(showClass);
+          });
         } else {
           $dropdown.off("mouseenter mouseleave");
         }
@@ -806,7 +821,6 @@
         var elementVisible = 50;
         if (elementTop < windowHeight - elementVisible) {
           reveals[i].classList.add("active");
-        } else {
         }
       }
     }
@@ -814,32 +828,32 @@
   </script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./assets/js/slider.js" type="text/javascript" charset="utf-8"></script>
-  <link rel="stylesheet" href="./assets/css/slider.css" />
+  <link rel="stylesheet" href="./assets/css/slider.css">
+
   <script type="text/javascript">
-    $(document).on("ready", function () {
-      $(".center").slick({
+    $(document).on('ready', function () {
+      $('.center').slick({
         centerMode: true,
         dots: false,
-        centerPadding: "0",
+        centerPadding: '0',
         slidesToShow: 3,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              centerMode: true,
-              centerPadding: "0",
-              slidesToShow: 3,
-            },
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              centerMode: true,
-              centerPadding: "0",
-              slidesToShow: 1,
-            },
-          },
-        ],
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+
+            centerMode: true,
+            centerPadding: '0',
+            slidesToShow: 3
+          }
+        }, {
+          breakpoint: 480,
+          settings: {
+
+            centerMode: true,
+            centerPadding: '0',
+            slidesToShow: 1
+          }
+        }]
       });
     });
   </script>
@@ -847,14 +861,13 @@
   <script>
     var input = document.querySelector("#tel");
     window.intlTelInput(input, {
-      separateDialCode: true,
+      separateDialCode: true
     });
 
     $("#country_selector").countrySelect({
-      preferredCountries: ["us"],
+      preferredCountries: ['us']
     });
-
-    const copyrightYearElement = document.getElementById("copyright-year");
+    const copyrightYearElement = document.getElementById('copyright-year');
     copyrightYearElement.textContent = new Date().getFullYear();
   </script>
 </body>
