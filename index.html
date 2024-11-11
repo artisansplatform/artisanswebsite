@@ -19,6 +19,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/custom-style.css">
         <style>
+            html,
+            body {
+                overflow-x: hidden;
+            }
             .slide-container {
             margin: 0 auto;
             width: 100%;
@@ -75,6 +79,43 @@
             #prev-btn {
                 margin-left: 100px;
             }
+            .card-holder .card {
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            min-height: 320px;
+            }
+            .card-adaptability {
+            background-color: #E8F8FA;
+            }
+            .card-efficiency {
+            background-color: #FCE7F3;
+            }
+
+            .card-decision-making {
+            background-color: #E9E7FC;
+            }
+            .card-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            }
+            .card-team-overlay .card-img-top {
+            width: 80px;
+            height: 80px;
+            transform: translateY(-2.5rem);
+            }
+            .card-holder{
+            padding: 0px 120px!important;
+            }
+            .mt-md-5, .my-md-5 {
+            margin-top:0 !important;
+            padding: 0 2.5% !important;
+            }
+            .custom-h2{
+            padding: 0 90px !important;
+            }
 
             @media (max-width: 767px) {
             #next-btn {
@@ -85,17 +126,27 @@
                 margin-left: 5px;
                 margin-top: 150px;
             }
+            .card-holder .card {
+            min-height: auto;
             }
+            .card-holder{
+            padding: 0px !important;
+            }
+            .custom-h2{
+            padding: 0 !important;
+            }
+            }
+
             @media (min-width: 768px) and (max-width: 1024px) {
-             #next-btn {
-              margin-right: 5px;
-              margin-top: 10px;
-             }
+            #next-btn {
+            margin-right: 5px;
+            margin-top: 10px;
+            }
             #prev-btn {
-              margin-left: 5px;
-              margin-top: 10px;
-             }
-        }
+            margin-left: 5px;
+            margin-top: 10px;
+            }
+            }
         </style>
     </head>
     <body>
@@ -162,15 +213,13 @@
                                     <div class="row">
                                         <div class="col-12 col-md-6 text-white fadeInAnimation">
                                             <h1>
-                                                The freedom of choice opens
-                                                <span class="gradiant-text">doors to endless opportunities.</span>
+                                                Streamline, Optimize, and Align <span class="gradiant-text">Retail Planning and Supply Chain Operations
+                                                </span>
                                             </h1>
                                             <p>
-                                                Enterprise Composable Commerce Platform designed to revolutionize
-                                                digital commerce by addressing the limitations of traditional
-                                                monolithic systems.
+                                                Achieve seamless integration of supply, demand, merchandising, and operations planning with the <br> power of artisans' Al-driven unified retail platform.
                                             </p>
-                                            <a class="btn btn-primary mt-4" href="contact-us">Learn How</a>
+                                            <a class="btn btn-primary mt-4" href="contact-us">Book A 30 MINUTES DEMO</a>
                                         </div>
                                         <div class="col-12 col-md-6">
                                             <img fetchpriority="high" src="./assets/images/banner-image.png" alt="Banner Image" class="w-100 fadeInAnimation">
@@ -238,137 +287,88 @@
                 </div>
             </div>
         </section>
-        <section class="artisans-sec mt-5 pt-5 text-center">
-            <div class="container">
-                <div class="col-12 col-md-10 pb-5 m-auto fadeInAnimation">
-                    <h2 class="mb-3">Empowering Commerce <span class="gradiant-text">Excellence through Modern Technology</span></h2>
-                    <p>Ignite innovation, scale growth, and elevate customer experiences with our cutting-edge Composable Commerce Platform. Empower your business to rewire its core, unlocking unparalleled flexibility and success. Discover the transformative technology that drives adaptability, evolution, and scalability to meet the demands of a thriving marketplace.</p>
-                </div>
-                <div class="row pt-5">
-                    <div class="col-12 col-lg-4 text-left mb-5 fadeInAnimation">
-                        <h3>Streamline Customer Experiences, Optimize Operations, Minimize Costs</h3>
-                    </div>
-                    <div class="col-12 col-lg-8 fadeInAnimation">
-
-
-                        <div class="row">
-
-                            <div class="col-6 col-xl-3 pb-5">
-                                <article class="card card-team-overlay position-relative h-100">
-                                    <a href="#">
-                                        <div class="card-img-top position-relative rounded overflow-hidden">
-                                            <img src="./assets/images/icon.png" alt="logo">
-                                        </div>
-                                        <div class="card-body mt-n5">
-                                            <div class="text-container">
-                                                <div class="cont text-center">
-                                                    <h5 class="card-title">Composable Commerce</h5>
-                                                    <p>Leverage cutting-edge microservices capabilities to construct a highly tailored, modular commerce platform that amplifies your business's agility, facilitating rapid scalability</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="col-6 col-xl-3 pb-5">
-                                <article class="card card-team-overlay position-relative h-100">
-                                    <a href="#">
-                                        <div class="card-img-top position-relative rounded overflow-hidden">
-                                            <img src="./assets/images/icon-3.png" alt="logo">
-                                        </div>
-                                        <div class="card-body mt-n5">
-                                            <div class="text-container">
-                                                <div class="cont text-center">
-                                                    <h5 class="card-title">Headless Commerce </h5>
-                                                    <p>Unlock the potential of decoupling front-end from back-end to harness expanding landscape of customer touchpoints and interactions. Don't let tech stack hinder progress; embrace agility for seamless growth.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="col-6 col-xl-3 pb-5">
-                                <article class="card card-team-overlay position-relative h-100">
-                                    <a href="#">
-                                        <div class="card-img-top position-relative rounded overflow-hidden">
-                                            <img src="./assets/images/icon-2.png" alt="logo">
-                                        </div>
-                                        <div class="card-body mt-n5">
-                                            <div class="text-container">
-                                                <div class="cont text-center">
-                                                    <h5 class="card-title">Unified Commerce</h5>
-                                                    <p>Forge a unified journey across channels, technologies, and platforms with a single source of truth. Eliminate technical debt and uphold exceptional customer experiences, without compromise.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-							<div class="col-6 col-xl-3 pb-5">
-                                <article class="card card-team-overlay position-relative h-100">
-                                    <a href="#">
-                                        <div class="card-img-top position-relative rounded overflow-hidden">
-                                            <img src="./assets/images/icon-4.png" alt="logo">
-                                        </div>
-                                        <div class="card-body mt-n5">
-                                            <div class="text-container">
-                                                <div class="cont text-center">
-                                                    <h5 class="card-title">Omnichannel Retailing</h5>
-                                                    <p>Optimize your retail operations by integrating offline and online touchpoints, breaking silos for a consistent customer experience, increased sales, and enhanced loyalty</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <section class="artisans-sec pt-md-5 mt-md-3 pt-0 text-center merchandise-section3">
+        <div class="container">
+            <div class="col-12 pb-md-5 m-auto">
+                <h2 class="mb-3 mt-3 mt-md-0"> Drive Sales, Reduce Costs, and Minimize Waste with<span class="gradiant-text"><br> a Unified Retail Platform</span></h2>
+                    <p class="col-md-12">artisans Commerce Cloud integrates Al and machine learning technology to deliver data-driven insights that align retail operations with real-time demand. Our platform helps retailers increase sales, reduce operational costs, and cut down on waste through intelligent analytics, forecasting, and optimization, providing a bridge to improved profitability.</p>
+            </div>
+        </div>
         </section>
-        <section class="left-right-image-sec mt-5 pt-5">
-            <div class="container">
-                <div class="row align-items-center pb-5 ">
-                    <div class="col-md-6 how-img pr-5">
-                        <img src="./assets/images/product-xperience-management.png" alt="logo" class="w-100 fadeInAnimation">
+
+        <section class="left-right-image-sec mt-4 mb-md-5 fadeInAnimation">
+            <div class="container" style="background-color: #e2e3e479;">
+                <div class="row align-items-center pb-5 pb-md-3">
+                    <div class="col-md-5 order-md-2 mt-3 p-2 pb-md-0 pl-md-5">
+                        <img src="./assets/images/end-to-end-banner.webp" alt="logo" class="mt-md-5 img-fluid pr-md-5" style="float: right;">
                     </div>
-                    <div class="col-md-6 fadeInAnimation">
-                        <h2 class="pt-md-0 pt-4">Onboard, enrich and syndicate product data for today’s dynamic marketing environment.</h2>
-                        <p>Streamline product data governance and management to swiftly bring products to market, all while crafting exceptional customer experiences. Embrace accelerated product launches, higher conversion rates, and a turbocharged team performance.</p>
-                        <a class="btn btn-primary mt-2" href="product-xperience-management">Explore Artisan’s Product Xperience Management</a>
-                    </div>
-                </div>
-                <div class="row align-items-center pb-5 ">
-                    <div class="col-md-6 how-img order-md-2">
-                        <img src="./assets/images/distributed-order-management.png" alt="logo" class="w-100 fadeInAnimation">
-                    </div>
-                    <div class="col-md-6 pr-5 fadeInAnimation">
-                        <h2 class="pt-md-0 pt-4">Seamless orchestration. Empower your business with Distributed Order Management.</h2>
-                        <p>Build robust omnichannel sales capabilities with a single-pane view of all your orders across offline and online sales channels. Transform your retail operations with real-time inventory management, intelligent order routing and dynamic order fulfillment.</p>
-                        <a class="btn btn-secondary mt-2" href="distributed-order-management">Explore artisan’s Distributed Order Management</a>
-                    </div>
-                </div>
-                <div class="row align-items-center pb-5 ">
-                    <div class="col-md-6 how-img pr-5">
-                        <img src="./assets/images/composablecommerce.png" alt="logo" class="w-100 fadeInAnimation">
-                    </div>
-                    <div class="col-md-6 fadeInAnimation">
-                        <h2 class="pt-md-0 pt-4">Build and Scale Your Business with Modular Core and Seamless Customer Journeys</h2>
-                        <p>Build and scale your Ecommerce business with unmatched agility by capitalizing on the modular core of composable commerce. Integrate with other platforms and design seamless customer journeys that remain consistent across all channels.</p>
-                        <a class="btn btn-pruple mt-2" href="solution">Discover Artisan’s Composable Commerce</a>
-                    </div>
-                </div>
-				 <div class="row align-items-center pb-5 ">
-                    <div class="col-md-6 how-img order-md-2">
-                        <img src="./assets/images/customer-xperience-management.png" alt="logo" class="w-100 fadeInAnimation">
-                    </div>
-                    <div class="col-md-6 pr-5 fadeInAnimation">
-                        <h2 class="pt-md-0 pt-4">Elevate customer experience and gain competitive edge in today's dynamic marketplace</h2>
-                        <p>Seamlessly connect with customers across multiple touchpoints, understand their preferences and personalize interactions at every stage. Gain valuable insights, analyze feedback and make data-driven decisions to enhance satisfaction and loyalty.</p>
-                        <a class="btn btn-secondary mt-2" href="customer-xperience-management">Explore Artisan’s Customer Xperience Management</a>
+                    <div class="col-md-7 mt-md-5 pr-0">
+                        <h3 class="pt-md-3">Connect End-to-End Planning for <span class="gradiant-text">Real-Time Impact</span></h3> <br>
+                        <p>Harness a Unified Retail Platform that offers full visibility across Planning, Sales, and Operations. Using advanced forecasting and replenishment algorithms, our system enables retailers to maintain optimal stock levels. Our scalable, cloud-based architecture ensures seamless execution, from planning to day-to-day operations, with a focus on continuous improvement.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="artisans-sec mt-5 pt-md-5 text-center">
+            <div class="container">
+                <div class="col-md-12 pb-md-0 m-auto fadeInAnimation">
+                    <h2 class="mb-3 custom-h2">Facilitate Collaboration Across Teams <span class="gradiant-text">for Better Decision-Making</span></h2>
+                    <p>Break down silos between departments with artisans Commerce Cloud. Our platform promotes seamless communication and data sharing, ensuring that your planning is consistent and cohesive from the supply chain to the sales floor. This collaborative approach enhances decision-making, synchronizes operations, and drives effective execution across the organization.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-holder">
+            <div class="row pt-5 mt-md-3 justify-content-around g-4 fadeInAnimation">
+                <div class="col-12 col-md-6 col-xl-3 pb-5 d-flex justify-content-center">
+                    <article class="card card-team-overlay position-relative h-100" style="background-color: #def7fa;">
+                        <div class="card-img-top position-relative rounded overflow-hidden border card-icon" style="border-width: 2px !important; border-color: #a4d9e0 !important;">
+                            <img src="./assets/images/build-adaptablility.webp" alt="logo">
+                        </div>
+                        <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                            <div class="text-container">
+                                <div class="cont text-center">
+                                    <h5 class="card-title pb-2">Build Adaptability <br> and Resilience</h5>
+                                    <p>Stay ahead of market fluctuations with tools that help your teams respond rapidly to disruptions and changes. Our solution is designed to build resilience and adaptability into your operations, keeping your business agile.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 pb-5 d-flex justify-content-center">
+                    <article class="card card-team-overlay position-relative h-100" style="background-color: #FCE7F3;">
+                        <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thick" style="background-color: #FCE7F3; border-width: 2px !important; border-color: #e8bad4 !important;">
+                            <img src="./assets/images/achieve-cost-efficiency.webp" alt="logo">
+                        </div>
+                        <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                            <div class="text-container">
+                                <div class="cont text-center">
+                                    <h5 class="card-title pb-2">Achieve Cost Efficiency <br> with Smarter Processes</h5>
+                                    <p>Optimize processes for greater efficiency, unlocking significant cost-saving opportunities through data-driven planning and execution strategies.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-12 col-md-6 col-xl-3 pb-md-5 d-flex justify-content-center">
+                    <article class="card card-team-overlay position-relative h-100" style="background-color: #E9E7FC;">
+                        <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thicker" style="background-color: #E9E7FC; border-width: 2px !important; border-color: #bebae0 !important;">
+                            <img src="./assets/images/empower-informed-decision-making.webp" alt="logo">
+                        </div>
+                        <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                            <div class="text-container">
+                                <div class="cont text-center">
+                                    <h5 class="card-title pb-2">Empower Informed <br> Decision-Making Across <br> Your Organization</h5>
+                                    <p>Coordinate efforts across departments to enable impactful decisions that drive success. Our unified platform provides teams with insights to act swiftly and strategically.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section class="blue-sec mt-5 pt-5 text-white">
             <div class="container">
                 <div class="row align-items-center py-md-5 py-2">
@@ -520,7 +520,8 @@
         </section>
         <section class="contect-sec text-white">
             <div class="text-right fadeInAnimation">
-                <h2>Contact us today to understand <br>how we assist Retailers to Excel in <br> Digital Transformation </h2>
+                <h2>Ready to Elevate Your <br> Retail and Supply Chain Strategy?</h2>
+                <p>Let's connect to explore how artisans Commerce Cloud can meet your unique <br> business needs and fuel sustainable growth across sales channels.</p>
                 <a class="btn btn-white" href="contact-us">
                     <span class="gradiant-text">Contact Us</span>
                 </a>
