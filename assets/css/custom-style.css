@@ -887,6 +887,12 @@ form span.dropdown-toggle {
     background-size: 100% 100%;
 }
 
+.gray-tab-sec {
+    padding: 15vh 0 !important;
+    background: url("../images/shep.webp");
+    background-size: 100% 100%;
+}
+
 .leverage-sec {
     padding: 30vh 0 !important;
     background: url("../images/D2C-bg.png");
