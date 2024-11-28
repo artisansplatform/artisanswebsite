@@ -887,6 +887,12 @@ form span.dropdown-toggle {
     background-size: 100% 100%;
 }
 
+.gray-tab-sec {
+    padding: 15vh 0 !important;
+    background: url("../images/shep.webp");
+    background-size: 100% 100%;
+}
+
 .leverage-sec {
     padding: 30vh 0 !important;
     background: url("../images/D2C-bg.png");
@@ -1582,6 +1588,12 @@ background-size: 100% 100%;
         background-size: cover;
     }
 
+    .gray-tab-sec {
+        padding: 15vh 0 !important;
+        background: url(../images/shep.webp);
+        background-size: cover;
+    }
+
     h2.h2 {
         font-size: 45px;
         margin-bottom: 20px;
@@ -1957,6 +1969,11 @@ background-size: 100% 100%;
     }
 
     .tab-sec {
+        background-size: cover !important;
+        padding: 50px 0 200px !important;
+    }
+
+    .gray-tab-sec {
         background-size: cover !important;
         padding: 50px 0 200px !important;
     }
