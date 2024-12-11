@@ -1240,32 +1240,27 @@ background-size: 100% 100%;
     text-decoration: none;
 }
 
-@media (min-width: 2401px) and (max-width: 100000px) {
-    section.blue-bg {
-        height: auto;
-        padding-bottom: 120px;
+@media only screen and (max-width: 600px){
+    .custom-nav-item .custom-dropdown-menu .custom-dropdown-menu {
+        left: 0;
+        display:block;
+        transition: all 0.3s ease;
     }
+    .custom-nav-item .custom-dropdown-menu {
+        position: relative;
 
-    .contect-sec {
-        width: 85%;
-        padding: 120px 100px 200px 0;
-        margin-bottom: -175px !important;
+        }
+    .custom-nav-link{
+        margin-left: 15px;
     }
+    .custom-nav-item .custom-dropdown-menu {
 
-    body {
-        width: 1900px;
-        margin: auto;
+    padding: 5px 0px;
     }
-
-    .container {
-        max-width: 1700px;
-        padding: 0;
+    .sub-item{
+        margin-left: 10px;
     }
-
-    .solution-list p {
-        font-size: 18px;
     }
-}
 
 
 @media (min-width: 1800px) and (max-width: 2400px) {
