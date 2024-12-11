@@ -175,6 +175,29 @@
             margin-top: 10px;
             }
             }
+            /* Dropwdown for mobile*/
+            @media only screen and (max-width: 600px){
+            .custom-nav-item .custom-dropdown-menu .custom-dropdown-menu {
+                left: 0;
+                display:block;
+                transition: all 0.3s ease;
+            }
+            .custom-nav-item .custom-dropdown-menu {
+                position: relative;
+
+                }
+            .custom-nav-link{
+                margin-left: 15px;
+            }
+            .custom-nav-item .custom-dropdown-menu {
+
+            padding: 5px 0px;
+            }
+            .sub-item{
+                margin-left: 10px;
+            }
+            }
+
         </style>
     </head>
     <body>
@@ -191,31 +214,39 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav ml-auto">
-                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>
-                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-									    <a class="dropdown-item" href="artisans-commerce-cloud">artisans Commerce Cloud</a>
-                                        <a class="dropdown-item" href="merchandise-planning">Merchandise Planning</a>
-                                        <a class="dropdown-item" href="assortment-planning">Assortment Planning</a>
-                                        <a class="dropdown-item" href="POS">Enterprise Point of Sales</a>
-									    <a class="dropdown-item" href="product-xperience-management">Product Xperience Management</a>
-										<a class="dropdown-item" href="distributed-order-management">Distributed Order Management</a>
-										<a class="dropdown-item" href="customer-xperience-management">Customer Xperience Management</a>
-										<a class="dropdown-item" href="d2c-ecommerce"> D2C eCommerce</a>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="platforms">Platform</a>
                                 </li>
-                                <li class="nav-item dropdown">
-
-									 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Use Cases </a>
-                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-									    <a class="dropdown-item" href="solution">Composable Commerce</a>
-										<a class="dropdown-item" href="unified-commerce">Unified Commerce</a>
-                                        <a class="dropdown-item" href="headless-commerce">Headless Commerce</a>
-
+                               <li class="custom-nav-item custom-dropdown">
+                                    <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle" id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Solutions
+                                    </a>
+                                    <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                        <div class="custom-dropdown position-relative">
+                                            <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle" id="customNestedDropdown" role="button">
+                                                Supply Chain Planning
+                                            </a>
+                                            <div class="custom-dropdown-menu gaps-1">
+                                                <a class="custom-dropdown-item sub-item" href="merchandise-planning">Merchandise Planning</a>
+                                                <a class="custom-dropdown-item sub-item" href="assortment-planning">Assortment Planning</a>
+                                            </div>
+                                        </div>
+                                        <div class="custom-dropdown">
+                                            <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle" id="customNestedDropdown" role="button">
+                                                Omnichannel Commerce
+                                            </a>
+                                            <div class="custom-dropdown-menu gaps">
+                                                <a class="custom-dropdown-item sub-item" href="unified-commerce">Overview</a>
+                                                <a class="custom-dropdown-item sub-item" href="distributed-order-management">Distributed Order Management</a>
+                                                <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of Sales</a>
+                                                <a class="custom-dropdown-item sub-item" href="customer-xperience-management">Customer Xperience Management</a>
+                                                <a class="custom-dropdown-item sub-item" href="distributed-order-management">D2C eCommerce</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                   <a class="nav-link" href="Integrations">Integrations</a>
+                                    <a class="nav-link" href="Integrations">Integrations</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="artificial-intelligence">Artificial Intelligence</a>
@@ -805,45 +836,84 @@
         // Dropdowns
         const dropdowns = {
             init: function() {
-            function handleDropdowns() {
-                if (window.innerWidth >= 768) {
-                document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                    dropdown.addEventListener("mouseenter", function () {
-                    this.classList.add("show");
-                    this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
-                    this.querySelector(".dropdown-menu").classList.add("show");
-                    });
-                    dropdown.addEventListener("mouseleave", function () {
-                    this.classList.remove("show");
-                    this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
-                    this.querySelector(".dropdown-menu").classList.remove("show");
-                    });
-                });
-                } else {
-                document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
-                    dropdownToggle.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    const dropdownMenu = this.nextElementSibling;
-                    const isOpen = dropdownMenu.classList.contains("show");
+                function handleDropdowns() {
+                    if (window.innerWidth >= 768) {
+                        // Desktop view: handle hover
+                        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
 
-                    document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                        menu.classList.remove("show");
-                    });
+                        // Handle nested dropdowns on desktop
+                        document.querySelectorAll(".dropdown-menu .dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
 
-                    if (!isOpen) {
-                        dropdownMenu.classList.add("show");
                     } else {
-                        dropdownMenu.classList.remove("show");
-                    }
-                    });
-                });
-                }
-            }
+                        // Mobile view: handle click
+                        document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
+                            dropdownToggle.addEventListener("click", function (e) {
+                                e.preventDefault();
+                                const dropdownMenu = this.nextElementSibling;
+                                const isOpen = dropdownMenu.classList.contains("show");
 
-            handleDropdowns();
-            window.addEventListener("resize", throttle(handleDropdowns, 200));
+                                // Close all dropdowns
+                                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    dropdownMenu.classList.add("show");
+                                } else {
+                                    dropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+
+                        // Handle nested dropdowns on mobile
+                        document.querySelectorAll(".dropdown-menu .dropdown .dropdown-toggle").forEach(function (nestedDropdownToggle) {
+                            nestedDropdownToggle.addEventListener("click", function (e) {
+                                e.stopPropagation();  // Prevent closing parent dropdown
+                                const nestedDropdownMenu = this.nextElementSibling;
+                                const isOpen = nestedDropdownMenu.classList.contains("show");
+
+                                // Close all nested dropdowns
+                                document.querySelectorAll(".dropdown-menu .dropdown .dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    nestedDropdownMenu.classList.add("show");
+                                } else {
+                                    nestedDropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+                    }
+                }
+
+                handleDropdowns();
+                window.addEventListener("resize", throttle(handleDropdowns, 200));
             },
         };
+
         // Navbar toggle logic for small screens
         const navbarToggler = document.querySelector(".navbar-toggler");
         const navbarMenu = document.querySelector("#navbarNavDropdown");

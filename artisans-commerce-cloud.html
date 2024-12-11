@@ -26,6 +26,7 @@
     .underline {
     text-decoration: underline;
     }
+    /* Dropdown */
     .custom-nav-item .custom-dropdown-menu {
     display: none;
     position: absolute;
@@ -74,18 +75,26 @@
     color: black;
     text-decoration: none;
 }
+/* Dropdown for mobile */
 @media only screen and (max-width: 600px){
 .custom-nav-item .custom-dropdown-menu .custom-dropdown-menu {
-    top: 0;
+    top: 10%;
     left: 0;
     display: none;
-
+    transition: all 0.3s ease;
 }
 .custom-nav-item .custom-dropdown-menu {
        position: relative;
-       margin-bottom: auto;}
+
+    }
 .custom-nav-link{
     margin-left: 15px;
+}
+.custom-dropdown-item{
+    padding-left: 20px;
+}
+.sub-item{
+    padding-left:30px;
 }
 }
 
@@ -122,7 +131,7 @@
                                                 <a class="custom-dropdown-item sub-item" href="assortment-planning">Assortment Planning</a>
                                             </div>
                                         </div>
-                                        <div class="custom-dropdown position-relative">
+                                        <div class="custom-dropdown">
                                             <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle" id="customNestedDropdown" role="button">
                                                 Omnichannel Commerce
                                             </a>
@@ -501,9 +510,9 @@ Embark on this transformative adventure with artisans and discover the magic of 
 
                         <ul>
                              <li><a href="platforms">Platform</a></li>
-    <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
-    <li><a href="automation">Automation</a></li>
-    <li><a href="resources">Resources</a></li>
+                            <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                            <li><a href="automation">Automation</a></li>
+                            <li><a href="resources">Resources</a></li>
                             <li>
                                 <a href="contact-us">Contact Us</a>
                             </li>
@@ -599,49 +608,48 @@ Embark on this transformative adventure with artisans and discover the magic of 
                 $(window).scroll(function() {
                     stickyNav();
                 });
-                const $dropdown = $(".dropdown");
-const $dropdownToggle = $(".dropdown-toggle");
-const $dropdownMenu = $(".dropdown-menu");
-const showClass = "show";
+                const $dropdown = $(".custom-dropdown");
+                const $dropdownToggle = $(".custom-dropdown-toggle");
+                const $dropdownMenu = $(".custom-dropdown-menu");
+                const showClass = "show";
 
-$(window).on("load resize", function () {
-    if (this.matchMedia("(min-width: 768px)").matches) {
-        $dropdown.hover(
-            function () {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-            },
-            function () {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
-            }
-        );
+                $(window).on("load resize", function () {
+                    if (this.matchMedia("(min-width: 768px)").matches) {
+                        $dropdown.hover(
+                            function () {
+                                const $this = $(this);
+                                $this.addClass(showClass);
+                                $this.find($dropdownToggle).attr("aria-expanded", "true");
+                                $this.find($dropdownMenu).addClass(showClass);
+                            },
+                            function () {
+                                const $this = $(this);
+                                $this.removeClass(showClass);
+                                $this.find($dropdownToggle).attr("aria-expanded", "false");
+                                $this.find($dropdownMenu).removeClass(showClass);
+                            }
+                        );
 
-        // Handle nested dropdowns
-        $(".dropdown-menu .dropdown").hover(
-            function () {
-                const $this = $(this);
-                $this.addClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "true");
-                $this.find($dropdownMenu).addClass(showClass);
-            },
-            function () {
-                const $this = $(this);
-                $this.removeClass(showClass);
-                $this.find($dropdownToggle).attr("aria-expanded", "false");
-                $this.find($dropdownMenu).removeClass(showClass);
-            }
-        );
-    } else {
-        $dropdown.off("mouseenter mouseleave");
-        $(".dropdown-menu .dropdown").off("mouseenter mouseleave");
-    }
-});
-
+                        // Handle nested dropdowns
+                        $(".dropdown-menu .dropdown").hover(
+                            function () {
+                                const $this = $(this);
+                                $this.addClass(showClass);
+                                $this.find($dropdownToggle).attr("aria-expanded", "true");
+                                $this.find($dropdownMenu).addClass(showClass);
+                            },
+                            function () {
+                                const $this = $(this);
+                                $this.removeClass(showClass);
+                                $this.find($dropdownToggle).attr("aria-expanded", "false");
+                                $this.find($dropdownMenu).removeClass(showClass);
+                            }
+                        );
+                    } else {
+                        $dropdown.off("mouseenter mouseleave");
+                        $(".dropdown-menu .dropdown").off("mouseenter mouseleave");
+                    }
+                });
             });
 
             function fadeInAnimation() {
