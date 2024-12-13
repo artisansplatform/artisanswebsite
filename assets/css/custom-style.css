@@ -1191,33 +1191,76 @@ padding: 20vh 0 !important;
 background: url("../images/tab-bg.png");
 background-size: 100% 100%;
 }
-
-@media (min-width: 2401px) and (max-width: 100000px) {
-    section.blue-bg {
-        height: auto;
-        padding-bottom: 120px;
-    }
-
-    .contect-sec {
-        width: 85%;
-        padding: 120px 100px 200px 0;
-        margin-bottom: -175px !important;
-    }
-
-    body {
-        width: 1900px;
-        margin: auto;
-    }
-
-    .container {
-        max-width: 1700px;
-        padding: 0;
-    }
-
-    .solution-list p {
-        font-size: 18px;
-    }
+.custom-nav-item .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    font-size: 1rem;
+    border-radius: 0.50rem;
+    background: linear-gradient(90deg, #12d9e3 10%, #8d67f5 60%, #f74ddd 80%);
+    box-shadow: 0px 2px 31px 0px rgba(115, 155, 244, 0.15);
+    padding: 10px 0px;
 }
+
+.custom-dropdown>a {
+    text-decoration: none !important;
+}
+
+.custom-nav-item.custom-dropdown:hover>.custom-dropdown-menu {
+    display: block;
+}
+
+.custom-nav-item .custom-dropdown-menu .custom-dropdown {
+    position: relative;
+}
+
+.custom-nav-item .custom-dropdown-menu .custom-dropdown-menu {
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+.custom-nav-item .custom-dropdown-menu .custom-dropdown:hover>.custom-dropdown-menu {
+    display: block;
+}
+
+.custom-dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 14px;
+    text-wrap: nowrap;
+    text-decoration: none;
+    transition: all 0.1s ease;
+}
+
+.custom-dropdown-item:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 600px){
+    .custom-nav-item .custom-dropdown-menu .custom-dropdown-menu {
+        left: 0;
+        display:block;
+        transition: all 0.3s ease;
+    }
+    .custom-nav-item .custom-dropdown-menu {
+        position: relative;
+
+        }
+    .custom-nav-link{
+        margin-left: 15px;
+    }
+    .custom-nav-item .custom-dropdown-menu {
+
+    padding: 5px 0px;
+    }
+    .sub-item{
+        margin-left: 10px;
+    }
+    }
 
 
 @media (min-width: 1800px) and (max-width: 2400px) {

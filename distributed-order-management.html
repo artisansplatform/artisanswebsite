@@ -29,8 +29,8 @@
             <header>
                 <div class="container">
                     <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
-                        <a class="navbar-brand" href="index">
-                            <img src="./assets/images/logo.png" alt="logo" width="300">
+                         <a class="navbar-brand" href="index">
+                            <img fetchpriority="high" src="./assets/images/logo.png" alt="logo" width="300">
                         </a>
                         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fa fa-bars" aria-hidden="true"></i>
@@ -38,27 +38,35 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
                             <ul class="navbar-nav ml-auto">
-                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Products </a>
-                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-									    <a class="dropdown-item" href="artisans-commerce-cloud">artisans Commerce Cloud</a>
-                                        <a class="dropdown-item" href="merchandise-planning">Merchandise Planning</a>
-                                        <a class="dropdown-item" href="assortment-planning">Assortment Planning</a>
-                                        <a class="dropdown-item" href="POS">Enterprise Point of Sales</a>
-									    <a class="dropdown-item" href="product-xperience-management">Product Xperience Management</a>
-										<a class="dropdown-item" href="distributed-order-management">Distributed Order Management</a>
-										<a class="dropdown-item" href="customer-xperience-management">Customer Xperience Management</a>
-										<a class="dropdown-item" href="d2c-ecommerce"> D2C eCommerce</a>
-                                    </div>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="platform">Platform</a>
                                 </li>
-                                <li class="nav-item dropdown">
-
-									 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Use Cases </a>
-                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
-									    <a class="dropdown-item" href="solution">Composable Commerce</a>
-										<a class="dropdown-item" href="unified-commerce">Unified Commerce</a>
-                                        <a class="dropdown-item" href="headless-commerce">Headless Commerce</a>
-
+                               <li class="custom-nav-item custom-dropdown">
+                                    <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle" id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Solutions
+                                    </a>
+                                    <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                        <div class="custom-dropdown position-relative">
+                                            <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle" id="customNestedDropdown" role="button">
+                                                Supply Chain Planning
+                                            </a>
+                                            <div class="custom-dropdown-menu gaps-1">
+                                                <a class="custom-dropdown-item sub-item" href="merchandise-planning">Merchandise Planning</a>
+                                                <a class="custom-dropdown-item sub-item" href="assortment-planning">Assortment Planning</a>
+                                            </div>
+                                        </div>
+                                        <div class="custom-dropdown">
+                                            <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle" id="customNestedDropdown" role="button">
+                                                Omnichannel Commerce
+                                            </a>
+                                            <div class="custom-dropdown-menu gaps">
+                                                <a class="custom-dropdown-item sub-item" href="unified-commerce">Overview</a>
+                                                <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of Sales</a>
+                                                <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C eCommerce</a>
+                                                <a class="custom-dropdown-item sub-item" href="distributed-order-management">Distributed Order Management</a>
+                                                <a class="custom-dropdown-item sub-item" href="customer-xperience-management">Customer Xperience Management</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </li>
                                 <li class="nav-item">
@@ -379,77 +387,41 @@
 						 <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
 						 <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a></p>
                     </div>
-                    <div class="col-12 col-sm-3">
-                        <p>
-                            <b>Products</b>
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="artisans-commerce-cloud">artisans Commerce Cloud</a>
-                            </li>
-                            <li>
-                                <a href="merchandise-planning">Merchandise Planning</a>
-                            </li>
-                            <li>
-                                <a href="assortment-planning">Assortment Planning</a>
-                            </li>
-                            <li>
-                                <a href="POS.html">Enterprise Point of Sales</a>
-                            </li>
-                            <li>
-                                <a href="product-xperience-management">Product Xperience Management</a>
-                            </li>
-                            <li>
-                                <a href="distributed-order-management">Distributed Order Management</a>
-                            </li>
-                            <li>
-                                <a href="customer-xperience-management">Customer Xperience Management</a>
-                            </li>
-                            <li>
-                                <a href="d2c-ecommerce">D2C eCommerce</a>
-                            </li>
-                        </ul>
-                         <p>
-                            <b><a href="platforms" class="underline" >Platforms</a></b>
-                        </p>
-                    </div>
-                    <div class="col-12 col-sm-3">
-                        <p>
-                            <b>Solutions</b>
-                        </p>
-                        <ul>
-                            <li>
-                                <a href="solution">Composable Commerce</a>
-                            </li>
-                            <li>
-                                <a href="unified-commerce">Unified Commerce</a>
-                            </li>
-                            <li>
-                                <a href="headless-commerce">Headless Commerce</a>
-                            </li>
-                        </ul>
-                        <p>
-                            <b><a href="artificial-intelligence" class="underline">Artificial Intelligence</a></b>
-                        </p>
-                        <p>
-                            <b><a href="automation" class="underline">Automation</a></b>
-                        </p>
-                        <p><b><a href="resources" class="underline">Resources</a></b></p>
-                    </div>
                     <div class="col-12 col-sm-2">
                         <p>
                             <b>Company</b>
                         </p>
                         <ul>
-                            <li>
-                                <a href="about">About artisans</a>
-                            </li>
-                            <li>
-                                <a href="Integrations">Integrations</a>
-                            </li>
-                            <li>
-                                <a href="contact-us">Contact Us</a>
-                            </li>
+                            <li><a href="platform">Platform</a></li>
+                            <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                            <li><a href="automation">Automation</a></li>
+                            <li><a href="resources">Resources</a></li>
+                            <li><a href="about">About artisans</a></li>
+                            <li><a href="Integrations">Integrations</a></li>
+                            <li><a href="contact-us">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-3">
+                        <p>
+                            <b>Our Solutions</b>
+                        </p>
+                        <ul>
+                            <li><a href="merchandise-planning">Merchandise Planning</a></li>
+                            <li><a href="assortment-planning">Assortment Planning</a></li>
+                            <li><a href="unified-commerce">Omnichannel Commerce</a></li>
+                            <li><a href="distributed-order-management">Distributed Order Management</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-sm-2">
+                        <ul>
+                            <li class="mt-md-4"></li>
+                            <li class="pt-md-2"></li>
+                            <li><a href="POS.html">Enterprise Point of Sales</a></li>
+                            <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience Management</a></li>
+                            <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
+                            <li><a href="solution">Composable Commerce</a></li>
                         </ul>
                     </div>
                 </div>
