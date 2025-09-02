@@ -141,6 +141,39 @@
             opacity: 1;
         }
 
+        .achievements-list {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .achievements-list .highlight {
+            font-weight: 700;
+            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+
+        .achievements-list .highlight::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .achievements-list .highlight:hover::after {
+            height: 4px;
+            background: linear-gradient(90deg, #f74ddd, #8d67f5, #12d9e3);
+        }
+
         @media (max-width: 992px) {
             .bi-exclusive-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -333,10 +366,12 @@
                         warehouse implementation to establish a single version of truth. We have 40+ years of experience
                         in BI and have helped our customers in revenue reconciliation to put a lid on their losses and
                         improve operational efficiency through KPI dashboarding and tracking.</p>
-                    <p>» Reporting: SSRS, Crystal Reports, Business Objects</p>
-                    <p>» Analytics: Power BI, SSAS, Tableau, QlikView, Spagobi</p>
-                    <p>» ETL: SSIS, Oracle Data Integrator, Informatica, Talend</p>
-                    <p>» Big Data: Hadoop, MongoDB, Apache Spark</p>
+                    <div class="achievements-list">
+                        <p><span class="highlight">Reporting:</span> SSRS, Crystal Reports, Business Objects</p>
+                        <p><span class="highlight">Analytics:</span> Power BI, SSAS, Tableau, QlikView, Spagobi</p>
+                        <p><span class="highlight">ETL:</span> SSIS, Oracle Data Integrator, Informatica, Talend</p>
+                        <p><span class="highlight">Big Data:</span> Hadoop, MongoDB, Apache Spark</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -374,7 +409,7 @@
                     <div class="bi-exclusive-grid">
                         <div class="bi-exclusive-card">
                             <h3><i class="fas fa-chess" style="color: #12d9e3;"></i> Strategy</h3>
-                            <p>Our (MASD) framework brings synergy in applications through business processes and
+                            <p>Our framework brings synergy in applications through business processes and
                                 maturity
                                 in change management and automation in operational activities.</p>
                         </div>
@@ -385,8 +420,8 @@
                         </div>
                         <div class="bi-exclusive-card">
                             <h3><i class="fas fa-project-diagram" style="color: #8d67f5;"></i> Projects</h3>
-
-                            <p>We have a cumulative experience of almost 100 years of data warehousing across 20+
+                            <p>Together with our partners, we have a cumulative experience of almost 100 years of data
+                                warehousing across 20+
                                 customers.
                                 We have crafted BI solutions for supply chain and logistics companies.</p>
                         </div>
@@ -429,7 +464,7 @@
                             </div>
                             <div id="collapseOne" class="accordion-content collapse show" aria-labelledby="headingOne">
                                 <div class="content-body">
-                                    <p>Using MSBI we have helped a 3PL in Europe to have better operational
+                                    <p>We helped a large 3PL in Europe to have better operational
                                         visualization and financial reconciliation by
                                         including hundreds of BI dashboards for each level of business user that helps
                                         them take informed decision making.</p>
@@ -753,4 +788,5 @@
         });
     </script>
 </body>
+
 </html>
