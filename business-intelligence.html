@@ -136,9 +136,16 @@
             margin: 0;
         }
 
-        .accordion-content.show {
-            max-height: 500px;
-            opacity: 1;
+        .accordion-toggle:after {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-toggle.collapsed:after {
+            transform: rotate(0deg);
+        }
+
+        .accordion-toggle:not(.collapsed):after {
+            transform: rotate(180deg);
         }
 
         .achievements-list {
@@ -652,7 +659,7 @@
             };
         }
 
-        // Accordion logic (kept outside DOMContentLoaded)
+        // Accordion
         const accordion = {
             init: function () {
                 const accordionToggles = document.querySelectorAll('.accordion-toggle');
@@ -660,26 +667,67 @@
                     toggle.addEventListener('click', function () {
                         const targetId = this.getAttribute('data-target');
                         const targetContent = document.querySelector(targetId);
-
+                        // Close all other open accordion contents smoothly
+                        document.querySelectorAll('.accordion-content').forEach((content) => {
+                            if (content !== targetContent && content.classList.contains('show')) {
+                                smoothClose(content);
+                            }
+                        });
+                        // Collapse other toggles
+                        document.querySelectorAll('.accordion-toggle').forEach((t) => {
+                            if (t !== toggle) {
+                                t.classList.add('collapsed');
+                            }
+                        });
+                        // Toggle clicked accordion smoothly
                         if (targetContent.classList.contains('show')) {
-                            targetContent.classList.remove('show');
-                            this.classList.add('collapsed');
+                            smoothClose(targetContent);
+                            toggle.classList.add('collapsed');
                         } else {
-                            document.querySelectorAll('.accordion-content').forEach((content) => {
-                                content.classList.remove('show');
-                            });
-                            document.querySelectorAll('.accordion-toggle').forEach((toggle) => {
-                                toggle.classList.add('collapsed');
-                            });
-
-                            targetContent.classList.add('show');
-                            this.classList.remove('collapsed');
+                            smoothOpen(targetContent);
+                            toggle.classList.remove('collapsed');
                         }
                     });
                 });
+
+                // Smoothly open accordion content
+                function smoothOpen(element) {
+                    element.style.display = 'block';
+                    element.style.overflow = 'hidden';  // Prevent overflow during animation
+                    const height = element.scrollHeight + 'px';
+                    element.style.height = '0px';
+                    element.offsetHeight;  // Trigger reflow
+                    element.style.transition = 'height 0.4s ease';
+                    element.style.height = height;
+                    element.addEventListener('transitionend', function handler() {
+                        element.style.height = 'auto';   // Reset height after animation
+                        element.style.overflow = '';     // Reset overflow
+                        element.classList.add('show');   // Mark as open
+                        element.style.transition = '';
+                        element.removeEventListener('transitionend', handler);
+                    });
+                }
+                // Smoothly close accordion content
+                function smoothClose(element) {
+                    element.style.overflow = 'hidden';  // Prevent overflow during animation
+                    element.style.height = element.scrollHeight + 'px';
+
+                    element.offsetHeight;  // Trigger reflow
+
+                    element.style.transition = 'height 0.4s ease';
+                    element.style.height = '0px';
+
+                    element.addEventListener('transitionend', function handler() {
+                        element.style.transition = '';
+                        element.classList.remove('show');  // Mark as closed
+                        element.style.display = 'none';    // Hide content
+                        element.style.overflow = '';       // Reset overflow
+                        element.removeEventListener('transitionend', handler);
+                    });
+                }
             },
         };
-
+        accordion.init();
         // DOM Ready
         document.addEventListener("DOMContentLoaded", function () {
             // Sticky Header
