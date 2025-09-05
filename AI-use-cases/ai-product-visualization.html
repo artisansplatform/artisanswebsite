@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Visualization Solutions | Artisans Cloud</title>
+    <meta name="description"
+        content="Transform your product visuals with AI-powered visualization from artisans. Create stunning, realistic product images instantly without expensive photo shoots.">
+    <meta name="keywords"
+        content="AI product visualization, AI retail solutions, product image generation, AI fashion visualization, ecommerce product images, AI background replacement, 3D product visualization">
+    <meta name="author" content="artisans">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AI Product Visualization Solutions | Artisans Cloud">
+    <meta property="og:description"
+        content="Transform your product visuals with AI-powered visualization. Create stunning, realistic product images instantly without expensive photo shoots.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artisanscloud.com/AI-use-cases/ai-product-visualization">
+    <meta property="og:locale" content="en_US">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/custom-style.css">
+
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .gradiant-text {
+            background: linear-gradient(90deg, #12d9e3 10%, #8d67f5 60%, #f74ddd 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .why-ai-highlight {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* Why AI Section Styles */
+        .why-ai-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+            padding-top: 20px;
+            padding-bottom: 8%;
+        }
+
+        .why-ai-card {
+            background: white;
+            padding: 40px 35px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-ai-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .why-ai-card:hover::before {
+            left: 100%;
+        }
+
+        .why-ai-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        .why-ai-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .why-ai-card:hover .why-ai-number {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .why-ai-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .why-ai-card-text {
+            font-size: 1.05rem;
+            color: #64748b;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .why-ai-floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .why-ai-floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.1);
+            animation: whyAiFloat 8s ease-in-out infinite;
+        }
+
+        .why-ai-floating-shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 15%;
+            left: 8%;
+            animation-delay: 0s;
+        }
+
+        .why-ai-floating-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 70%;
+            right: 10%;
+            animation-delay: 3s;
+        }
+
+        .why-ai-floating-shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+
+        @keyframes whyAiFloat {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+                opacity: 1;
+            }
+        }
+
+        /* How It Works Section Styles */
+        .bi-exclusive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bi-exclusive-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .bi-exclusive-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .bi-exclusive-card:hover::before {
+            left: 100%;
+        }
+
+        .bi-exclusive-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            border-color: #cbd5e1;
+        }
+
+        .bi-card-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: #f8fafc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .bi-exclusive-card:hover .bi-card-icon-wrapper {
+            transform: scale(1.1);
+            background: #f1f5f9;
+        }
+
+        .bi-card-icon-wrapper i {
+            font-size: 2.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .bi-exclusive-card:hover .bi-card-icon-wrapper i {
+            transform: rotate(10deg);
+        }
+
+        .bi-exclusive-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1e293b;
+            line-height: 1.3;
+        }
+
+        .bi-exclusive-card p {
+            font-size: 1rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .showcase-card-vertical {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(18, 217, 227, 0.15);
+            border: 1px solid #e2e8f0;
+            margin-bottom: 2rem;
+        }
+
+        .showcase-card-vertical:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 45px #667eea28;
+            border-color: #764ba24f;
+        }
+
+        .image-container {
+            position: relative;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .before-after-wrapper {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .image-placeholder {
+            flex: 1;
+            position: relative;
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Sample images */
+        .card-1 .before-image {
+            background-image: url('../assets/images/black-dress.webp');
+        }
+
+        .card-1 .after-image {
+            background-image: url('../assets/images/american-model.webp');
+        }
+
+        .card-2 .before-image {
+            background-image: url('../assets/images/american-model.webp');
+        }
+
+        .card-2 .after-image {
+            background-image: url('../assets/images/african-model.webp');
+        }
+
+        .card-3 .before-image {
+            background-image: url('../assets/images/american-model.webp');
+        }
+
+        .card-3 .after-image {
+            background-image: url('../assets/images/american-model-background-changed.webp');
+        }
+
+        .card-4 .before-image {
+            background-image: url('../assets/images/american-model-background-changed.webp');
+        }
+
+        .card-4 .after-image {
+            background-image: url('../assets/images/american-model-accessories.webp');
+        }
+
+        .card-5 .before-image {
+            background-image: url('../assets/images/white-dress-model.webp');
+        }
+
+        .card-5 .after-image {
+            background-image: url('../assets/images/white-dress-side-views.webp');
+        }
+
+        .card-6 .before-image {
+            background-image: url('../assets/images/african-model-beach-bg.webp');
+        }
+
+        .card-6 .after-image {
+            background-image: url('../assets/images/text-between-foreground-background.webp');
+        }
+
+        .card-7 .before-image {
+            background-image: url('../assets/images/sketch.webp');
+        }
+
+        .card-7 .after-image {
+            background-image: url('../assets/images/model-pose-per-sketch.webp');
+        }
+
+        .before-image {
+            border-right: 2px solid #764ba22b;
+        }
+
+        .placeholder-badge {
+            position: absolute;
+            top: 12px;
+            z-index: 3;
+            font-size: 0.65rem;
+            font-weight: 650;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.5rem;
+            border-radius: 15px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 1;
+        }
+
+        .before-badge {
+            background: white;
+            color: #dc3545;
+            left: 4px;
+            top: 3px;
+            border: 1px solid rgba(220, 53, 69, 0.2);
+        }
+
+        .after-badge {
+            background: white;
+            color: #198754;
+            right: 4px;
+            top: 3px;
+            border: 1px solid rgba(25, 135, 84, 0.2);
+        }
+
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder:hover .image-overlay {
+            opacity: 1;
+            background: rgba(0, 0, 0, 0.331);
+        }
+
+        .image-placeholder-text {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .showcase-content-vertical {
+            padding-top: 1.5rem;
+            text-align: center;
+            background: white;
+        }
+
+        .showcase-content-vertical h6 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .showcase-content-vertical p {
+            font-size: 0.95rem;
+            color: #6c757d;
+            margin: 0;
+            line-height: 1.5;
+            padding: 0px 10px;
+        }
+
+        .ai-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .why-ai-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .why-ai-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 35px;
+            }
+
+            .bi-card-icon-wrapper {
+                width: 70px;
+                height: 70px;
+                margin: 0 auto 20px;
+            }
+
+            .bi-card-icon-wrapper i {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-ai-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .bi-exclusive-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .bi-exclusive-card {
+                padding: 35px 25px;
+            }
+
+            .bi-card-icon-wrapper {
+                width: 60px;
+                height: 60px;
+                margin: 0 auto 18px;
+            }
+
+            .bi-card-icon-wrapper i {
+                font-size: 1.6rem;
+            }
+
+            .image-container {
+                height: 360px !important;
+            }
+
+            .how-img img {
+                max-width: 250px;
+                width: 100%;
+            }
+
+            .gray-tab-sec {
+                padding: 0px 0px 25% 0px !important;
+                background-size: 200% 220%;
+            }
+
+            .how-img {
+                display: flex;
+                justify-content: center;
+            }
+
+            .pull-up {
+                margin-top: -20% !important;
+            }
+
+            .push-down {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .image-container {
+                height: 220px;
+            }
+
+            .showcase-content-vertical {
+                padding: 1rem;
+                padding-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bi-exclusive-card {
+                padding: 30px 20px;
+            }
+
+            .bi-card-icon-wrapper {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto 15px;
+            }
+
+            .bi-card-icon-wrapper i {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue-bg">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
+                    <a class="navbar-brand" href="index">
+                        <img fetchpriority="high" src="../assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="platform">Platform</a>
+                            </li>
+                            <li class="custom-nav-item custom-dropdown">
+                                <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle"
+                                    id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Solutions
+                                </a>
+                                <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                    <div class="custom-dropdown position-relative">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Supply Chain Planning
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps-1">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="merchandise-planning">Merchandise Planning</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="assortment-planning">Assortment Planning</a>
+                                        </div>
+                                    </div>
+                                    <div class="custom-dropdown">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Unified Commerce
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="unified-commerce">Overview</a>
+                                            <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of
+                                                Sales</a>
+                                            <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C
+                                                eCommerce</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="distributed-order-management">Distributed Order Management</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="customer-xperience-management">Customer Xperience Management</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="business-intelligence">Business Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artificial-intelligence">Artificial Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="icons">
+                            <a class="btn btn-gradiant" href="contact-us">TALK TO US</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-sec">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-md-7 text-white fadeInAnimation active">
+                        <h1>Turn Your Products into Visual Masterpieces <br><span class="gradiant-text">Quick, Easy &
+                                Hassle-Free!</span></h1>
+                        <p>In today’s competitive retail landscape, <b>visual appeal is everything</b>. Customers no longer buy
+                            products - they buy
+                            experiences, aesthetics, and emotions. That’s why brands that present their products
+                            beautifully gain a significant
+                            edge. But creating studio-quality visuals often requires time, money, and resources.</p>
+                        <a class="btn btn-primary my-2" href="contact-us">Schedule a Demo</a>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <img src="../assets/images/new-page-banner.webp" alt="Business Intelligence" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artisans-sec pt-md-5 mt-md-3 pt-0 text-center merchandise-section3">
+        <div class="container">
+            <div class="col-12 pb-md-5 m-auto">
+                <h2>What if <span class="gradient-text2">AI could do it for you?</span></h2>
+                <p>
+                    Artificial Intelligence is revolutionizing retail product visualization, making it faster,
+                    cost-effective, and incredibly realistic. With AI-powered tools, retailers can now
+                    <span class="why-ai-highlight">transform simple product images into stunning, eye-catching
+                        visuals - without expensive photo shoots or complex design processes</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gray-tab-sec">
+        <section class="">
+            <div class="why-ai-floating-elements">
+                <div class="why-ai-floating-shape"></div>
+                <div class="why-ai-floating-shape"></div>
+                <div class="why-ai-floating-shape"></div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-3 mt-3 mt-md-5 text-center"> Why AI for<span class="gradiant-text"> Retail Product
+                                Visualization?</span></h2>
+                        <div class="why-ai-grid">
+                            <div class="why-ai-card">
+                                <div class="why-ai-number">1</div>
+                                <h3 class="why-ai-card-title">Save Time and Costs</h3>
+                                <p class="why-ai-card-text">Traditional photo shoots typically involve hiring
+                                    photographers,
+                                    arranging props, and setting up a studio. AI eliminates this by creating <span
+                                        class="why-ai-highlight">realistic product images in multiple backgrounds and
+                                        themes
+                                        instantly</span>.</p>
+                            </div>
+
+                            <div class="why-ai-card">
+                                <div class="why-ai-number">2</div>
+                                <h3 class="why-ai-card-title">Personalized Marketing at Scale</h3>
+                                <p class="why-ai-card-text">Whether it's a festive holiday, a seasonal collection, or a
+                                    themed marketing campaign, AI can <span class="why-ai-highlight">generate tailored
+                                        visuals for every campaign</span> in minutes.</p>
+                            </div>
+
+                            <div class="why-ai-card">
+                                <div class="why-ai-number">3</div>
+                                <h3 class="why-ai-card-title">Boost Engagement and Conversions</h3>
+                                <p class="why-ai-card-text">High-quality visuals attract more attention, increase
+                                    click-through rates, and drive sales. AI ensures your products look <span
+                                        class="why-ai-highlight">premium and appealing across all platforms -</span>
+                                    websites, social media, and ads.</p>
+                            </div>
+
+                            <div class="why-ai-card">
+                                <div class="why-ai-number">4</div>
+                                <h3 class="why-ai-card-title">Consistency Across Channels</h3>
+                                <p class="why-ai-card-text">AI tools maintain <span class="why-ai-highlight">brand
+                                        consistency</span> across hundreds of images - something that's tough with
+                                    manual
+                                    editing.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="showcase-section pull-up">
+        <div class="container">
+            <div class="text-center mb-4 my-md-5">
+                <h2>Visual Showcase: <span class="gradiant-text">AI-Enhanced Product Samples</span></h2>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-1">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Input Dress Only</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Dress on American Model</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-tshirt ai-icon"></i> AI Apparel Transformation</h6>
+                            <p>Input dress added to an American model</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-2">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">American Model</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">African Model with Different Body Weight
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-users ai-icon"></i> Body Type Diversity</h6>
+                            <p>From an American model to an African model with different body weight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-3">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Plain Studio Background</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Lifestyle Context with New Background</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-image ai-icon"></i> Background Enhancement</h6>
+                            <p>Lifestyle context creation with changed backgrounds</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-4">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Model Without Accessories</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Same Model with AI-Added Accessories</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-glasses ai-icon"></i> AI Accessory Addition</h6>
+                            <p>Accessories added seamlessly to the model wearing the product</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-5">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Single Front View</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Front, Back & Side Views Generated</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-sync-alt ai-icon"></i> Multi-View Generation</h6>
+                            <p>Created front, back & side views for store listing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-6">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Unblended Foreground & Background</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">AI Blended Foreground + Background</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-layer-group ai-icon"></i> Foreground + Background AI Blending</h6>
+                            <p>Text added naturally between layers</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
+                    <div class="showcase-card-vertical card-7">
+                        <div class="image-container">
+                            <div class="before-after-wrapper">
+                                <div class="image-placeholder before-image">
+                                    <div class="placeholder-badge before-badge">BEFORE</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">Hand-Drawn Sketch</div>
+                                    </div>
+                                </div>
+                                <div class="image-placeholder after-image">
+                                    <div class="placeholder-badge after-badge">AFTER</div>
+                                    <div class="image-overlay">
+                                        <div class="image-placeholder-text">AI Generated Model, Dress & Pose</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-content-vertical">
+                            <h6><i class="fas fa-pencil-ruler ai-icon"></i> AI Pose from Sketch</h6>
+                            <p>Model, dress & pose generated from a hand-drawn sketch</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bi-section my-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 m-auto text-center">
+                    <h2><span class="gradiant-text mb-3">How It Works:</span> Quick, Easy & Hassle-Free</h2>
+                    <p>
+                        <span class="why-ai-highlight">AI-powered</span> retail visualization tools use
+                        <span class="why-ai-highlight">advanced image recognition</span>,
+                        <span class="why-ai-highlight">generative AI</span>, and
+                        <span class="why-ai-highlight">automation</span> to enhance or create
+                        <span class="why-ai-highlight">product images</span>
+                    </p>
+
+                    <div class="bi-exclusive-grid">
+                        <div class="bi-exclusive-card">
+                            <div class="bi-card-icon-wrapper">
+                                <i class="fas fa-image" style="color: #12d9e3;"></i>
+                            </div>
+                            <h3>Background Replacement</h3>
+                            <p>Instantly swap dull backdrops with trendy or thematic ones.</p>
+                        </div>
+                        <div class="bi-exclusive-card">
+                            <div class="bi-card-icon-wrapper">
+                                <i class="fas fa-lightbulb" style="color: #FFD700;"></i>
+                            </div>
+                            <h3>Lighting & Color Adjustments</h3>
+                            <p>Make your product pop with perfect lighting - no studio needed.</p>
+                        </div>
+                        <div class="bi-exclusive-card">
+                            <div class="bi-card-icon-wrapper">
+                                <i class="fas fa-cube" style="color: #8d67f5;"></i>
+                            </div>
+                            <h3>3D Product Visualization</h3>
+                            <p>Turn 2D images into immersive 3D models for AR/VR shopping.</p>
+                        </div>
+                        <div class="bi-exclusive-card">
+                            <div class="bi-card-icon-wrapper">
+                                <i class="fas fa-magic" style="color: #ff69b4;"></i>
+                            </div>
+                            <h3>Creative Variations</h3>
+                            <p>Generate multiple style options for the same product to test what works best.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="gray-tab-sec push-down">
+        <div class="container">
+            <div class="row align-items-center pb-5 pb-md-3">
+                <div class="col-md-6 how-img order-md-2 pt-5" style="display: flex; justify-content: center;">
+                    <img src="../assets/images/real-world-applications-in-retail.webp" alt="logo" style="width: 75%;" />
+                </div>
+                <div class="col-md-6 pr-4 pt-5 pt-md-0">
+                    <h2>
+                        Real-World Applications in <span class="gradient-text2">Retail</span>
+                    </h2>
+
+                    <p><b>Fashion Retail</b></p>
+                    <p style="margin-top: -18px !important;">
+                        Try your dress on <span class="why-ai-highlight">models of different ethnicities</span>,
+                        <span class="why-ai-highlight">body types</span>, and
+                        <span class="why-ai-highlight">settings</span>.
+                    </p>
+
+                    <p><b>Home Decor</b></p>
+                    <p style="margin-top: -18px !important;">
+                        <span class="why-ai-highlight">Visualize furniture</span> in different interior setups
+                        before listing it online.
+                    </p>
+
+                    <p><b>Beauty & Cosmetics</b></p>
+                    <p style="margin-top: -18px !important;">
+                        Showcase products in <span class="why-ai-highlight">lifestyle images</span> with
+                        <span class="why-ai-highlight">zero photo shoots</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="left-right-image-sec pull-up">
+        <div class="container">
+            <div class="row align-items-center pb-md-3">
+                <div class="col-md-6 how-img">
+                    <img src="../assets/images/ai-powered-retail-product-visualization.webp" alt="logo" />
+                </div>
+                <div class="col-md-6">
+                    <h2>The Future of Retail is <span class="gradient-text2">AI-Driven</span></h2> <br>
+                    <p style="margin-top: -40px;">Retailers that adopt <span class="why-ai-highlight">AI-driven product
+                            visualization</span> will save costs,
+                        scale marketing, and offer personalized shopping
+                        experiences like never before.</p>
+                    <p>With tools that make it <span class="why-ai-highlight">quick, easy, and hassle-free,</span> your
+                        products won’t just look good
+                        - they’ll look <span class="why-ai-highlight">irresistible.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contect-sec text-white">
+        <div class="text-right top-to-bottom">
+            <h2>
+                Ready to transform your retail visuals <br> with AI? Start now and turn your products <br> into stunning
+                masterpieces <br> without
+                breaking the bank!
+            </h2>
+
+            <a class="btn btn-white" href="contact-us">
+                <span class="gradiant-text">Contact Us</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 mt-5">
+                    <a class="navbar-brand mb-5" href="#">
+                        <img src="../assets/images/logo.png" alt="logo" width="300" />
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        Jalan Kiara 3, Mont Kiara, 50480 Kuala Lumpur,<br> Wilayah Persekutuan Kuala Lumpur -
+                        59100<br>Malaysia
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        1108-9, The Spire 2, BRTS,<br> 150 Feet Ring Rd, Near Shital Park,<br> Opposite Plexus Med Care,
+                        Shastri Nagar,<br> Rajkot, Gujarat 360006. <br>India
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
+                        <a href="mailto:support@artisanscloud.com.my"
+                            class="text-white">support@artisanscloud.com.my</a>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                        <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <p>
+                        <b>Company</b>
+                    </p>
+                    <ul>
+                        <li><a href="platform">Platform</a></li>
+                        <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="automation">Automation</a></li>
+                        <li><a href="resources">Resources</a></li>
+                        <li><a href="about">About artisans</a></li>
+                        <li><a href="Integrations">Integrations</a></li>
+                        <li><a href="contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-3">
+                    <p>
+                        <b>Our Solutions</b>
+                    </p>
+                    <ul>
+                        <li><a href="merchandise-planning">Merchandise Planning</a></li>
+                        <li><a href="assortment-planning">Assortment Planning</a></li>
+                        <li><a href="unified-commerce">Unified Commerce</a></li>
+                        <li><a href="distributed-order-management">Distributed Order Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-2">
+                    <ul>
+                        <li style="margin-top: 20px;"></li>
+                        <li class="pt-md-3"></li>
+                        <li><a href="POS.html">Enterprise Point of Sales</a></li>
+                        <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience
+                                Management</a></li>
+                        <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
+                        <li><a href="solution">Composable Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 pb-md-0 pb-2">
+                        <p>
+                            <a href="#">Terms & Conditions</a>
+                            <span class="gradiant-text px-2">|</span>
+                            <a href="#">Privacy Policy</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-4 pb-md-0 pb-2">
+                        <p class="text-center">
+                            © <span id="copyright-year">2024</span>
+                            artisans. All right
+                            reserved.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="social-icons">
+                            <li><a href="https://www.linkedin.com/company/artisanscommercecloud/"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="content-btn">
+        <a href="contact-us">Contact Us</a>
+    </div>
+    <script type="text/javascript">
+        // Debounce function
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(this, args);
+                }, wait);
+            };
+        }
+
+        // Throttle function
+        function throttle(func, wait) {
+            let timeout;
+            return function (...args) {
+                if (!timeout) {
+                    func.apply(this, args);
+                    timeout = setTimeout(() => {
+                        timeout = null;
+                    }, wait);
+                }
+            };
+        }
+
+        // DOM Ready
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sticky Header
+            var stickyNavTop = document.querySelector("header").offsetTop;
+
+            function stickyNav() {
+                var scrollTop = window.scrollY;
+                if (scrollTop > 1) {
+                    document.querySelector("header").classList.add("fixed-top", "sticky");
+                } else {
+                    document.querySelector("header").classList.remove("fixed-top", "sticky");
+                }
+            }
+
+            stickyNav();
+            window.addEventListener("scroll", debounce(stickyNav, 100));
+
+            // Dropdown hover for desktop
+            function handleDropdowns() {
+                if (window.innerWidth >= 768) {
+                    document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+                        dropdown.addEventListener("mouseenter", function () {
+                            this.classList.add("show");
+                            this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                            this.querySelector(".dropdown-menu").classList.add("show");
+                        });
+                        dropdown.addEventListener("mouseleave", function () {
+                            this.classList.remove("show");
+                            this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                            this.querySelector(".dropdown-menu").classList.remove("show");
+                        });
+                    });
+                } else {
+                    document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
+                        dropdownToggle.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            const dropdownMenu = this.nextElementSibling;
+                            const isOpen = dropdownMenu.classList.contains("show");
+
+                            document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                                menu.classList.remove("show");
+                            });
+
+                            if (!isOpen) {
+                                dropdownMenu.classList.add("show");
+                            } else {
+                                dropdownMenu.classList.remove("show");
+                            }
+                        });
+                    });
+                }
+            }
+
+            handleDropdowns();
+            window.addEventListener("resize", throttle(handleDropdowns, 200));
+
+            // Navbar Toggler for Mobile
+            const navbarToggler = document.querySelector(".navbar-toggler");
+            const navbarMenu = document.querySelector("#navbarNavDropdown");
+            const navbarIcon = navbarToggler.querySelector("i");
+
+            navbarToggler.addEventListener("click", function () {
+                const isExpanded = navbarMenu.classList.contains("show");
+
+                if (isExpanded) {
+                    document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                        menu.classList.remove("show");
+                    });
+                    navbarMenu.classList.remove("show");
+                    navbarToggler.setAttribute("aria-expanded", "false");
+                    navbarIcon.classList.remove("fa-times");
+                    navbarIcon.classList.add("fa-bars");
+                } else {
+                    navbarMenu.classList.add("show");
+                    navbarToggler.setAttribute("aria-expanded", "true");
+                    navbarIcon.classList.remove("fa-bars");
+                    navbarIcon.classList.add("fa-times");
+                }
+            });
+
+            // Scroll-triggered animation
+            function animateElements(className) {
+                var reveals = document.querySelectorAll(className);
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 50;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", debounce(function () {
+                animateElements(".fadeInAnimation");
+                animateElements(".right-to-left");
+                animateElements(".left-to-right");
+            }, 100));
+
+            function animate() {
+                requestAnimationFrame(animate);
+                animateElements(".fadeInAnimation");
+                animateElements(".right-to-left");
+                animateElements(".left-to-right");
+            }
+            animate();
+
+            // Update copyright year
+            const copyrightYearElement = document.getElementById("copyright-year");
+            if (copyrightYearElement) {
+                copyrightYearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+
+</html>
