@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Product Visualization Solutions | Artisans Cloud</title>
+    <title>AI Product Visualization Solutions | artisans Cloud</title>
     <meta name="description"
         content="Transform your product visuals with AI-powered visualization from artisans. Create stunning, realistic product images instantly without expensive photo shoots.">
     <meta name="keywords"
         content="AI product visualization, AI retail solutions, product image generation, AI fashion visualization, ecommerce product images, AI background replacement, 3D product visualization">
     <meta name="author" content="artisans">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="AI Product Visualization Solutions | Artisans Cloud">
+    <meta property="og:title" content="AI Product Visualization Solutions | artisans Cloud">
     <meta property="og:description"
         content="Transform your product visuals with AI-powered visualization. Create stunning, realistic product images instantly without expensive photo shoots.">
     <meta property="og:type" content="website">
@@ -24,7 +24,8 @@
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/custom-style.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         html,
         body {
@@ -50,140 +51,6 @@
             font-weight: 600;
         }
 
-        /* Why AI Section Styles */
-        .why-ai-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            position: relative;
-            z-index: 2;
-            padding-top: 20px;
-            padding-bottom: 8%;
-        }
-
-        .why-ai-card {
-            background: white;
-            padding: 40px 35px;
-            border-radius: 25px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-ai-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .why-ai-card:hover::before {
-            left: 100%;
-        }
-
-        .why-ai-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-        }
-
-        .why-ai-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 25px;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .why-ai-card:hover .why-ai-number {
-            transform: scale(1.1) rotate(5deg);
-        }
-
-        .why-ai-card-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-
-        .why-ai-card-text {
-            font-size: 1.05rem;
-            color: #64748b;
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        .why-ai-floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .why-ai-floating-shape {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(102, 126, 234, 0.1);
-            animation: whyAiFloat 8s ease-in-out infinite;
-        }
-
-        .why-ai-floating-shape:nth-child(1) {
-            width: 100px;
-            height: 100px;
-            top: 15%;
-            left: 8%;
-            animation-delay: 0s;
-        }
-
-        .why-ai-floating-shape:nth-child(2) {
-            width: 150px;
-            height: 150px;
-            top: 70%;
-            right: 10%;
-            animation-delay: 3s;
-        }
-
-        .why-ai-floating-shape:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            bottom: 20%;
-            left: 15%;
-            animation-delay: 6s;
-        }
-
-        @keyframes whyAiFloat {
-
-            0%,
-            100% {
-                transform: translateY(0px) rotate(0deg);
-                opacity: 0.7;
-            }
-
-            50% {
-                transform: translateY(-30px) rotate(180deg);
-                opacity: 1;
-            }
-        }
-
-        /* How It Works Section Styles */
         .bi-exclusive-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -269,188 +136,6 @@
             margin-bottom: 0;
         }
 
-        .showcase-card-vertical {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid rgba(18, 217, 227, 0.15);
-            border: 1px solid #e2e8f0;
-            margin-bottom: 2rem;
-        }
-
-        .showcase-card-vertical:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 45px #667eea28;
-            border-color: #764ba24f;
-        }
-
-        .image-container {
-            position: relative;
-            height: 320px;
-            overflow: hidden;
-        }
-
-        .before-after-wrapper {
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .image-placeholder {
-            flex: 1;
-            position: relative;
-            transition: all 0.3s ease;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* Sample images */
-        .card-1 .before-image {
-            background-image: url('../assets/images/black-dress.webp');
-        }
-
-        .card-1 .after-image {
-            background-image: url('../assets/images/american-model.webp');
-        }
-
-        .card-2 .before-image {
-            background-image: url('../assets/images/american-model.webp');
-        }
-
-        .card-2 .after-image {
-            background-image: url('../assets/images/african-model.webp');
-        }
-
-        .card-3 .before-image {
-            background-image: url('../assets/images/american-model.webp');
-        }
-
-        .card-3 .after-image {
-            background-image: url('../assets/images/american-model-background-changed.webp');
-        }
-
-        .card-4 .before-image {
-            background-image: url('../assets/images/american-model-background-changed.webp');
-        }
-
-        .card-4 .after-image {
-            background-image: url('../assets/images/american-model-accessories.webp');
-        }
-
-        .card-5 .before-image {
-            background-image: url('../assets/images/white-dress-model.webp');
-        }
-
-        .card-5 .after-image {
-            background-image: url('../assets/images/white-dress-side-views.webp');
-        }
-
-        .card-6 .before-image {
-            background-image: url('../assets/images/african-model-beach-bg.webp');
-        }
-
-        .card-6 .after-image {
-            background-image: url('../assets/images/text-between-foreground-background.webp');
-        }
-
-        .card-7 .before-image {
-            background-image: url('../assets/images/sketch.webp');
-        }
-
-        .card-7 .after-image {
-            background-image: url('../assets/images/model-pose-per-sketch.webp');
-        }
-
-        .before-image {
-            border-right: 2px solid #764ba22b;
-        }
-
-        .placeholder-badge {
-            position: absolute;
-            top: 12px;
-            z-index: 3;
-            font-size: 0.65rem;
-            font-weight: 650;
-            letter-spacing: 0.5px;
-            padding: 0.2rem 0.5rem;
-            border-radius: 15px;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            opacity: 1;
-        }
-
-        .before-badge {
-            background: white;
-            color: #dc3545;
-            left: 4px;
-            top: 3px;
-            border: 1px solid rgba(220, 53, 69, 0.2);
-        }
-
-        .after-badge {
-            background: white;
-            color: #198754;
-            right: 4px;
-            top: 3px;
-            border: 1px solid rgba(25, 135, 84, 0.2);
-        }
-
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .image-placeholder:hover .image-overlay {
-            opacity: 1;
-            background: rgba(0, 0, 0, 0.331);
-        }
-
-        .image-placeholder-text {
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            text-align: center;
-        }
-
-        .showcase-content-vertical {
-            padding-top: 1.5rem;
-            text-align: center;
-            background: white;
-        }
-
-        .showcase-content-vertical h6 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .showcase-content-vertical p {
-            font-size: 0.95rem;
-            color: #6c757d;
-            margin: 0;
-            line-height: 1.5;
-            padding: 0px 10px;
-        }
-
         .ai-icon {
             font-size: 1.2rem;
             margin-right: 0.5rem;
@@ -460,27 +145,131 @@
             background-clip: text;
         }
 
-        .footer-note {
-            text-align: center;
-            margin-top: 3rem;
-            color: #6c757d;
-            font-size: 0.9rem;
+        .ba-cards-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: auto;
         }
 
-        /* Responsive adjustments */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #6b11cb4f, #2574fc30);
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            opacity: 0.9;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .carousel-control-prev {
+            left: -80px;
+        }
+
+        .carousel-control-next {
+            right: -80px;
+        }
+
+        .ba-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ba-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .ba-before,
+        .ba-after {
+            flex: 1;
+            background: #fafafa;
+            padding: 5px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ba-before img,
+        .ba-after img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .ba-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ba-card h2 {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .ba-desc {
+            margin-top: 15px;
+            font-size: 1rem;
+            color: #444;
+            text-align: center;
+        }
+
+        .ba-left,
+        .ba-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .ba-left {
+            flex: 1;
+        }
+
+        .ba-left .ba-desc {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .ba-right h6 {
+            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
         @media (max-width: 1200px) {
-            .why-ai-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 35px;
+            .carousel-control-prev {
+                left: -30px;
+            }
+
+            .carousel-control-next {
+                right: -30px;
             }
         }
 
         @media (max-width: 992px) {
-            .why-ai-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 35px;
-            }
-
             .bi-card-icon-wrapper {
                 width: 70px;
                 height: 70px;
@@ -490,14 +279,23 @@
             .bi-card-icon-wrapper i {
                 font-size: 1.9rem;
             }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 50px;
+                height: 50px;
+            }
+
+            .carousel-control-prev {
+                left: -15px;
+            }
+
+            .carousel-control-next {
+                right: -15px;
+            }
         }
 
         @media (max-width: 768px) {
-            .why-ai-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
             .bi-exclusive-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
@@ -517,42 +315,77 @@
                 font-size: 1.6rem;
             }
 
-            .image-container {
-                height: 360px !important;
+            .ba-card {
+                flex-direction: column;
+                padding: 15px;
+                margin: 10px 0;
             }
 
-            .how-img img {
-                max-width: 250px;
-                width: 100%;
+            .ba-top {
+                flex-direction: row;
+                gap: 12px;
+                align-items: stretch;
+                height: auto;
             }
 
-            .gray-tab-sec {
-                padding: 0px 0px 25% 0px !important;
-                background-size: 200% 220%;
+            .ba-left {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
             }
 
-            .how-img {
+            .ba-before {
+                flex: 8;
                 display: flex;
                 justify-content: center;
+                align-items: center;
             }
 
-            .pull-up {
-                margin-top: -20% !important;
+            .ba-desc {
+                flex: 2;
+                font-size: 0.9rem;
+                color: #444;
+                text-align: center;
+                margin-top: 8px;
             }
 
-            .push-down {
-                margin-top: 20px;
+            .ba-right {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ba-right h2 {
+                flex: 2;
+                text-align: center;
+                font-size: 1rem;
+                margin-bottom: 6px;
+            }
+
+            .ba-after {
+                flex: 8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .ba-before img,
+            .ba-after img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
             }
         }
 
         @media (max-width: 576px) {
-            .image-container {
-                height: 220px;
-            }
-
-            .showcase-content-vertical {
-                padding: 1rem;
-                padding-bottom: 0 !important;
+            .ba-cards-wrapper {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -571,9 +404,39 @@
                 font-size: 1.3rem;
             }
         }
+
+        @media (min-width: 769px) {
+            .ba-top {
+                align-items: stretch;
+            }
+
+            .ba-right {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ba-right h6 {
+                margin-bottom: 10px;
+                flex-shrink: 0;
+            }
+
+            .ba-right .ba-after {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .ba-right .ba-after img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <section class="blue-bg">
         <header>
@@ -655,7 +518,8 @@
                     <div class="col-12 col-md-7 text-white fadeInAnimation active">
                         <h1>Turn Your Products into Visual Masterpieces <br><span class="gradiant-text">Quick, Easy &
                                 Hassle-Free!</span></h1>
-                        <p>In today’s competitive retail landscape, <b>visual appeal is everything</b>. Customers no longer buy
+                        <p>In today’s competitive retail landscape, <b>visual appeal is everything</b>. Customers no
+                            longer buy
                             products - they buy
                             experiences, aesthetics, and emotions. That’s why brands that present their products
                             beautifully gain a significant
@@ -684,253 +548,477 @@
         </div>
     </section>
 
-    <section class="gray-tab-sec">
-        <section class="">
-            <div class="why-ai-floating-elements">
-                <div class="why-ai-floating-shape"></div>
-                <div class="why-ai-floating-shape"></div>
-                <div class="why-ai-floating-shape"></div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2 class="mb-3 mt-3 mt-md-5 text-center"> Why AI for<span class="gradiant-text"> Retail Product
-                                Visualization?</span></h2>
-                        <div class="why-ai-grid">
-                            <div class="why-ai-card">
-                                <div class="why-ai-number">1</div>
-                                <h3 class="why-ai-card-title">Save Time and Costs</h3>
-                                <p class="why-ai-card-text">Traditional photo shoots typically involve hiring
-                                    photographers,
-                                    arranging props, and setting up a studio. AI eliminates this by creating <span
-                                        class="why-ai-highlight">realistic product images in multiple backgrounds and
-                                        themes
-                                        instantly</span>.</p>
+    <section class="tab-sec text-white">
+        <div class="container">
+            <h2 class="text-center font-3">Why AI for <span class="gradiant-text">Retail Product Visualization?</span>
+            </h2>
+            <div class="row align-items-center py-md-5 py-2">
+                <div class="col-12 pr-md-5 pr-0">
+                    <div class="col-12 col-md-10 m-auto">
+                        <ul id="tabs" class="nav nav-tabs">
+                            <li>
+                                <a data-toggle="tab" data-target="#tab1" class="btn" href="">Save Time and Costs</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab2" class="btn active" href="">Personalized
+                                    Marketing at Scale</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab3" class="btn" href="">Boost Engagement and
+                                    Conversions</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab4" class="btn" href="">Consistency Across
+                                    Channels</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div class="tab-content pl-md-5 pl-0">
+                            <div id="tab1" class="tab-pane">
+                                <div
+                                    style="padding: 18px; width: 80px; height: 80px; background-color: #8d67f5; border-radius: 100px; display: inline-block;">
+                                    <i class="fas fa-clock" style="color: white; font-size: 45px; display: block;"></i>
+                                </div><br><br>
+                                <h3>Save Time and Costs</h3>
+                                <p>Traditional photo shoots typically involve hiring photographers, arranging props, and
+                                    setting up a studio. AI eliminates
+                                    this by creating realistic product images in multiple backgrounds and themes
+                                    instantly.
+                                </p>
                             </div>
-
-                            <div class="why-ai-card">
-                                <div class="why-ai-number">2</div>
-                                <h3 class="why-ai-card-title">Personalized Marketing at Scale</h3>
-                                <p class="why-ai-card-text">Whether it's a festive holiday, a seasonal collection, or a
-                                    themed marketing campaign, AI can <span class="why-ai-highlight">generate tailored
-                                        visuals for every campaign</span> in minutes.</p>
+                            <div id="tab2" class="tab-pane show active">
+                                <div
+                                    style="background-color: #f74ddd; border-radius: 100px; padding: 10px; width: 80px; height: 80px; display: inline-flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-bullhorn" style="color: white; font-size: 45px;"></i>
+                                </div><br><br>
+                                <h3>Personalized Marketing at Scale</h3>
+                                <p>Whether it's a festive holiday, a seasonal collection, or a themed marketing
+                                    campaign, AI can generate tailored visuals
+                                    for every campaign in minutes.</p>
                             </div>
+                            <div id="tab3" class="tab-pane">
+                                <div
+                                    style="background-color: #784BA0; border-radius: 100px; padding: 10px; width: 80px; height: 80px; display: inline-flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-chart-line" style="color: white; font-size: 45px;"></i>
+                                </div><br><br>
 
-                            <div class="why-ai-card">
-                                <div class="why-ai-number">3</div>
-                                <h3 class="why-ai-card-title">Boost Engagement and Conversions</h3>
-                                <p class="why-ai-card-text">High-quality visuals attract more attention, increase
-                                    click-through rates, and drive sales. AI ensures your products look <span
-                                        class="why-ai-highlight">premium and appealing across all platforms -</span>
-                                    websites, social media, and ads.</p>
+                                <h3>Boost Engagement and Conversions</h3>
+                                <p>High-quality visuals attract more attention, increase click-through rates, and drive
+                                    sales. AI ensures your products
+                                    look premium and appealing across all platforms - websites, social media, and ads.
+                                </p>
                             </div>
+                            <div id="tab4" class="tab-pane">
+                                <div
+                                    style="background-color: #12d9e3; border-radius: 100px; padding: 10px; width: 80px; height: 80px; display: inline-flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-sync-alt" style="color: white; font-size: 45px;"></i>
+                                </div><br><br>
 
-                            <div class="why-ai-card">
-                                <div class="why-ai-number">4</div>
-                                <h3 class="why-ai-card-title">Consistency Across Channels</h3>
-                                <p class="why-ai-card-text">AI tools maintain <span class="why-ai-highlight">brand
-                                        consistency</span> across hundreds of images - something that's tough with
-                                    manual
-                                    editing.</p>
+                                <h3>Consistency Across Channels</h3>
+                                <p>AI tools maintain brand consistency across hundreds of images - something that's
+                                    tough with manual editing.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <section class="showcase-section pull-up">
         <div class="container">
-            <div class="text-center mb-4 my-md-5">
+            <div class="text-center mb-4 mb-5 mt-3 mt-md-5">
                 <h2>Visual Showcase: <span class="gradiant-text">AI-Enhanced Product Samples</span></h2>
             </div>
+            <!-- ================== DESKTOP/TABLET CAROUSEL (2 cards per slide) ================== -->
+            <div id="cardsCarouselDesktop" class="carousel slide mt-5 d-none d-md-block" data-ride="carousel"
+                data-interval="4000">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#cardsCarouselDesktop" data-slide-to="0" class="active"></li>
+                    <li data-target="#cardsCarouselDesktop" data-slide-to="1"></li>
+                    <li data-target="#cardsCarouselDesktop" data-slide-to="2"></li>
+                    <li data-target="#cardsCarouselDesktop" data-slide-to="3"></li>
+                </ol>
 
-            <div class="row justify-content-center">
-                <!-- Card 1 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-1">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Input Dress Only</div>
+                <!-- Slides -->
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex flex-wrap justify-content-center">
+
+                            <!-- Card 1 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/black-dress.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Input dress added to an American model</p>
                                     </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Dress on American Model</div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-tshirt ai-icon"></i> AI Apparel Transformation</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model.webp" alt="After">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-tshirt ai-icon"></i> AI Apparel Transformation</h6>
-                            <p>Input dress added to an American model</p>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Card 2 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-2">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">American Model</div>
+                            <!-- Card 2 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">From an American model to an African model with different
+                                            body weight</p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-users ai-icon"></i> Body Type Diversity</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/african-model.webp" alt="After">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">African Model with Different Body Weight
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-wrap justify-content-center">
+
+                            <!-- Card 3 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Lifestyle context creation with changed backgrounds</p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-image ai-icon"></i> Background Enhancement</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model-background-changed.webp"
+                                                alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model-background-changed.webp"
+                                                alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Accessories added seamlessly to the model wearing the product
+                                        </p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-glasses ai-icon"></i> AI Accessory Addition</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model-accessories.webp" alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-wrap justify-content-center">
+
+                            <!-- Card 5 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/white-dress-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Created front, back & side views for store listing</p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-sync-alt ai-icon"></i> Multi-View Generation</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/white-dress-side-views.webp" alt="After"
+                                                style="width: 110%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/african-model-beach-bg.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Text added naturally between layers</p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-layer-group ai-icon"></i> Foreground + Background AI
+                                            Blending</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/text-between-foreground-background.webp"
+                                                alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 (Card 7 only) -->
+                    <div class="carousel-item">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="ba-card col-12 col-md-6 mb-4">
+                                <div class="ba-top d-flex">
+                                    <div class="ba-left me-3">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/sketch.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">Model, dress & pose generated from a hand-drawn sketch</p>
+                                    </div>
+                                    <div class="ba-right ms-3">
+                                        <h6><i class="fas fa-pencil-ruler ai-icon"></i> AI Pose from Sketch</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/model-pose-per-sketch.webp" alt="After">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-users ai-icon"></i> Body Type Diversity</h6>
-                            <p>From an American model to an African model with different body weight</p>
-                        </div>
                     </div>
+
                 </div>
 
-                <!-- Card 3 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-3">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Plain Studio Background</div>
-                                    </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Lifestyle Context with New Background</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-image ai-icon"></i> Background Enhancement</h6>
-                            <p>Lifestyle context creation with changed backgrounds</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-4">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Model Without Accessories</div>
-                                    </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Same Model with AI-Added Accessories</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-glasses ai-icon"></i> AI Accessory Addition</h6>
-                            <p>Accessories added seamlessly to the model wearing the product</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-5">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Single Front View</div>
-                                    </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Front, Back & Side Views Generated</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-sync-alt ai-icon"></i> Multi-View Generation</h6>
-                            <p>Created front, back & side views for store listing</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-6">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Unblended Foreground & Background</div>
-                                    </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">AI Blended Foreground + Background</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-layer-group ai-icon"></i> Foreground + Background AI Blending</h6>
-                            <p>Text added naturally between layers</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-xs-custom col-sm-6 col-md-6 col-md-custom col-lg-4 col-laptop col-xl-custom mb-4">
-                    <div class="showcase-card-vertical card-7">
-                        <div class="image-container">
-                            <div class="before-after-wrapper">
-                                <div class="image-placeholder before-image">
-                                    <div class="placeholder-badge before-badge">BEFORE</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">Hand-Drawn Sketch</div>
-                                    </div>
-                                </div>
-                                <div class="image-placeholder after-image">
-                                    <div class="placeholder-badge after-badge">AFTER</div>
-                                    <div class="image-overlay">
-                                        <div class="image-placeholder-text">AI Generated Model, Dress & Pose</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="showcase-content-vertical">
-                            <h6><i class="fas fa-pencil-ruler ai-icon"></i> AI Pose from Sketch</h6>
-                            <p>Model, dress & pose generated from a hand-drawn sketch</p>
-                        </div>
-                    </div>
-                </div>
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#cardsCarouselDesktop" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#cardsCarouselDesktop" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
+
+            <!-- ================== MOBILE CAROUSEL (1 card per slide) ================== -->
+            <div id="cardsCarouselMobile" class="carousel slide mt-5 d-block d-md-none" data-ride="carousel"
+                data-interval="4000" style="margin-top: -30px !important; margin-bottom: 15px;">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#cardsCarouselMobile" data-slide-to="0" class="active"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="1"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="2"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="3"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="4"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="5"></li>
+                    <li data-target="#cardsCarouselMobile" data-slide-to="6"></li>
+                </ol>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12 col-md-6">
+                                <div class="ba-top">
+                                    <!-- Left: Before image + description -->
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/black-dress.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Input dress added to an American model </p>
+                                    </div>
+
+                                    <!-- Right: Title + After image -->
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-tshirt ai-icon"></i> AI Apparel Transformation</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model.webp" alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            From an American model to an African model with different body weight </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-users ai-icon"></i> Body Type Diversity</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/african-model.webp" alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Lifestyle context creation with changed backgrounds </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-image ai-icon"></i> Background Enhancement</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model-background-changed.webp"
+                                                alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/american-model-background-changed.webp"
+                                                alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Accessories added seamlessly to the model wearing the product </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-glasses ai-icon"></i> AI Accessory Addition</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/american-model-accessories.webp" alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/white-dress-model.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Created front, back & side views for store listing </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-sync-alt ai-icon"></i> Multi-View Generation</h6>
+
+                                        <div class="ba-after">
+                                            <img src="../assets/images/white-dress-side-views.webp" alt="After"
+                                                style="width: 100%; height: auto;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/african-model-beach-bg.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Text added naturally between layers </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-layer-group ai-icon"></i> Foreground + Background AI
+                                            Blending</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/text-between-foreground-background.webp"
+                                                alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="ba-card col-12">
+                                <div class="ba-top">
+                                    <div class="ba-left">
+                                        <div class="ba-before">
+                                            <img src="../assets/images/sketch.webp" alt="Before">
+                                        </div>
+                                        <p class="ba-desc">
+                                            Model, dress & pose generated from a hand-drawn sketch
+                                        </p>
+                                    </div>
+                                    <div class="ba-right">
+                                        <h6><i class="fas fa-pencil-ruler ai-icon"></i> AI Pose from Sketch</h6>
+                                        <div class="ba-after">
+                                            <img src="../assets/images/model-pose-per-sketch.webp" alt="After">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#cardsCarouselMobile" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#cardsCarouselMobile" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
         </div>
     </section>
 
@@ -1288,5 +1376,4 @@
         });
     </script>
 </body>
-
 </html>
