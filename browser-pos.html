@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TabsyPOS – AI-Powered Browser POS for single stores. Fast, secure, and offline-capable point-of-sale solution.">
+    <title>TabsyPOS – AI-Powered Browser POS | artisans</title>
+    <meta name="keywords" content="Browser POS, AI-Powered POS, Offline POS, Single Store POS, TabsyPOS">
+    <meta name="author" content="artisans">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://artisanscloud.com/browser-pos">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/custom-style.css">
+    <style>
+        /* Essential custom styles only */
+        html,
+        body {
+            overflow-x: hidden !important;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .text-pink {
+            margin-top: 8px;
+            color: #f74ddd !important;
+            font-size: 22px;
+        }
+
+        /* BI Cards - custom design */
+        .bi-exclusive-card {
+            background: #F1F4F8;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .bi-exclusive-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .bi-exclusive-card h3 {
+            color: #1A2B50;
+            font-size: 1.40rem;
+            font-weight: 600;
+        }
+
+        .bi-exclusive-card h3 i {
+            font-size: 1.6rem;
+        }
+
+        .bi-exclusive-card p {
+            color: #444;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Achievements list - custom gradient */
+        .achievements-list .highlight {
+            font-weight: 700;
+            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+
+        .achievements-list .highlight::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .achievements-list .highlight:hover::after {
+            height: 4px;
+            background: linear-gradient(90deg, #f74ddd, #8d67f5, #12d9e3);
+        }
+
+        .achievements-list p {
+            font-size: 1rem;
+        }
+
+        /* Card styles - custom design */
+        .card {
+            width: 215px;
+            height: 240px;
+            max-height: 330px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08), -4px -4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-image-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 180px;
+            margin-bottom: 12px;
+            max-height: 130px;
+            overflow: hidden;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            line-clamp: 1;
+        }
+
+        .card-des {
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            line-clamp: 3;
+            font-size: 15px;
+        }
+
+        /* Tablet responsiveness */
+        @media (min-width: 768px) and (max-width: 1180px) {
+            .card {
+                width: 230px !important;
+                height: 240px;
+                max-height: 250px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .card-des {
+                font-size: 16px;
+            }
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: 90%;
+                height: auto;
+                max-height: 200px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .kpi-img-col {
+                width: 45% !important;
+                flex: 0 0 45% !important;
+                max-width: 45% !important;
+            }
+
+            .kpi-text-col {
+                width: 55% !important;
+                flex: 0 0 55% !important;
+                max-width: 55% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue-bg">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
+                    <a class="navbar-brand" href="index">
+                        <img fetchpriority="high" src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="platform">Platform</a>
+                            </li>
+                            <li class="custom-nav-item custom-dropdown">
+                                <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle"
+                                    id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Solutions
+                                </a>
+                                <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                    <div class="custom-dropdown position-relative">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Supply Chain Planning
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps-1">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="merchandise-planning">Merchandise Planning</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="assortment-planning">Assortment Planning</a>
+                                        </div>
+                                    </div>
+                                    <div class="custom-dropdown">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Unified Commerce
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="unified-commerce">Overview</a>
+                                            <a class="custom-dropdown-item sub-item" href="browser-pos">Browser POS</a>
+                                            <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C
+                                                eCommerce</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="distributed-order-management">Distributed Order Management</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="customer-xperience-management">Customer Xperience Management</a>
+                                        </div>
+                                    </div>
+                                    <a href="browser-pos.html">
+                                        <div class="custom-dropdown-item active">Browser POS</div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="business-intelligence">Business Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artificial-intelligence">Artificial Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="icons">
+                            <a class="btn btn-gradiant" href="contact-us">TALK TO US</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-sec">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-md-6 text-white fadeInAnimation">
+                        <h1>
+                            TabsyPOS – AI-Powered Browser POS
+                        </h1>
+                        <p>
+                            Fast, secure, and always available — even without the internet.
+                        </p>
+                        <p>
+                            Simple, fast, and secure. Your data never leaves your device, and it continues to function
+                            even without an internet connection.
+                        </p>
+                        <a class="btn btn-primary mt-md-4" href="https://tabsy-pos.pages.dev/sales">Free Forever - Get Started</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img fetchpriority="high" src="./assets/images/ai-hero-image.webp" alt="TabsyPOS"
+                            class="w-100 fadeInAnimation">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BI Section - Using Bootstrap grid and utilities -->
+    <section class="bg-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 m-auto">
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+                        <div class="col mb-4">
+                            <div class="bi-exclusive-card p-4 h-100">
+                                <h3 class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-chess mr-3" style="color: #12d9e3;"></i> Privacy First
+                                </h3>
+                                <p class="mb-0">Your sales and customer data never leave your device.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="bi-exclusive-card p-4 h-100">
+                                <h3 class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-balance-scale mr-3" style="color: #1fcde6;"></i> Works 100% Offline
+                                </h3>
+                                <p class="mb-0">No internet? No problem. TabsyPOS works seamlessly offline.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="bi-exclusive-card p-4 h-100">
+                                <h3 class="d-flex align-items-center mb-3" style="line-height: 30px;">
+                                    <i class="fas fa-project-diagram mr-3" style="color: #8d67f5;"></i> AI-Powered
+                                    Search & Assistance
+                                </h3>
+                                <p class="mb-0">Find products faster with type or voice search powered by AI.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="bi-exclusive-card p-4 h-100">
+                                <h3 class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-hands-helping mr-3" style="color: #a458ef;"></i> Reliable Support
+                                </h3>
+                                <p class="mb-0">We take pride in delivering every project on time—maintaining a
+                                    consistent record of zero delays in our delivery schedules.</p>
+                            </div>
+                        </div>
+                        <div class="col mb-4">
+                            <div class="bi-exclusive-card p-4 h-100">
+                                <h3 class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-chalkboard-teacher mr-3" style="color: #d347e5;"></i> Backup &
+                                    Import/Export
+                                </h3>
+                                <p class="mb-0">Easily back up your data or move it with import/export options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="left-right-image-sec">
+        <div class="container">
+            <div class="row align-items-center pb-3 pb-md-5">
+                <div class="col-md-6 how-img kpi-img-col mb-4 mb-md-0">
+                    <img src="./assets/images/kpi.webp" alt="KPI Dashboard" class="img-fluid" />
+                </div>
+                <div class="col-md-6 kpi-text-col">
+                    <h2 class="mb-4">Why TabsyPOS?</h2>
+                    <p class="mb-4">Lightweight yet powerful — built for today's businesses.</p>
+                    <p>
+                        Unlike cloud POS, TabsyPOS never sends your data anywhere. Everything stays safe on your device.
+                        Need a copy? Just back
+                        it up or export it. Internet down? No problem — TabsyPOS continues to work right inside your
+                        browser.
+                    </p>
+                    <div class="achievements-list">
+                        <p class="font"><span class="highlight">No installation needed:</span> Run your POS from any
+                            browser.</p>
+                        <p><span class="highlight">Lightweight yet powerful:</span> Focused on the features that matter
+                            most.</p>
+                        <p><span class="highlight">Fast & flexible:</span> Perfect for businesses of all sizes.</p>
+                        <p><span class="highlight">Always accessible:</span> Works on any device, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section - Using Bootstrap flex utilities -->
+    <section class="container">
+        <div>
+            <h2 class="text-center">Key Features</h2>
+            <p class="text-center">All Essentials, Right Where You Need Them.</p>
+            <p class="text-center">From checkout to receipts, TabsyPOS gives you complete control.</p>
+        </div>
+        <div class="d-flex justify-content-around align-items-center" style="min-height: 30vh;">
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #12d9e3;">
+                        <img src="assets/images/assortment-card1.webp" alt="Sales Performance"
+                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Products & Customers</p>
+                <p class="card-des mb-0">
+                    Add products and customers in bulk, search by typing or voice.
+                </p>
+            </div>
+
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #784BA0;">
+                        <img src="assets/images/assortment-card2.webp" alt="Inventory Turnover"
+                            style="max-width: 100%; padding-left: 10px; max-height: 80%; object-fit: contain;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Smart Cart</p>
+                <p class="card-des mb-0">
+                    Update item price & quantity, assign or switch customers seamlessly.
+                </p>
+            </div>
+
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #f74ddd;">
+                        <img src="assets/images/assortment-card3.webp" alt="Customer Satisfaction"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Flexible Payments</p>
+                <p class="card-des mb-0">
+                    Support for multiple methods, plus partial payment options.
+                </p>
+            </div>
+
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #12d9e3;">
+                        <img src="assets/images/assortment-card4.webp" alt="Reduction in Stockouts"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 3px;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Sales History</p>
+                <p class="card-des mb-0">
+                    Stay on top of every transaction with easy-to-access records.
+                </p>
+            </div>
+
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #8d67f5;">
+                        <img src="assets/images/assortment-card5.webp" alt="Product Availability"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 2px; padding-left: 5px; padding-top: 8px;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Custom Receipts</p>
+                <p class="card-des mb-0">
+                    Print branded receipts with personalised header & footer text.
+                </p>
+            </div>
+
+            <div class="card pt-3 text-center m-3">
+                <div class="d-flex justify-content-center">
+                    <div class="card-image-container d-flex justify-content-center align-items-center"
+                        style="background-color: #8d67f5;">
+                        <img src="assets/images/assortment-card5.webp" alt="Product Availability"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 2px; padding-left: 5px; padding-top: 8px;">
+                    </div>
+                </div>
+                <p class="card-title mb-2">Powerful Settings</p>
+                <p class="card-des mb-0">
+                    Set currency, language, AI models, keyboard shortcuts, and clear data when needed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-2 px-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-5 mb-5 mb-md-0 text-center text-md-left">
+                    <h3 class="mt-md-5">A POS That Fits in a Browser Tab<br>
+                    </h3>
+                    <span class="gradiant-text">Lightweight yet powerful — built for today's businesses.</span>
+                    <img src="./assets/images/precision-assortment-planning.webp" alt="Assortment Planning"
+                        class="img-fluid mx-auto">
+                </div>
+                <div class="col-12 col-md-6 offset-md-1">
+                    <h4>AI-powered convenience</h4>
+                    <p>Smarter searches and operations.</p>
+                    <br />
+                    <h4>Browser-native</h4>
+                    <p>No downloads, no updates, no login, just sell.</p>
+                    <br />
+                    <h4>Customizable</h4>
+                    <p>Tailor it to your business with flexible settings.</p>
+                    <br />
+                    <h4>Built for speed</h4>
+                    <p>Simple, clutter-free interface to keep sales moving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-4 mb-md-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col"></div>
+            </div>
+
+            <div class="row align-items-center pb-5 px-3 px-md-0">
+                <!-- Image -->
+                <div class="col-md-5 order-md-2 pt-md-5">
+                    <img src="./assets/images/unified-platform-technology.webp" alt="logo" class="img-fluid mb-4" />
+                </div>
+
+                <!-- Content -->
+                <div class="col-md-7">
+                    <h2>Who Can Use TabsyPOS?</h2>
+                    <p class="mt-n3 pt-2"> <!-- replaces style="margin-top: -40px;" -->
+                        Perfect for Single-Store Businesses<br>
+                        Easy, no-frills, and built for single-location operations.
+                    </p>
+                    <p>
+                        TabsyPOS is best suited for single stores that want a simple, free, and reliable point-of-sale
+                        solution without extra
+                        complexity. Since your data is stored in the browser, it works seamlessly for a single outlet,
+                        but
+                        is not recommended
+                        for managing multiple stores or centralised reporting
+                    </p>
+                    <p>» Retail Planning</p>
+                    <p>» Point of sale</p>
+                    <p>» Online Store</p>
+                    <p>» Store inventory and fulfillment</p>
+                    <p>» Promotion Management</p>
+                    <p>» Order management</p>
+                    <p>» Customer Experience Management</p>
+                    <p>» Digital self-service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contect-sec text-white">
+        <div class="text-right fadeInAnimation">
+            <h2>Start Selling Smarter with TabsyPOS</h2>
+            <p>Experience a POS that doesn't slow you down. TabsyPOS is fast to set up, easy to use, and built to help
+                your business grow.</p>
+            <a class="btn btn-white" href="https://tabsy-pos.pages.dev/sales">
+                <span class="gradiant-text">Try TabsyPOS Now</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 mt-5">
+                    <a class="navbar-brand mb-5" href="#">
+                        <img src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        Jalan Kiara 3, Mont Kiara, 50480 Kuala Lumpur,<br> Wilayah Persekutuan Kuala Lumpur -
+                        59100<br>Malaysia
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        1108-9, The Spire 2, BRTS,<br> 150 Feet Ring Rd, Near Shital Park,<br> Opposite Plexus Med Care,
+                        Shastri Nagar,<br> Rajkot, Gujarat 360006. <br>India
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
+                        <a href="mailto:support@artisanscloud.com.my"
+                            class="text-white">support@artisanscloud.com.my</a>
+                    </p>
+                    <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                        <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <p>
+                        <b>Company</b>
+                    </p>
+                    <ul>
+                        <li><a href="platform">Platform</a></li>
+                        <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="automation">Automation</a></li>
+                        <li><a href="resources">Resources</a></li>
+                        <li><a href="about">About artisans</a></li>
+                        <li><a href="Integrations">Integrations</a></li>
+                        <li><a href="contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p>
+                        <b>Our Solutions</b>
+                    </p>
+                    <ul>
+                        <li><a href="merchandise-planning">Merchandise Planning</a></li>
+                        <li><a href="assortment-planning">Assortment Planning</a></li>
+                        <li><a href="unified-commerce">Unified Commerce</a></li>
+                        <li><a href="distributed-order-management">Distributed Order Management</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <ul>
+                        <li style="margin-top: 20px;"></li>
+                        <li class="pt-md-3"></li>
+                        <li><a href="browser-pos">Browser POS</a></li>
+                        <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience
+                                Management</a></li>
+                        <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
+                        <li><a href="solution">Composable Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 pb-2 pb-md-0">
+                        <p><a href="#">Terms & Conditions</a> <span class="gradiant-text px-2">|</span> <a
+                                href="#">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-12 col-md-4 pb-2 pb-md-0">
+                        <p class="text-center">© <span id="copyright-year">2024</span> artisans. All right reserved.</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="social-icons">
+                            <li><a href="https://www.linkedin.com/company/artisanscommercecloud/"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="content-btn">
+        <a href="contact-us">Contact Us</a>
+    </div>
+
+    <script type="text/javascript">
+        // Debounce function to limit event handler calls
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(this, args);
+                }, wait);
+            };
+        }
+
+        // Throttle function to limit event handler calls
+        function throttle(func, wait) {
+            let timeout;
+            return function (...args) {
+                if (!timeout) {
+                    func.apply(this, args);
+                    timeout = setTimeout(() => {
+                        timeout = null;
+                    }, wait);
+                }
+            };
+        }
+
+        // Sticky navigation
+        const stickyNav = {
+            init: function () {
+                const stickyNavTop = document.querySelector("header").offsetTop;
+
+                function stickyNav() {
+                    const scrollTop = window.scrollY;
+                    if (scrollTop > 1) {
+                        document.querySelector("header").classList.add("fixed-top", "sticky");
+                    } else {
+                        document.querySelector("header").classList.remove("fixed-top", "sticky");
+                    }
+                }
+
+                stickyNav();
+                window.addEventListener("scroll", debounce(stickyNav, 100));
+            },
+        };
+
+        // Dropdowns
+        const dropdowns = {
+            init: function () {
+                function handleDropdowns() {
+                    if (window.innerWidth >= 768) {
+                        // Desktop view: handle hover
+                        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
+
+                        // Handle nested dropdowns on desktop
+                        document.querySelectorAll(".dropdown-menu .dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
+
+                    } else {
+                        // Mobile view: handle click
+                        document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
+                            dropdownToggle.addEventListener("click", function (e) {
+                                e.preventDefault();
+                                const dropdownMenu = this.nextElementSibling;
+                                const isOpen = dropdownMenu.classList.contains("show");
+
+                                // Close all dropdowns
+                                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    dropdownMenu.classList.add("show");
+                                } else {
+                                    dropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+
+                        // Handle nested dropdowns on mobile
+                        document.querySelectorAll(".dropdown-menu .dropdown .dropdown-toggle").forEach(function (nestedDropdownToggle) {
+                            nestedDropdownToggle.addEventListener("click", function (e) {
+                                e.stopPropagation();  // Prevent closing parent dropdown
+                                const nestedDropdownMenu = this.nextElementSibling;
+                                const isOpen = nestedDropdownMenu.classList.contains("show");
+
+                                // Close all nested dropdowns
+                                document.querySelectorAll(".dropdown-menu .dropdown .dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    nestedDropdownMenu.classList.add("show");
+                                } else {
+                                    nestedDropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+                    }
+                }
+
+                handleDropdowns();
+                window.addEventListener("resize", throttle(handleDropdowns, 200));
+            },
+        };
+
+        // Navbar toggle logic for small screens
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarMenu = document.querySelector("#navbarNavDropdown");
+        const navbarIcon = navbarToggler.querySelector("i");
+
+        navbarToggler.addEventListener("click", function () {
+            const isExpanded = navbarMenu.classList.contains("show");
+
+            if (isExpanded) {
+                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                    menu.classList.remove("show");
+                });
+                navbarMenu.classList.remove("show");
+                navbarToggler.setAttribute("aria-expanded", "false");
+                navbarIcon.classList.remove("fa-times");
+                navbarIcon.classList.add("fa-bars");
+            } else {
+                navbarMenu.classList.add("show");
+                navbarToggler.setAttribute("aria-expanded", "true");
+                navbarIcon.classList.remove("fa-bars");
+                navbarIcon.classList.add("fa-times");
+            }
+        });
+
+        // Initialize components
+        document.addEventListener('DOMContentLoaded', function () {
+            stickyNav.init();
+            dropdowns.init();
+
+            // Scroll reveal animation
+            const scrollReveal = (elements, className) => {
+                elements.forEach((element) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 50;
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add(className);
+                    } else {
+                        element.classList.remove(className);
+                    }
+                });
+            };
+
+            const fadeInAnimation = () => {
+                const fadeInElements = document.querySelectorAll('.fadeInAnimation');
+                scrollReveal(fadeInElements, 'active');
+            };
+
+            window.addEventListener('scroll', fadeInAnimation);
+
+            const copyrightYearElement = document.getElementById('copyright-year');
+            if (copyrightYearElement) {
+                copyrightYearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+
+</html>
