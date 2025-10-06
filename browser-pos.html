@@ -120,6 +120,11 @@
             font-size: 16px;
             font-weight: 600;
             line-clamp: 1;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: 'Poppins', Arial, sans-serif;
         }
 
         .card-des {
@@ -127,6 +132,36 @@
             display: -webkit-box;
             line-clamp: 3;
             font-size: 15px;
+        }
+
+        .card-holder .card {
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            width: 100%;
+            min-width: 300px;
+            min-height: 220px;
+            height: 250px;
+        }
+
+        .card-team-overlay .card-img-top {
+            width: 80px;
+            height: 80px;
+            transform: translateY(-2.5rem);
+        }
+
+        .card-holder {
+            padding: 0px 230px !important;
+        }
+
+        @media (max-width: 767px) {
+            .card-holder .card {
+                min-height: auto;
+            }
+
+            .card-holder {
+                padding: 0px !important;
+            }
         }
 
         /* Tablet responsiveness */
@@ -265,65 +300,83 @@
                         <a class="btn btn-primary mt-md-4" href="https://tabsy.artisanscloud.com.my/">Free Forever - Get Started</a>
                     </div>
                     <div class="col-12 col-md-6">
-                        <img fetchpriority="high" src="./assets/images/ai-hero-image.webp" alt="TabsyPOS"
-                            class="w-100 fadeInAnimation">
+                        <img fetchpriority="high" src="./assets/images/browser-pos-1.png" alt="TabsyPOS"
+                            class="w-100 fadeInAnimation" style="margin-top: -55px !important;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BI Section - Using Bootstrap grid and utilities -->
-    <section class="bg-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 m-auto">
-                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
-                        <div class="col mb-4">
-                            <div class="bi-exclusive-card p-4 h-100">
-                                <h3 class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-chess mr-3" style="color: #12d9e3;"></i> Privacy First
-                                </h3>
-                                <p class="mb-0">Your sales and customer data never leave your device.</p>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="bi-exclusive-card p-4 h-100">
-                                <h3 class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-balance-scale mr-3" style="color: #1fcde6;"></i> Works 100% Offline
-                                </h3>
-                                <p class="mb-0">No internet? No problem. TabsyPOS works seamlessly offline.</p>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="bi-exclusive-card p-4 h-100">
-                                <h3 class="d-flex align-items-center mb-3" style="line-height: 30px;">
-                                    <i class="fas fa-project-diagram mr-3" style="color: #8d67f5;"></i> AI-Powered
-                                    Search & Assistance
-                                </h3>
-                                <p class="mb-0">Find products faster with type or voice search powered by AI.</p>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="bi-exclusive-card p-4 h-100">
-                                <h3 class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-hands-helping mr-3" style="color: #a458ef;"></i> Reliable Support
-                                </h3>
-                                <p class="mb-0">We take pride in delivering every project on time—maintaining a
-                                    consistent record of zero delays in our delivery schedules.</p>
-                            </div>
-                        </div>
-                        <div class="col mb-4">
-                            <div class="bi-exclusive-card p-4 h-100">
-                                <h3 class="d-flex align-items-center mb-3">
-                                    <i class="fas fa-chalkboard-teacher mr-3" style="color: #d347e5;"></i> Backup &
-                                    Import/Export
-                                </h3>
-                                <p class="mb-0">Easily back up your data or move it with import/export options.</p>
+    <section class="card-holder mt-5">
+        <div class="row pt-5 mt-md-3 justify-content-around g-4 fadeInAnimation">
+            <div class="col-2 pb-5 d-flex justify-content-center mt-2 mt-md-0">
+                <article class="card card-team-overlay position-relative h-100" style="background-color: #def7fa;">
+                    <div class="card-img-top position-relative rounded overflow-hidden border card-icon"
+                        style="border-width: 2px !important; border-color: #a4d9e0 !important;">
+                        <img src="./assets/images/Privacy First.png" alt="logo">
+                    </div>
+                    <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                        <div class="text-container">
+                            <div class="cont text-center">
+                                <h5 class="card-title pb-2">Privacy First</h5>
+                                <p>Your sales and customer data never leave your device.</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
+            </div>
+            <div class="col-2 pb-5 d-flex justify-content-center mt-3 mt-md-0">
+                <article class="card card-team-overlay position-relative h-100" style="background-color: #FCE7F3;">
+                    <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thick"
+                        style="background-color: #FCE7F3; border-width: 2px !important; border-color: #e8bad4 !important;">
+                        <img src="./assets/images/Works Offline.png" alt="logo">
+                    </div>
+                    <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                        <div class="text-container">
+                            <div class="cont text-center">
+                                <h5 class="card-title pb-2"
+                                    style="white-space: normal; line-clamp: unset; -webkit-line-clamp: unset;">Works
+                                    100&#x25; Offline</h5>
+                                <p>No internet? No problem. TabsyPOS works seamlessly offline.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-2 pb-md-5 d-flex justify-content-center mt-3 mt-md-0">
+                <article class="card card-team-overlay position-relative h-100" style="background-color: #E9E7FC;">
+                    <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thicker"
+                        style="background-color: #E9E7FC; border-width: 2px !important; border-color: #bebae0 !important;">
+                        <img src="./assets/images/AI Powered.png" alt="logo">
+                    </div>
+                    <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                        <div class="text-container">
+                            <div class="cont text-center">
+                                <h5 class="card-title pb-2">AI-Powered Search & Assistance</h5>
+                                <p>Find products faster with type or voice search powered by AI.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-2 pb-md-5 d-flex justify-content-center mt-3 mt-md-0">
+                <article class="card card-team-overlay position-relative h-100" style="background-color: #fcfbe7;">
+                    <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thicker"
+                        style="background-color: #fcfbe7; border-width: 2px !important; border-color: #e0dfba !important;">
+                        <img src="./assets/images/Backup & Import-Export.png" alt="logo">
+                    </div>
+                    <div class="card-body mt-n5" style="margin-top: -65px !important;">
+                        <div class="text-container">
+                            <div class="cont text-center">
+                                <h5 class="card-title pb-2">Backup & Import/Export</h5>
+                                <p>Easily back up your data or move it with import/export options.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -331,8 +384,8 @@
     <section class="left-right-image-sec">
         <div class="container">
             <div class="row align-items-center pb-3 pb-md-5">
-                <div class="col-md-6 how-img kpi-img-col mb-4 mb-md-0">
-                    <img src="./assets/images/kpi.webp" alt="KPI Dashboard" class="img-fluid" />
+                <div class="col-md-6 how-img kpi-img-col mb-4 mb-md-0 p-5">
+                    <img src="./assets/images/Why TabsyPOS.png" alt="KPI Dashboard" class="img-fluid" />
                 </div>
                 <div class="col-md-6 kpi-text-col">
                     <h2 class="mb-4">Why TabsyPOS?</h2>
@@ -366,10 +419,9 @@
         <div class="d-flex justify-content-around align-items-center" style="min-height: 30vh;">
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #12d9e3;">
-                        <img src="assets/images/assortment-card1.webp" alt="Sales Performance"
-                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/Products & Customers.png" alt="Sales Performance"
+                            style="max-width: 70%; padding-right: 0px; max-height: 100%; padding-top: 3px; object-fit: contain;">
                     </div>
                 </div>
                 <p class="card-title mb-2">Products & Customers</p>
@@ -380,10 +432,9 @@
 
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #784BA0;">
-                        <img src="assets/images/assortment-card2.webp" alt="Inventory Turnover"
-                            style="max-width: 100%; padding-left: 10px; max-height: 80%; object-fit: contain;">
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/Smart Cart.png" alt="Inventory Turnover"
+                            style="max-width: 60%; padding-left: 0px; max-height: 60%; object-fit: contain;">
                     </div>
                 </div>
                 <p class="card-title mb-2">Smart Cart</p>
@@ -394,10 +445,9 @@
 
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #f74ddd;">
-                        <img src="assets/images/assortment-card3.webp" alt="Customer Satisfaction"
-                            style="max-width: 100%; max-height: 80%; object-fit: contain;">
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/Flexible Payment.png" alt="Customer Satisfaction"
+                            style="max-width: 65%; max-height: 65%; object-fit: contain;">
                     </div>
                 </div>
                 <p class="card-title mb-2">Flexible Payments</p>
@@ -408,9 +458,8 @@
 
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #12d9e3;">
-                        <img src="assets/images/assortment-card4.webp" alt="Reduction in Stockouts"
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/Sales History.png" alt="Reduction in Stockouts"
                             style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 3px;">
                     </div>
                 </div>
@@ -422,10 +471,9 @@
 
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #8d67f5;">
-                        <img src="assets/images/assortment-card5.webp" alt="Product Availability"
-                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 2px; padding-left: 5px; padding-top: 8px;">
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/receipt.png" alt="Product Availability"
+                            style="max-width: 70%; max-height: 70%; object-fit: contain;  padding-left: 5px;">
                     </div>
                 </div>
                 <p class="card-title mb-2">Custom Receipts</p>
@@ -436,10 +484,9 @@
 
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
-                    <div class="card-image-container d-flex justify-content-center align-items-center"
-                        style="background-color: #8d67f5;">
-                        <img src="assets/images/assortment-card5.webp" alt="Product Availability"
-                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 2px; padding-left: 5px; padding-top: 8px;">
+                    <div class="card-image-container d-flex justify-content-center align-items-center">
+                        <img src="assets/images/Powerful Settings.png" alt="Product Availability"
+                            style="max-width: 70%; max-height: 70%; object-fit: contain; padding-left: 5px;">
                     </div>
                 </div>
                 <p class="card-title mb-2">Powerful Settings</p>
@@ -457,8 +504,7 @@
                     <h3 class="mt-md-5">A POS That Fits in a Browser Tab<br>
                     </h3>
                     <span class="gradiant-text">Lightweight yet powerful — built for today's businesses.</span>
-                    <img src="./assets/images/precision-assortment-planning.webp" alt="Assortment Planning"
-                        class="img-fluid mx-auto">
+                    <img src="./assets/images/browser-pos-2.jpg" alt="Assortment Planning" class="img-fluid mx-auto">
                 </div>
                 <div class="col-12 col-md-6 offset-md-1">
                     <h4>AI-powered convenience</h4>
@@ -486,7 +532,7 @@
             <div class="row align-items-center pb-5 px-3 px-md-0">
                 <!-- Image -->
                 <div class="col-md-5 order-md-2 pt-md-5">
-                    <img src="./assets/images/unified-platform-technology.webp" alt="logo" class="img-fluid mb-4" />
+                    <img src="./assets/images/browser-pos-3.jpg" alt="logo" class="img-fluid mb-4" />
                 </div>
 
                 <!-- Content -->
