@@ -150,8 +150,8 @@
             transform: translateY(-2.5rem);
         }
 
-        .card-holder {
-            padding: 0px 230px !important;
+        .image-adjust {
+            margin-top: -55px;
         }
 
         @media (max-width: 767px) {
@@ -186,7 +186,12 @@
             .card {
                 width: 90%;
                 height: auto;
-                max-height: 200px;
+            }
+            .image-adjust {
+                margin-top: -0px;
+            }
+            .card-holder {
+                padding: 0px 15px !important;
             }
         }
 
@@ -303,16 +308,16 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <img fetchpriority="high" src="./assets/images/browser-pos-1.jpg" alt="TabsyPOS"
-                            class="fadeInAnimation" style="margin-top: -55px !important;">
+                            class="fadeInAnimation image-adjust" width="100%">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="card-holder mt-5">
+    <section class="container card-holder mt-5">
         <div class="row pt-5 mt-md-3 justify-content-around g-4 fadeInAnimation">
-            <div class="col-2 pb-5 d-flex justify-content-center mt-2 mt-md-0">
+            <div class="col-xl-3 col-md-6 col-sm-12 pb-5 d-flex justify-content-center mt-3 mt-md-0">
                 <article class="card card-team-overlay position-relative h-100" style="background-color: #def7fa;">
                     <div class="card-img-top position-relative rounded overflow-hidden border card-icon"
                         style="border-width: 2px !important; border-color: #a4d9e0 !important;">
@@ -328,7 +333,7 @@
                     </div>
                 </article>
             </div>
-            <div class="col-2 pb-5 d-flex justify-content-center mt-3 mt-md-0">
+            <div class="col-xl-3 col-md-6 col-sm-12 pb-5 d-flex justify-content-center mt-3 mt-md-0">
                 <article class="card card-team-overlay position-relative h-100" style="background-color: #FCE7F3;">
                     <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thick"
                         style="background-color: #FCE7F3; border-width: 2px !important; border-color: #e8bad4 !important;">
@@ -346,7 +351,7 @@
                     </div>
                 </article>
             </div>
-            <div class="col-2 pb-md-5 d-flex justify-content-center mt-3 mt-md-0">
+            <div class="col-xl-3 col-md-6 col-sm-12 pb-5 d-flex justify-content-center mt-3 mt-md-0">
                 <article class="card card-team-overlay position-relative h-100" style="background-color: #E9E7FC;">
                     <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thicker"
                         style="background-color: #E9E7FC; border-width: 2px !important; border-color: #bebae0 !important;">
@@ -363,7 +368,7 @@
                     </div>
                 </article>
             </div>
-            <div class="col-2 pb-md-5 d-flex justify-content-center mt-3 mt-md-0">
+            <div class="col-xl-3 col-md-6 col-sm-12 pb-5 d-flex justify-content-center mt-3 mt-md-0">
                 <article class="card card-team-overlay position-relative h-100" style="background-color: #fcfbe7;">
                     <div class="card-img-top position-relative rounded overflow-hidden border card-icon border-thicker"
                         style="background-color: #fcfbe7; border-width: 2px !important; border-color: #e0dfba !important;">
@@ -418,7 +423,7 @@
             <p class="text-center">All Essentials, Right Where You Need Them.</p>
             <p class="text-center">From checkout to receipts, TabsyPOS gives you complete control.</p>
         </div>
-        <div class="d-flex justify-content-around align-items-center" style="min-height: 30vh;">
+        <div class="row justify-content-around align-items-center" style="min-height: 30vh;">
             <div class="card pt-3 text-center m-3">
                 <div class="d-flex justify-content-center">
                     <div class="card-image-container d-flex justify-content-center align-items-center">
