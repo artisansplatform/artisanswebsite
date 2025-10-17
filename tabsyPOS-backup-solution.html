@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TabsyPOS – AI-Powered Browser POS for single stores. Fast, secure, and offline-capable point-of-sale solution.">
+    <title>Tabsy POS as a Backup Solution | artisans</title>
+    <meta name="keywords" content="Browser POS, AI-Powered POS, Offline POS, Single Store POS, TabsyPOS">
+    <meta name="author" content="artisans">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://artisanscloud.com/browser-pos">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/custom-style.css">
+
+    <style>
+        /* Essential custom styles only */
+        html,
+        body {
+            overflow-x: hidden !important;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .image-adjust {
+            margin-top: -55px;
+        }
+
+        .accordion-toggle:after {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-toggle.collapsed:after {
+            transform: rotate(0deg);
+        }
+
+        .accordion-toggle:not(.collapsed):after {
+            transform: rotate(180deg);
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .image-adjust {
+                margin-top: -0px;
+            }
+        }
+
+        @media screen and (min-width: 1366px) {
+            #accordion .faq {
+                padding-right: 6%;
+            }
+
+            #accordion h5.collapsed:after,
+            #accordion h5:after {
+                right: 1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue-bg">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
+                    <a class="navbar-brand" href="index">
+                        <img fetchpriority="high" src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="platform">Platform</a>
+                            </li>
+                            <li class="custom-nav-item custom-dropdown">
+                                <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle"
+                                    id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Solutions
+                                </a>
+                                <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                    <div class="custom-dropdown position-relative">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Supply Chain Planning
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps-1">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="merchandise-planning">Merchandise Planning</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="assortment-planning">Assortment Planning</a>
+                                        </div>
+                                    </div>
+                                    <div class="custom-dropdown">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Unified Commerce
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="unified-commerce">Overview</a>
+                                            <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C
+                                                eCommerce</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="distributed-order-management">Distributed Order Management</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="customer-xperience-management">Customer Xperience Management</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="/browser-pos" class="custom-dropdown-item" role="button">
+                                            Browser POS
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="business-intelligence">Business Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artificial-intelligence">Artificial Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="icons">
+                            <a class="btn btn-gradiant" href="contact-us">TALK TO US</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-sec">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-md-6 text-white fadeInAnimation">
+                        <h1>
+                            Turn Downtime into Go-Time with <span class="gradiant-text">TabsyPOS</span>
+                        </h1>
+                        <p>
+                            Stay Operational — Even When Your Main POS Fails
+                        </p>
+                        <p>
+                            TabsyPOS works directly in your browser — no downloads, no installations, and no signup
+                            required.
+                        </p>
+                        <p>
+                            Just open your browser, start selling, and keep your customers moving without interruption.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img fetchpriority="high" src="./assets/images/browser-pos-1.jpg" alt="TabsyPOS"
+                            class="fadeInAnimation image-adjust" width="100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="left-right-image-sec mt-5">
+        <div class="container">
+            <div class="row align-items-center pb-5 ">
+                <div class="col-md-6 how-img pr-5">
+                    <img src="./assets/images/10-second-checkout.png" alt="logo" class="w-100">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="pt-md-0 pt-4">Why TabsyPOS Makes the Perfect Backup POS
+                    </h2>
+                    <p><b>Instant Access — No Setup Needed:</b> When your primary POS goes down, there’s no time for
+                        installations or configuration. <br> With TabsyPOS, you can simply open your browser and start
+                        billing immediately — no sign-in, no dependencies.</p>
+
+                    <p><b>Fast. Simple. Works on Any Device:</b> TabsyPOS is designed for speed and flexibility. A sale
+                        can be completed in as little as 10 seconds, helping you serve
+                        customers quickly even when your main POS is down. <br>
+                        It runs directly in your browser — on any device, including laptops, tablets, or mobile phones.
+                        No installation, no
+                        setup. Just open and start billing instantly.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="solution-list">
+        <div class="container">
+            <div class="row pb-5 ">
+                <div class="col-12 col-md-4 mb-5 blue-shade">
+                    <div class="list-icon">
+                        <img src="./assets/images/solution-icon1.png" alt="logo">
+                    </div>
+                    <h4 class="pt-md-0 pt-4">Offline-Ready</h4>
+                    <p>Even if your internet connection drops, TabsyPOS continues to work smoothly right from your
+                        browser.
+                        <br>
+                        Your transactions are saved locally, ensuring your sales never stop.
+                    </p>
+
+                </div>
+                <div class="col-12 col-md-4 mb-5 pink-shade">
+                    <div class="list-icon">
+                        <img src="./assets/images/solution-icon2.png" alt="logo">
+                    </div>
+                    <h4 class="pt-md-0 pt-4">Privacy Guaranteed</h4>
+                    <p>Your data never leaves your device. Unlike cloud-based POS systems, everything is stored securely
+                        in your own browser,
+                        maintaining full control over your information.
+                    </p>
+                </div>
+                <div class="col-12 col-md-4 mb-5 purple-shade">
+                    <div class="list-icon">
+                        <img src="./assets/images/solution-icon3.png" alt="logo">
+                    </div>
+                    <h4 class="pt-md-0 pt-4">Export When You’re Ready</h4>
+                    <p>Once your main POS system is back online, you can easily <b>export all your sales and
+                            customers</b>
+                        from TabsyPOS.
+                        <br>
+                        Import them back into your main POS and continue business as usual — with nothing lost.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-sec text-white">
+        <div class="container">
+            <h2 class="text-center">How to Use TabsyPOS as a <span class="gradiant-text">Backup POS</span>
+            </h2>
+            <div class="row align-items-center py-md-5 py-2">
+                <div class="col-12 pr-md-5 pr-0">
+                    <div class="col-12 col-md-10 m-auto">
+                        <ul id="tabs" class="nav nav-tabs">
+                            <li>
+                                <a data-toggle="tab" data-target="#tab1" class="btn" href="">Open TabsyPOS Instantly</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab2" class="btn active" href="">Add Products and
+                                    Customers</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab3" class="btn" href="">Start Billing
+                                    Immediately</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab4" class="btn" href="">Print Receipts</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab5" class="btn" href="">Export Your Data</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab6" class="btn" href="">Import Back into Your Main
+                                    POS</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div class="tab-content pl-md-5 pl-0">
+                            <div id="tab1" class="tab-pane">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>No login. No installation. Just open and start.</h3>
+                                <p>Launch TabsyPOS in any modern browser — it’s ready to use immediately. There’s no
+                                    need for account creation, downloads,
+                                    or complex setup.</p>
+                            </div>
+                            <div id="tab2" class="tab-pane show active">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>Set up your data in seconds.</h3>
+                                <p>Upload products and customers in bulk, or add them manually using quick add options.
+                                    TabsyPOS makes setup fast so you
+                                    can start selling right away.
+                                </p>
+                            </div>
+                            <div id="tab3" class="tab-pane">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>Smooth checkout, every time.</h3>
+                                <p>Add items to the cart, update prices or quantities, assign or switch customers, and
+                                    process payments — all from one
+                                    screen.</p>
+                            </div>
+                            <div id="tab4" class="tab-pane">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>Always hand customers a proper receipt.</h3>
+                                <p>Even when you’re not using your main POS, you can still print clean, professional
+                                    receipts — avoiding handwritten slips
+                                    and ensuring a consistent, reliable checkout experience for every customer.</p>
+                            </div>
+                            <div id="tab5" class="tab-pane">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>Take your sales with you.</h3>
+                                <p>Once your main POS system is back online, export your TabsyPOS sales data in just a
+                                    few clicks. All your transactions
+                                    stay organised and easy to move.</p>
+                            </div>
+                            <div id="tab6" class="tab-pane">
+                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <h3>Seamless data transfer, zero loss.</h3>
+                                <p>Reconcile your transactions effortlessly by importing the exported data into your
+                                    main POS system. Stay synced and keep
+                                    every record intact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="accordion" style="padding-bottom: 10% !important; margin-bottom: -10% !important;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-xl-5 text-center">
+                    <img src="./assets/images/small-logo.png" alt="logo" width="100">
+                    <h2>Use Cases<h2>
+                </div>
+                <div class="col-12 col-xl-7">
+                    <div class="faq position-relative fadeInAnimation">
+                        <div class="accordion-item">
+                            <div id="headingOne">
+                                <h5 class="accordion-toggle" data-target="#collapseOne">Network or Server Outage
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="accordion-content collapse show" aria-labelledby="headingOne">
+                                <div class="content-body">
+                                    <p>Keep your business running even when your main system or internet connection goes
+                                        down. TabsyPOS works fully offline, so
+                                        you can continue billing without disruption.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div id="headingTwo">
+                                <h5 class="accordion-toggle collapsed" data-target="#collapseTwo">Dashboards for an
+                                    Cloud POS Downtime</h5>
+                            </div>
+                            <div id="collapseTwo" class="accordion-content collapse" aria-labelledby="headingTwo">
+                                <div class="content-body">
+                                    <p>When your cloud-based POS is under maintenance or facing issues, switch to
+                                        TabsyPOS instantly. It runs directly in your
+                                        browser — no setup, no delay, no lost sales.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div id="headingThree">
+                                <h5 class="accordion-toggle collapsed" data-target="#collapseThree">Device Replacement
+                                    or Maintenance</h5>
+                            </div>
+                            <div id="collapseThree" class="accordion-content collapse" aria-labelledby="headingThree">
+                                <div class="content-body">
+                                    <p>Need to replace or repair your POS device? Use TabsyPOS temporarily on any other
+                                        computer or tablet and keep serving
+                                        customers without interruption.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div id="headingFour">
+                                <h5 class="accordion-toggle collapsed" data-target="#collapseFour">Temporary Pop-Up
+                                    Stalls or Outdoor Events</h5>
+                            </div>
+                            <div id="collapseFour" class="accordion-content collapse" aria-labelledby="headingFour">
+                                <div class="content-body">
+                                    <p>Running a short-term sale, exhibition, or outdoor counter? TabsyPOS is perfect
+                                        for temporary setups. Just open it in
+                                        your browser and start selling right away — no internet dependency or
+                                        installation needed.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contect-sec text-white">
+        <div class="text-right fadeInAnimation">
+            <h2>Try It Now — Free Forever</h2>
+            <p>No signup. No installation. No waiting.</p>
+            <p>Just open your browser and start selling.</p>
+            <a class="btn btn-white" href="https://tabsy.artisanscloud.com.my/sales">
+                <span class="gradiant-text">Start Using TabsyPOS Now</span>
+            </a>
+        </div>
+    </section>
+
+
+    <footer class="text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 mt-5">
+                    <a class="navbar-brand mb-5" href="#">
+                        <img src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        10-1, Menara Infiniti,<br>
+                        Jalan SS 6/3, Kelana Jaya,<br>
+                        47301 Petaling Jaya, Selangor,<br>
+                        Malaysia.
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        1108-9, The Spire 2, BRTS,<br> 150 Feet Ring Rd, Near Shital Park,<br> Opposite Plexus Med Care,
+                        Shastri Nagar,<br> Rajkot, Gujarat 360006. <br>India
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
+                        <a href="mailto:support@artisanscloud.com.my"
+                            class="text-white">support@artisanscloud.com.my</a>
+                    </p>
+                    <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                        <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <p>
+                        <b>Company</b>
+                    </p>
+                    <ul>
+                        <li><a href="platform">Platform</a></li>
+                        <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="automation">Automation</a></li>
+                        <li><a href="resources">Resources</a></li>
+                        <li><a href="about">About artisans</a></li>
+                        <li><a href="Integrations">Integrations</a></li>
+                        <li><a href="contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <p>
+                        <b>Our Solutions</b>
+                    </p>
+                    <ul>
+                        <li><a href="merchandise-planning">Merchandise Planning</a></li>
+                        <li><a href="assortment-planning">Assortment Planning</a></li>
+                        <li><a href="unified-commerce">Unified Commerce</a></li>
+                        <li><a href="distributed-order-management">Distributed Order Management</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <ul>
+                        <li style="margin-top: 20px;"></li>
+                        <li class="pt-md-3"></li>
+                        <li><a href="/browser-pos">Browser POS</a></li>
+                        <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience
+                                Management</a></li>
+                        <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
+                        <li><a href="solution">Composable Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 pb-2 pb-md-0">
+                        <p><a href="#">Terms & Conditions</a> <span class="gradiant-text px-2">|</span> <a
+                                href="#">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-12 col-md-4 pb-2 pb-md-0">
+                        <p class="text-center">© <span id="copyright-year">2024</span> artisans. All right reserved.</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="social-icons">
+                            <li><a href="https://www.linkedin.com/company/artisanscommercecloud/"><i
+                                        class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="content-btn">
+        <a href="contact-us">Contact Us</a>
+    </div>
+
+    <script type="text/javascript">
+        // Debounce function to limit event handler calls
+        function debounce(func, wait) {
+            let timeout;
+            return function (...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(this, args);
+                }, wait);
+            };
+        }
+
+        // Throttle function to limit event handler calls
+        function throttle(func, wait) {
+            let timeout;
+            return function (...args) {
+                if (!timeout) {
+                    func.apply(this, args);
+                    timeout = setTimeout(() => {
+                        timeout = null;
+                    }, wait);
+                }
+            };
+        }
+
+        // Sticky navigation
+        const stickyNav = {
+            init: function () {
+                const stickyNavTop = document.querySelector("header").offsetTop;
+
+                function stickyNav() {
+                    const scrollTop = window.scrollY;
+                    if (scrollTop > 1) {
+                        document.querySelector("header").classList.add("fixed-top", "sticky");
+                    } else {
+                        document.querySelector("header").classList.remove("fixed-top", "sticky");
+                    }
+                }
+
+                stickyNav();
+                window.addEventListener("scroll", debounce(stickyNav, 100));
+            },
+        };
+
+        // Dropdowns
+        const dropdowns = {
+            init: function () {
+                function handleDropdowns() {
+                    if (window.innerWidth >= 768) {
+                        // Desktop view: handle hover
+                        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
+
+                        // Handle nested dropdowns on desktop
+                        document.querySelectorAll(".dropdown-menu .dropdown").forEach(function (dropdown) {
+                            dropdown.addEventListener("mouseenter", function () {
+                                this.classList.add("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
+                                this.querySelector(".dropdown-menu").classList.add("show");
+                            });
+                            dropdown.addEventListener("mouseleave", function () {
+                                this.classList.remove("show");
+                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
+                                this.querySelector(".dropdown-menu").classList.remove("show");
+                            });
+                        });
+
+                    } else {
+                        // Mobile view: handle click
+                        document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
+                            dropdownToggle.addEventListener("click", function (e) {
+                                e.preventDefault();
+                                const dropdownMenu = this.nextElementSibling;
+                                const isOpen = dropdownMenu.classList.contains("show");
+
+                                // Close all dropdowns
+                                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    dropdownMenu.classList.add("show");
+                                } else {
+                                    dropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+
+                        // Handle nested dropdowns on mobile
+                        document.querySelectorAll(".dropdown-menu .dropdown .dropdown-toggle").forEach(function (nestedDropdownToggle) {
+                            nestedDropdownToggle.addEventListener("click", function (e) {
+                                e.stopPropagation();  // Prevent closing parent dropdown
+                                const nestedDropdownMenu = this.nextElementSibling;
+                                const isOpen = nestedDropdownMenu.classList.contains("show");
+
+                                // Close all nested dropdowns
+                                document.querySelectorAll(".dropdown-menu .dropdown .dropdown-menu").forEach(function (menu) {
+                                    menu.classList.remove("show");
+                                });
+
+                                if (!isOpen) {
+                                    nestedDropdownMenu.classList.add("show");
+                                } else {
+                                    nestedDropdownMenu.classList.remove("show");
+                                }
+                            });
+                        });
+                    }
+                }
+
+                handleDropdowns();
+                window.addEventListener("resize", throttle(handleDropdowns, 200));
+            },
+        };
+
+        // Navbar toggle logic for small screens
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarMenu = document.querySelector("#navbarNavDropdown");
+        const navbarIcon = navbarToggler.querySelector("i");
+
+        navbarToggler.addEventListener("click", function () {
+            const isExpanded = navbarMenu.classList.contains("show");
+
+            if (isExpanded) {
+                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                    menu.classList.remove("show");
+                });
+                navbarMenu.classList.remove("show");
+                navbarToggler.setAttribute("aria-expanded", "false");
+                navbarIcon.classList.remove("fa-times");
+                navbarIcon.classList.add("fa-bars");
+            } else {
+                navbarMenu.classList.add("show");
+                navbarToggler.setAttribute("aria-expanded", "true");
+                navbarIcon.classList.remove("fa-bars");
+                navbarIcon.classList.add("fa-times");
+            }
+        });
+
+        // Initialize components
+        document.addEventListener('DOMContentLoaded', function () {
+            stickyNav.init();
+            dropdowns.init();
+
+            // Scroll reveal animation
+            const scrollReveal = (elements, className) => {
+                elements.forEach((element) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = element.getBoundingClientRect().top;
+                    const elementVisible = 50;
+                    if (elementTop < windowHeight - elementVisible) {
+                        element.classList.add(className);
+                    } else {
+                        element.classList.remove(className);
+                    }
+                });
+            };
+
+            const fadeInAnimation = () => {
+                const fadeInElements = document.querySelectorAll('.fadeInAnimation');
+                scrollReveal(fadeInElements, 'active');
+            };
+
+            window.addEventListener('scroll', fadeInAnimation);
+
+            const copyrightYearElement = document.getElementById('copyright-year');
+            if (copyrightYearElement) {
+                copyrightYearElement.textContent = new Date().getFullYear();
+            }
+        });
+
+        // Accordion
+        const accordion = {
+            init: function () {
+                const accordionToggles = document.querySelectorAll('.accordion-toggle');
+                accordionToggles.forEach((toggle) => {
+                    toggle.addEventListener('click', function () {
+                        const targetId = this.getAttribute('data-target');
+                        const targetContent = document.querySelector(targetId);
+                        // Close all other open accordion contents smoothly
+                        document.querySelectorAll('.accordion-content').forEach((content) => {
+                            if (content !== targetContent && content.classList.contains('show')) {
+                                smoothClose(content);
+                            }
+                        });
+                        // Collapse other toggles
+                        document.querySelectorAll('.accordion-toggle').forEach((t) => {
+                            if (t !== toggle) {
+                                t.classList.add('collapsed');
+                            }
+                        });
+                        // Toggle clicked accordion smoothly
+                        if (targetContent.classList.contains('show')) {
+                            smoothClose(targetContent);
+                            toggle.classList.add('collapsed');
+                        } else {
+                            smoothOpen(targetContent);
+                            toggle.classList.remove('collapsed');
+                        }
+                    });
+                });
+
+                // Smoothly open accordion content
+                function smoothOpen(element) {
+                    element.style.display = 'block';
+                    element.style.overflow = 'hidden';  // Prevent overflow during animation
+                    const height = element.scrollHeight + 'px';
+                    element.style.height = '0px';
+                    element.offsetHeight;  // Trigger reflow
+                    element.style.transition = 'height 0.4s ease';
+                    element.style.height = height;
+                    element.addEventListener('transitionend', function handler() {
+                        element.style.height = 'auto';   // Reset height after animation
+                        element.style.overflow = '';     // Reset overflow
+                        element.classList.add('show');   // Mark as open
+                        element.style.transition = '';
+                        element.removeEventListener('transitionend', handler);
+                    });
+                }
+                // Smoothly close accordion content
+                function smoothClose(element) {
+                    element.style.overflow = 'hidden';  // Prevent overflow during animation
+                    element.style.height = element.scrollHeight + 'px';
+
+                    element.offsetHeight;  // Trigger reflow
+
+                    element.style.transition = 'height 0.4s ease';
+                    element.style.height = '0px';
+
+                    element.addEventListener('transitionend', function handler() {
+                        element.style.transition = '';
+                        element.classList.remove('show');  // Mark as closed
+                        element.style.display = 'none';    // Hide content
+                        element.style.overflow = '';       // Reset overflow
+                        element.removeEventListener('transitionend', handler);
+                    });
+                }
+            },
+        };
+        accordion.init();
+    </script>
+</body>
+
+</html>
