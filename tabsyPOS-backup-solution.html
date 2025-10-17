@@ -63,6 +63,23 @@
                 right: 1px;
             }
         }
+
+        .blue-bg {
+            height: 80vh;
+        }
+
+        .card-image-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 180px;
+            margin-bottom: 12px;
+            max-height: 130px;
+            overflow: hidden;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 
@@ -180,11 +197,17 @@
                 <div class="col-md-6">
                     <h3 class="pt-md-0 pt-4">Why TabsyPOS Makes the Perfect Backup POS
                     </h3>
+                    <div class="list-icon" style="background-color: #d6d4f9;">
+                        <img src="./assets/images/why-tabsy-makes-1.png" alt="logo">
+                    </div>
                     <h4>Instant Access — No Setup Needed:</h4>
                     <p> When your primary POS goes down, there’s no time for
                         installations or configuration. <br> With TabsyPOS, you can simply open your browser and start
                         billing immediately — no sign-in, no dependencies.</p>
 
+                    <div class="list-icon" style="background-color:#d4f9f9;">
+                        <img src="./assets/images/why-tabsy-makes-2.png" alt="logo">
+                    </div>
                     <h4>Fast. Simple. Works on Any Device:</h4>
                     <p>TabsyPOS is designed for speed and flexibility. A sale
                         can be completed in as little as 10 seconds, helping you serve
@@ -206,7 +229,7 @@
             <div class="row pb-5 ">
                 <div class="col-12 col-md-4 mb-5 blue-shade">
                     <div class="list-icon">
-                        <img src="./assets/images/solution-icon1.png" alt="logo">
+                        <img src="./assets/images/why-tabsy-makes-5.png" alt="logo">
                     </div>
                     <h4 class="pt-md-0 pt-4">Offline-Ready</h4>
                     <p>Even if your internet connection drops, TabsyPOS continues to work smoothly right from your
@@ -217,7 +240,7 @@
                 </div>
                 <div class="col-12 col-md-4 mb-5 pink-shade">
                     <div class="list-icon">
-                        <img src="./assets/images/solution-icon2.png" alt="logo">
+                        <img src="./assets/images/why-tabsy-makes-4.png" alt="logo">
                     </div>
                     <h4 class="pt-md-0 pt-4">Privacy Guaranteed</h4>
                     <p>Your data never leaves your device. Unlike cloud-based POS systems, everything is stored securely
@@ -227,7 +250,7 @@
                 </div>
                 <div class="col-12 col-md-4 mb-5 purple-shade">
                     <div class="list-icon">
-                        <img src="./assets/images/solution-icon3.png" alt="logo">
+                        <img src="./assets/images/why-tabsy-makes-3.png" alt="logo" class="pl-1">
                     </div>
                     <h4 class="pt-md-0 pt-4">Export When You’re Ready</h4>
                     <p>Once your main POS system is back online, you can easily <b>export all your sales and
@@ -249,10 +272,11 @@
                     <div class="col-12 col-md-10 m-auto">
                         <ul id="tabs" class="nav nav-tabs">
                             <li>
-                                <a data-toggle="tab" data-target="#tab1" class="btn" href="">Open TabsyPOS Instantly</a>
+                                <a data-toggle="tab" data-target="#tab1" class="btn active" href="">Open TabsyPOS
+                                    Instantly</a>
                             </li>
                             <li>
-                                <a data-toggle="tab" data-target="#tab2" class="btn active" href="">Add Products and
+                                <a data-toggle="tab" data-target="#tab2" class="btn " href="">Add Products and
                                     Customers</a>
                             </li>
                             <li>
@@ -272,15 +296,27 @@
                         </ul>
                         <br>
                         <div class="tab-content pl-md-5 pl-0">
-                            <div id="tab1" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                            <div id="tab1" class="tab-pane active">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-1.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>No login. No installation. Just open and start.</h3>
                                 <p>Launch TabsyPOS in any modern browser — it’s ready to use immediately. There’s no
                                     need for account creation, downloads,
                                     or complex setup.</p>
                             </div>
-                            <div id="tab2" class="tab-pane show active">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                            <div id="tab2" class="tab-pane show ">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-2.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>Set up your data in seconds.</h3>
                                 <p>Upload products and customers in bulk, or add them manually using quick add options.
                                     TabsyPOS makes setup fast so you
@@ -288,28 +324,52 @@
                                 </p>
                             </div>
                             <div id="tab3" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-4.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>Smooth checkout, every time.</h3>
                                 <p>Add items to the cart, update prices or quantities, assign or switch customers, and
                                     process payments — all from one
                                     screen.</p>
                             </div>
                             <div id="tab4" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-6.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>Always hand customers a proper receipt.</h3>
                                 <p>Even when you’re not using your main POS, you can still print clean, professional
                                     receipts — avoiding handwritten slips
                                     and ensuring a consistent, reliable checkout experience for every customer.</p>
                             </div>
                             <div id="tab5" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-5.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>Take your sales with you.</h3>
                                 <p>Once your main POS system is back online, export your TabsyPOS sales data in just a
                                     few clicks. All your transactions
                                     stay organised and easy to move.</p>
                             </div>
                             <div id="tab6" class="tab-pane">
-                                <img src="./assets/images/img.png" alt="logo" width="100">
+                                <div class="icon">
+                                    <div class="card-image-container"
+                                        style="background-color: #f74ddd; display: flex; justify-content: center; align-items: center; height: 80px;">
+                                        <img src="assets/images/use-tabsy-3.svg" alt="Sales Performance" class="p-3"
+                                            style="max-width: 90%; padding-right: 12px; max-height: 100%; padding-top: 3px; object-fit: contain;">
+                                    </div>
+                                </div>
                                 <h3>Seamless data transfer, zero loss.</h3>
                                 <p>Reconcile your transactions effortlessly by importing the exported data into your
                                     main POS system. Stay synced and keep
