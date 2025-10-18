@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabsy POS as a Backup Solution | artisans</title>
     <meta name="description"
         content="TabsyPOS – AI-Powered Browser POS for single stores. Fast, secure, and offline-capable point-of-sale solution.">
-    <title>Tabsy POS as a Backup Solution | artisans</title>
     <meta name="keywords" content="Browser POS, AI-Powered POS, Offline POS, Single Store POS, TabsyPOS">
     <meta name="author" content="artisans">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://artisanscloud.com/browser-pos">
+
+    <meta property="og:title" content="Tabsy POS as a Backup Solution | artisans">
+    <meta property="og:description"
+        content="Keep your store running with TabsyPOS — an AI-powered browser POS that works instantly, even when your main system is down. No setup, no installation, fully offline-ready for uninterrupted sales and customer service." />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://artisanscloud.com/tabsyPOS-backup-solution">
+    <meta property="og:locale" content="en_US">
+
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -202,7 +209,7 @@
                     </div>
                     <h4>Instant Access — No Setup Needed:</h4>
                     <p> When your primary POS goes down, there’s no time for
-                        installations or configuration. <br> With TabsyPOS, you can simply open your browser and start
+                        installations or configuration. With TabsyPOS, you can simply open your browser and start
                         billing immediately — no sign-in, no dependencies.</p>
                     <div class="list-icon" style="background-color: #d6d4f9;">
                         <img src="./assets/images/why-tabsy-makes-1.png" alt="logo">
@@ -404,7 +411,8 @@
                         </div>
                         <div class="accordion-item">
                             <div id="headingTwo">
-                                <h5 class="accordion-toggle collapsed" data-target="#collapseTwo">Cloud POS Downtime</h5>
+                                <h5 class="accordion-toggle collapsed" data-target="#collapseTwo">Cloud POS Downtime
+                                </h5>
                             </div>
                             <div id="collapseTwo" class="accordion-content collapse" aria-labelledby="headingTwo">
                                 <div class="content-body">
@@ -553,35 +561,16 @@
     </div>
 
     <script type="text/javascript">
-        // Debounce function to limit event handler calls
         function debounce(func, wait) {
             let timeout;
             return function (...args) {
                 clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    func.apply(this, args);
-                }, wait);
+                timeout = setTimeout(() => func.apply(this, args), wait);
             };
         }
 
-        // Throttle function to limit event handler calls
-        function throttle(func, wait) {
-            let timeout;
-            return function (...args) {
-                if (!timeout) {
-                    func.apply(this, args);
-                    timeout = setTimeout(() => {
-                        timeout = null;
-                    }, wait);
-                }
-            };
-        }
-
-        // Sticky navigation
         const stickyNav = {
             init: function () {
-                const stickyNavTop = document.querySelector("header").offsetTop;
-
                 function stickyNav() {
                     const scrollTop = window.scrollY;
                     if (scrollTop > 1) {
@@ -590,105 +579,19 @@
                         document.querySelector("header").classList.remove("fixed-top", "sticky");
                     }
                 }
-
                 stickyNav();
                 window.addEventListener("scroll", debounce(stickyNav, 100));
             },
         };
 
-        // Dropdowns
-        const dropdowns = {
-            init: function () {
-                function handleDropdowns() {
-                    if (window.innerWidth >= 768) {
-                        // Desktop view: handle hover
-                        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                            dropdown.addEventListener("mouseenter", function () {
-                                this.classList.add("show");
-                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
-                                this.querySelector(".dropdown-menu").classList.add("show");
-                            });
-                            dropdown.addEventListener("mouseleave", function () {
-                                this.classList.remove("show");
-                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
-                                this.querySelector(".dropdown-menu").classList.remove("show");
-                            });
-                        });
-
-                        // Handle nested dropdowns on desktop
-                        document.querySelectorAll(".dropdown-menu .dropdown").forEach(function (dropdown) {
-                            dropdown.addEventListener("mouseenter", function () {
-                                this.classList.add("show");
-                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
-                                this.querySelector(".dropdown-menu").classList.add("show");
-                            });
-                            dropdown.addEventListener("mouseleave", function () {
-                                this.classList.remove("show");
-                                this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
-                                this.querySelector(".dropdown-menu").classList.remove("show");
-                            });
-                        });
-
-                    } else {
-                        // Mobile view: handle click
-                        document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
-                            dropdownToggle.addEventListener("click", function (e) {
-                                e.preventDefault();
-                                const dropdownMenu = this.nextElementSibling;
-                                const isOpen = dropdownMenu.classList.contains("show");
-
-                                // Close all dropdowns
-                                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                                    menu.classList.remove("show");
-                                });
-
-                                if (!isOpen) {
-                                    dropdownMenu.classList.add("show");
-                                } else {
-                                    dropdownMenu.classList.remove("show");
-                                }
-                            });
-                        });
-
-                        // Handle nested dropdowns on mobile
-                        document.querySelectorAll(".dropdown-menu .dropdown .dropdown-toggle").forEach(function (nestedDropdownToggle) {
-                            nestedDropdownToggle.addEventListener("click", function (e) {
-                                e.stopPropagation();  // Prevent closing parent dropdown
-                                const nestedDropdownMenu = this.nextElementSibling;
-                                const isOpen = nestedDropdownMenu.classList.contains("show");
-
-                                // Close all nested dropdowns
-                                document.querySelectorAll(".dropdown-menu .dropdown .dropdown-menu").forEach(function (menu) {
-                                    menu.classList.remove("show");
-                                });
-
-                                if (!isOpen) {
-                                    nestedDropdownMenu.classList.add("show");
-                                } else {
-                                    nestedDropdownMenu.classList.remove("show");
-                                }
-                            });
-                        });
-                    }
-                }
-
-                handleDropdowns();
-                window.addEventListener("resize", throttle(handleDropdowns, 200));
-            },
-        };
-
-        // Navbar toggle logic for small screens
         const navbarToggler = document.querySelector(".navbar-toggler");
         const navbarMenu = document.querySelector("#navbarNavDropdown");
-        const navbarIcon = navbarToggler.querySelector("i");
 
         navbarToggler.addEventListener("click", function () {
             const isExpanded = navbarMenu.classList.contains("show");
+            const navbarIcon = navbarToggler.querySelector("i");
 
             if (isExpanded) {
-                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                    menu.classList.remove("show");
-                });
                 navbarMenu.classList.remove("show");
                 navbarToggler.setAttribute("aria-expanded", "false");
                 navbarIcon.classList.remove("fa-times");
@@ -701,12 +604,9 @@
             }
         });
 
-        // Initialize components
         document.addEventListener('DOMContentLoaded', function () {
             stickyNav.init();
-            dropdowns.init();
 
-            // Scroll reveal animation
             const scrollReveal = (elements, className) => {
                 elements.forEach((element) => {
                     const windowHeight = window.innerHeight;
@@ -731,77 +631,66 @@
             if (copyrightYearElement) {
                 copyrightYearElement.textContent = new Date().getFullYear();
             }
-        });
 
-        // Accordion
-        const accordion = {
-            init: function () {
-                const accordionToggles = document.querySelectorAll('.accordion-toggle');
-                accordionToggles.forEach((toggle) => {
-                    toggle.addEventListener('click', function () {
-                        const targetId = this.getAttribute('data-target');
-                        const targetContent = document.querySelector(targetId);
-                        // Close all other open accordion contents smoothly
-                        document.querySelectorAll('.accordion-content').forEach((content) => {
-                            if (content !== targetContent && content.classList.contains('show')) {
-                                smoothClose(content);
-                            }
-                        });
-                        // Collapse other toggles
-                        document.querySelectorAll('.accordion-toggle').forEach((t) => {
-                            if (t !== toggle) {
-                                t.classList.add('collapsed');
-                            }
-                        });
-                        // Toggle clicked accordion smoothly
-                        if (targetContent.classList.contains('show')) {
-                            smoothClose(targetContent);
-                            toggle.classList.add('collapsed');
-                        } else {
-                            smoothOpen(targetContent);
-                            toggle.classList.remove('collapsed');
+            // Accordion functionality
+            const accordionToggles = document.querySelectorAll('.accordion-toggle');
+            accordionToggles.forEach((toggle) => {
+                toggle.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    const targetContent = document.querySelector(targetId);
+
+                    document.querySelectorAll('.accordion-content').forEach((content) => {
+                        if (content !== targetContent && content.classList.contains('show')) {
+                            smoothClose(content);
                         }
                     });
+
+                    document.querySelectorAll('.accordion-toggle').forEach((t) => {
+                        if (t !== toggle) t.classList.add('collapsed');
+                    });
+
+                    if (targetContent.classList.contains('show')) {
+                        smoothClose(targetContent);
+                        toggle.classList.add('collapsed');
+                    } else {
+                        smoothOpen(targetContent);
+                        toggle.classList.remove('collapsed');
+                    }
                 });
+            });
 
-                // Smoothly open accordion content
-                function smoothOpen(element) {
-                    element.style.display = 'block';
-                    element.style.overflow = 'hidden';  // Prevent overflow during animation
-                    const height = element.scrollHeight + 'px';
-                    element.style.height = '0px';
-                    element.offsetHeight;  // Trigger reflow
-                    element.style.transition = 'height 0.4s ease';
-                    element.style.height = height;
-                    element.addEventListener('transitionend', function handler() {
-                        element.style.height = 'auto';   // Reset height after animation
-                        element.style.overflow = '';     // Reset overflow
-                        element.classList.add('show');   // Mark as open
-                        element.style.transition = '';
-                        element.removeEventListener('transitionend', handler);
-                    });
-                }
-                // Smoothly close accordion content
-                function smoothClose(element) {
-                    element.style.overflow = 'hidden';  // Prevent overflow during animation
-                    element.style.height = element.scrollHeight + 'px';
+            function smoothOpen(element) {
+                element.style.display = 'block';
+                element.style.overflow = 'hidden';
+                const height = element.scrollHeight + 'px';
+                element.style.height = '0px';
+                element.offsetHeight;
+                element.style.transition = 'height 0.4s ease';
+                element.style.height = height;
+                element.addEventListener('transitionend', function handler() {
+                    element.style.height = 'auto';
+                    element.style.overflow = '';
+                    element.classList.add('show');
+                    element.style.transition = '';
+                    element.removeEventListener('transitionend', handler);
+                });
+            }
 
-                    element.offsetHeight;  // Trigger reflow
-
-                    element.style.transition = 'height 0.4s ease';
-                    element.style.height = '0px';
-
-                    element.addEventListener('transitionend', function handler() {
-                        element.style.transition = '';
-                        element.classList.remove('show');  // Mark as closed
-                        element.style.display = 'none';    // Hide content
-                        element.style.overflow = '';       // Reset overflow
-                        element.removeEventListener('transitionend', handler);
-                    });
-                }
-            },
-        };
-        accordion.init();
+            function smoothClose(element) {
+                element.style.overflow = 'hidden';
+                element.style.height = element.scrollHeight + 'px';
+                element.offsetHeight;
+                element.style.transition = 'height 0.4s ease';
+                element.style.height = '0px';
+                element.addEventListener('transitionend', function handler() {
+                    element.style.transition = '';
+                    element.classList.remove('show');
+                    element.style.display = 'none';
+                    element.style.overflow = '';
+                    element.removeEventListener('transitionend', handler);
+                });
+            }
+        });
     </script>
 </body>
 
