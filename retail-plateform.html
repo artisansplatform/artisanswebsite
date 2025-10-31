@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- SEO Meta Tags -->
+    <title>Retail Platform | artisans Cloud</title>
+    <meta name="description"
+        content="Discover the Retail Platform by artisans Cloud. Unify commerce, optimize supply chains, and enhance customer experiences with AI-driven insights and modular architecture.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Retail Platform | artisans Cloud">
+    <meta property="og:description"
+        content="Transform your retail operations with artisans Cloud. Explore our unified platform for predictive retailing, adaptive supply chains, and seamless customer journeys.">
+    <meta property="og:url" content="https://artisanscloud.com/retail-platform">
+    <meta property="og:image" content="https://artisanscloud.com/assets/images/retail-page-banner.png">
+    <meta property="og:type" content="website">
+
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/countrySelect.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/custom-style.css">
+</head>
+<style>
+    .img-fixed-size {
+        height: 150px;
+        width: auto !important;
+        padding-left: 20px;
+    }
+
+    .text-pink {
+        margin-top: 8px;
+        color: #f74ddd !important;
+    }
+
+    .active-pink {
+        color: #f74ddd !important;
+    }
+
+    .custom-blue-bg {
+        height: 90vh;
+    }
+
+    .tab-sec {
+        padding: 20vh 0 !important;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 767px) {
+        .custom-blue-bg {
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .tab-sec {
+            padding: 5vh 0 !important;
+        }
+
+        .img-fixed-size {
+            height: 100px;
+            padding-left: 10px;
+        }
+
+        .navbar-brand img {
+            max-width: 200px !important;
+        }
+
+        h1 {
+            font-size: 1.75rem !important;
+        }
+
+        h2 {
+            font-size: 1.5rem !important;
+        }
+
+        h3 {
+            font-size: 1.25rem !important;
+        }
+
+        h4 {
+            font-size: 1.1rem !important;
+        }
+
+        .banner-sec .row {
+            padding: 1rem !important;
+        }
+
+        .card h4 {
+            font-size: 1rem !important;
+        }
+
+        .card-img-top.ml-2 {
+            margin-left: 0 !important;
+            width: 80px !important;
+            height: 80px !important;
+        }
+
+        .card-img-top img {
+            height: 60px !important;
+        }
+
+        .text-right {
+            text-align: center !important;
+        }
+
+        .text-left {
+            text-align: center !important;
+        }
+
+        .pr-md-5 {
+            padding-right: 0 !important;
+        }
+
+        .pl-md-5 {
+            padding-left: 0 !important;
+        }
+
+        .pr-4 {
+            padding-right: 15px !important;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .tab-sec {
+            padding: 10vh 0 !important;
+        }
+
+        .card.flex-row {
+            flex-direction: column !important;
+            text-align: center;
+        }
+
+        .card.flex-row img {
+            max-width: 100px !important;
+            margin: 0 auto;
+        }
+    }
+</style>
+
+<body>
+    <section class="custom-blue-bg">
+        <header>
+            <div class="container">
+                <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
+                    <a class="navbar-brand" href="index">
+                        <img fetchpriority="high" src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                        <i class="fa fa-close" aria-hidden="true"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="platform">Platform</a>
+                            </li>
+                            <li class="custom-nav-item custom-dropdown">
+                                <a class="custom-nav-link nav-link custom-dropdown-toggle dropdown-toggle"
+                                    id="customNavbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    Solutions
+                                </a>
+                                <div class="custom-dropdown-menu" aria-labelledby="customNavbarDropdown">
+                                    <div class="custom-dropdown position-relative">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Supply Chain Planning
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps-1">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="merchandise-planning">Merchandise Planning</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="assortment-planning">Assortment Planning</a>
+                                        </div>
+                                    </div>
+                                    <div class="custom-dropdown">
+                                        <a class="custom-dropdown-item custom-dropdown-toggle dropdown-toggle"
+                                            id="customNestedDropdown" role="button">
+                                            Unified Commerce
+                                        </a>
+                                        <div class="custom-dropdown-menu gaps">
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="unified-commerce">Overview</a>
+                                            <!-- <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of Sales</a> -->
+                                            <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C
+                                                eCommerce</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="distributed-order-management">Distributed Order Management</a>
+                                            <a class="custom-dropdown-item sub-item"
+                                                href="customer-xperience-management">Customer Xperience Management</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="/browser-pos" class="custom-dropdown-item" role="button">
+                                            Browser POS
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="business-intelligence">Business Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artificial-intelligence">Artificial Intelligence</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about">About Us</a>
+                            </li>
+                        </ul>
+                        <div class="icons">
+                            <a class="btn btn-gradiant" href="contact-us">TALK TO US</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="banner-sec">
+            <div class="container">
+                <div class="row p-4">
+                    <div class="col-12 col-md-7 text-white  fadeInAnimation active">
+                        <small>Architecting the Future of Unified Commerce</small>
+                        <h1>One Platform. Every Channel. <span class="gradiant-text">Infinite
+                                Intelligence.</span></span>
+                        </h1>
+                        <p>We forge a single intelligent ecosystem connecting data, stores, supply chains, and
+                            customers, enabling predictive
+                            retailing, adaptive experiences, and measurable profit acceleration at scale.</p>
+                        <div>
+                            <a class="btn btn-primary my-2" href="contact-us">Explore Our
+                                Capabilities</a>
+                            <br>
+                            <a class="btn btn-primary my-2" href="contact-us">View Transformation Case Studies</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <img src="./assets/images/retail-page-banner.png" alt="logo"
+                            class="w-100 fadeInAnimation active">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="artisans-sec mt-md-5 pt-md-3 mt-0 pt-0 text-center">
+        <div class="container">
+            <div class="col-12 pb-5 m-auto">
+                <h2>
+                    The Unified Commerce Engine
+                </h2>
+                <h3 class="mb-3 font-3">A Single Source of Truth for
+                    <span class="gradiant-text">
+                        Intelligent Retail Operations
+                    </span>
+                </h3>
+                <p>At the core of our Retail Platform is a unified data and process layer, a digital operating system
+                    that synchronizes
+                    every function of modern retail. From real-time inventory to demand forecasting, order orchestration
+                    to customer
+                    experience, our platform eliminates channel silos, creating seamless alignment between enterprise
+                    intelligence and
+                    execution.</p>
+            </div>
+    </section>
+
+    <section class="case-sec mt-md-3 mt-0">
+        <div class="container">
+            <h2 class="pt-md-0 pt-4 font-3">Key
+                <span class="gradiant-text">Capabilities</span>
+            </h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center slider p-4">
+                        <article class="card-news h-100">
+                            <div class="card-img-top position-relative overflow-hidden p-0">
+                                <img class="img-fixed-size" src="./assets/images/capabilities-01.png"
+                                    alt="Capabilities Image" style="padding-left:0 !important;">
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">
+                                        Omnichannel Command Center
+                                    </p>
+                                </h4>
+                                <p class="text-light">Unified visibility and control across eCommerce, store and
+                                    marketplace operations.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top position-relative overflow-hidden p-0">
+                                <img class="img-fixed-size" src="./assets/images/capabilities-02.png"
+                                    alt="Capabilities Image">
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">
+                                        Predictive Merchandising
+                                    </p>
+                                </h4>
+                                <p class="text-light">AI-driven demand sensing and assortment optimization.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top position-relative overflow-hidden p-0">
+                                <img class="img-fixed-size" src="./assets/images/capabilities-03.png"
+                                    alt="Capabilities Image">
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Adaptive Supply Chain</p>
+                                </h4>
+                                <p class="text-light">Dynamic routing, fulfillment and pricing that respond to live
+                                    market signals.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top position-relative overflow-hidden p-0">
+                                <img class="img-fixed-size" src="./assets/images/capabilities-04.png"
+                                    alt="Capabilities Image">
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Experience Intelligence</p>
+                                </h4>
+                                <p class="text-light">Personalized journeys that increase conversion, retention and
+                                    lifetime value.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tab-sec py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="text-white">Platform Architecture</h2>
+                <h4 class="fw-bold mt-3 text-white">A Cognitive Engine for <br> the Modern Retail Enterprise</h4>
+                <p class="text-white">The foundation of our Retail Platform is a digital architecture that unifies
+                    intelligence, agility
+                    and extensibility.
+                    It’s engineered for enterprise interoperability, integrating seamlessly with existing ERP, CRM, POS
+                    and analytics
+                    environments while maintaining a single, AI-enhanced data core.</p>
+            </div>
+            <h4 class="text-white text-center">Architecture Highlights</h4>
+            <div class="row g-4 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm flex-row align-items-start">
+                        <img src="./assets/images/pillor-01.png" class="img-fluid rounded-start p-3"
+                            alt="Limited Collaboration" style="max-width: 120px; height: auto;">
+                        <div class="card-body">
+                            <h4 class="fw-semibold">Unified Data Fabric</h4>
+                            <p class="text-muted mb-0">
+                                Every transaction, interaction, and event flows into a governed, analytics-ready data
+                                model.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm flex-row align-items-start">
+                        <img src="./assets/images/pillor-02.png" class="img-fluid rounded-start p-3"
+                            alt="Supply Chain Visibility" style="max-width: 120px; height: auto;">
+                        <div class="card-body">
+                            <h4 class="fw-semibold">Cognitive Intelligence Layer</h4>
+                            <p class="text-muted mb-0">
+                                Embedded AI and ML models drive predictive forecasting, automation, and personalization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-6 mt-4">
+                    <div class="card h-100 border-0 shadow-sm flex-row align-items-start">
+                        <img src="./assets/images/pillor-03.png" class="img-fluid rounded-start p-3"
+                            alt="Resource Constraint" style="max-width: 120px; height: auto;">
+                        <div class="card-body">
+                            <h4 class="fw-semibold">Composable Microservices</h4>
+                            <p class="text-muted mb-0">
+                                Each capability is built as an independent, API-first service — modular, upgradeable,
+                                and infinitely scalable.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-4">
+                    <div class="card h-100 border-0 shadow-sm flex-row align-items-start">
+                        <img src="./assets/images/pillor-03.png" class="img-fluid rounded-start p-3"
+                            alt="Resource Constraint" style="max-width: 120px; height: auto;">
+                        <div class="card-body">
+                            <h4 class="fw-semibold">Interoperability at Scale</h4>
+                            <p class="text-muted mb-0">
+                                Natively integrates with enterprise systems (SAP, Oracle, Salesforce, and more) and
+                                modern data lakes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mt-4">
+                    <div class="card h-100 border-0 shadow-sm flex-row align-items-start">
+                        <img src="./assets/images/pillor-03.png" class="img-fluid rounded-start p-3"
+                            alt="Resource Constraint" style="max-width: 120px; height: auto;">
+                        <div class="card-body">
+                            <h4 class="fw-semibold">Security & Compliance by Design</h4>
+                            <p class="text-muted mb-0">
+                                Enterprise-grade protection across data residency, encryption, and regulatory
+                                frameworks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-sec mt-md-5 mt-0">
+        <div class="container">
+            <h2 class="pt-md-0 pt-4 font-3">
+                Modules
+            </h2>
+            <h4>Unified Modules. One Intelligent Retail Core.</h4>
+            <p>Our Retail Platform is built on modular architecture, a cohesive suite of enterprise-grade capabilities
+                designed to
+                operate as one cognitive system. Each module delivers a distinct strategic outcome while sharing the
+                same data, AI and
+                operational backbone. The result is seamless orchestration, measurable efficiency and accelerated value
+                realization
+                across the retail value chain.</p>
+            <h4 class="mt-5">Core Modules & Business Impact</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="center slider p-4">
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-01.png"
+                                    alt="Product Management" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Product Management</p>
+                                </h4>
+                                <p class="text-light">Centralize product lifecycle data and governance. Accelerate
+                                    launches, ensure data accuracy, and eliminate redundancy
+                                    across digital and physical channels.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-02.png"
+                                    alt="Inventory Management" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Inventory Management</p>
+                                </h4>
+                                <p class="text-light">Real-time, network-wide visibility with AI-driven demand
+                                    forecasting. Minimize stockouts, optimize turns, and reduce
+                                    carrying costs through predictive replenishment.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-03.png"
+                                    alt="Promotions Management" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Promotions Management</p>
+                                </h4>
+                                <p class="text-light">Orchestrate high-impact campaigns with dynamic pricing and
+                                    real-time ROI tracking. Align promotion strategies to
+                                    inventory velocity and margin objectives.
+                                </p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-04.png"
+                                    alt="Customer Data Management" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Customer Data Management</p>
+                                </h4>
+                                <p class="text-light">Consolidate customer interactions across all touchpoints. Activate
+                                    unified profiles to deliver individualized offers,
+                                    communications, and service experiences.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-05.png"
+                                    alt="Order Management System" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Order Management System</p>
+                                </h4>
+                                <p class="text-light">Integrate fulfillment, logistics, and payments into a single
+                                    command layer. Enable cross-channel order execution and
+                                    adaptive routing for superior delivery outcomes.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-06.png"
+                                    alt="Membership, Loyalty & Rewards" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Membership, Loyalty & Rewards</p>
+                                </h4>
+                                <p class="text-light">Transform transactional shoppers into lifelong advocates with
+                                    personalized engagement, flexible rewards, and unified
+                                    loyalty logic across stores and digital channels.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid rounded-circle" src="./assets/images/module-07.png"
+                                    alt="Enterprise POS" style="width: auto; height: 80px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Enterprise POS</p>
+                                </h4>
+                                <p class="text-light">Cloud-native, device-agnostic POS that connects every store to the
+                                    enterprise data fabric. Drive agility in checkout,
+                                    promotions, and real-time insights at the edge.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid" src="./assets/images/module-08.png"
+                                    alt="Online Store & Mobile Apps" style="width: auto; height: 70px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Online Store & Mobile Apps</p>
+                                </h4>
+                                <p class="text-light">High-performance digital storefronts powered by shared
+                                    intelligence and unified inventory, ensuring seamless omnichannel
+                                    buying experiences.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid" src="./assets/images/module-09.png" alt="Reporting & Dashboards"
+                                    style="width: auto; height: 70px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Reporting & Dashboards</p>
+                                </h4>
+                                <p class="text-light">Context-aware analytics for every role — from C-suite strategy to
+                                    store-level execution. Transform data noise into
+                                    predictive, actionable foresight.</p>
+                            </div>
+                        </article>
+                        <article class="card-news h-100">
+                            <div class="card-img-top ml-2 position-relative overflow-hidden p-0 d-flex justify-content-center align-items-center"
+                                style="background-color: #f8f9fa; border-radius: 50%; width: 100px; height: 100px;">
+                                <img class="img-fluid" src="./assets/images/module-10.png"
+                                    alt="Retail Planning & Optimization" style="width: auto; height: 70px;" />
+                            </div>
+                            <div class="card-body position-relative text-dark pt-0">
+                                <h4 class="mt-0 w-100">
+                                    <p class="text-secondary text-pink">Retail Planning & Optimization</p>
+                                </h4>
+                                <p class="text-light">AI-driven planning for pricing, allocation, and assortment
+                                    optimization. Enable proactive response to demand signals and
+                                    seasonal trends.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <p class="text-center">
+                        Each module can be deployed independently or as part of a unified enterprise rollout. Together,
+                        they form a continuously
+                        learning retail ecosystem one that adapts to market shifts, scales intelligently, and delivers
+                        quantifiable business
+                        value from day one.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary">Explore Platform Architecture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gray-tab-sec">
+        <div class="container">
+            <div class="row align-items-center pb-5 pb-md-3">
+                <div class="col-md-6 how-img order-md-2 pt-5">
+                    <img src="./assets/images/strategic-impact.png" alt="ETL and Analytics Illustration" class="w-100">
+                </div>
+                <div class="col-md-6 pr-4">
+                    <h2>Designed for Strategic Impact</h2>
+                    <h4>
+                        Engineered for Enterprise Growth, Efficiency and Agility
+                    </h4>
+                    <p>Our platform is not another commerce stack it is a strategic performance engine. Built on
+                        enterprise-grade architecture
+                        and powered by embedded AI, we enable retailers to operate with the foresight, precision and
+                        adaptability required in
+                        today’s volatile markets.</p>
+
+                    <h4>Strategic Outcomes</h4>
+                    <p>» 25% Faster Decision Velocity through unified intelligence dashboards.</p>
+                    <p>» 30% Margin Expansion from predictive pricing and supply optimization.</p>
+                    <p>» 40% Faster Product Rollouts through integrated digital operations</p>
+                    <p>» Omnichannel Consistency across every customer interaction</p>
+                    <a href="#" class="btn btn-primary">Discover the Retail Impact Framework</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-2 px-md-5 my-md-5">
+        <div class="container text-center">
+            <div class="text-center">
+                <h2>
+                    AI at the <span class="gradiant-text">Core</span>
+                </h2>
+                <h4>
+                    Cognitive Retail from Reactive to Predictive
+                </h4>
+                <p>
+                    Every function in our Retail Platform is infused with enterprise AI. <br>
+                    We embed intelligence where it matters most in decision-making.
+                    Our AI agents continuously learn from transaction patterns, market data
+                    and operational signals to drive next-best actions and optimize outcomes in real time.
+                </p>
+            </div>
+        </div>
+        <div class="row align-items-center mt-3">
+            <div class="col-12 col-md-6 text-center ">
+                <img class="img-fluid p-4" src="./assets/images/ai-at-core.png" alt="AI at the Core"
+                    style="max-width: 70%; height: auto;" />
+            </div>
+            <div class="col-12 col-md-6 text-left">
+                <h4>Faster Checkouts</h4>
+                <p>
+                    Enterprise point of sales system designed to reduce wait time and
+                    facilitate faster checkouts.
+                </p>
+                <br />
+                <h4>Streamlined Inventory Management</h4>
+                <p>
+                    Real-time, accurate inventory visibility across channels and
+                    Stores
+                </p>
+                <br />
+                <h4>Operational Excellence</h4>
+                <p>
+                    Unify Product, Inventory, Order and Customer Data across channels
+                    & stores and generate real-time insights
+                </p>
+                <br />
+                <h4>Open API & Integrations</h4>
+                <p>Build highly customizable workflows</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="api-sec py-md-5 py-0 w-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">
+                        Integration & <span class="gradiant-text">Scalability</span>
+                    </h2>
+                    <h4 class="text-center">
+                        Built to Integrate. Engineered to Scale
+                    </h4>
+                    <p class="text-center">The platform is designed for enterprise interoperability, integrating
+                        seamlessly with existing
+                        ERP, CRM, POS, and
+                        analytics ecosystems. Whether deployed on-premise, hybrid, or cloud-native, Artisans ensures
+                        security, resilience and
+                        performance consistency across all regions.</p>
+                    <img src="./assets/images/border.png" class="w-100 mb-3">
+                    <div class="shadow round p-5 my-2">
+                        <ul class="check-list">
+                            <li>Modular microservices architecture</li>
+                            <li>API-first interoperability</li>
+                            <li>Scalable data pipelines</li>
+                            <li>Enterprise-grade security and compliance frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="logo-sec my-5">
+        <div class="container">
+            <h2 class="text-center pb-2">
+                Industry Recognition & Trust
+            </h2>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 fadeInAnimation active pr-md-5 pr-0">
+                    <h3 class="text-right text-uppercase">Trusted by Global<br>
+                        <span class="gradiant-text">Retail Innovators</span>
+                    </h3>
+
+                </div>
+                <div class="col-12 col-md-6 borders-left pl-md-5 pl-0">
+                    <img src="./assets/images/left-logos.png" alt="logo" class="w-100 fadeInAnimation active ">
+                </div>
+            </div>
+            <div class="row align-items-center mt-5">
+                <div class="col-12 col-md-6 pl-md-5 pl-0 order-md-2">
+                    <p>We partner with leading retail enterprises and luxury brands worldwide, empowering them to
+                        modernize commerce, scale
+                        globally and lead in customer experience. Our track record spans multi-billion-dollar retailers
+                        who use the platform to
+                        unify business intelligence and transform their operational agility.</p>
+                </div>
+                <div class="col-12 col-md-6 fadeInAnimation active borders-right pr-md-4  pr-0">
+                    <img src="./assets/images/right-logos.png" alt="logo" class="w-100 fadeInAnimation active ">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold display-6 mb-3">Insight <span class="gradiant-text">Highlights</span></h2>
+                <p class="mx-auto">
+                    Intelligence that defines Tomorrow’s Retail
+                    <br><br>
+                    Explore how the convergence of AI, data and retail architecture is reshaping the commerce landscape.
+                </p>
+            </div>
+            <b class="pb-5">Featured Topics</b>
+            <!-- Blog Grid -->
+            <div class="row g-4 gap-2 justify-content-between pt-2">
+                <!-- Blog Card 1 -->
+                <div class="col-md-6 col-lg-4 border py-3">
+                    <div class="card bg-transparent border-0 h-100">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="./assets/images/blog-01.png" class="card-img-top img-fluid transition"
+                                style="transition: all 0.5s ease; transform: scale(1);"
+                                onmouseover="this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                        </div>
+
+                        <h4 class="fw-semibold">
+                            Unified Commerce
+                        </h4>
+                        <p class="mt-3" style="font-size: large">
+                            The Operating System of Modern Retail
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="col-md-6 col-lg-4 border py-3">
+                    <div class="card bg-transparent border-0 h-100">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="./assets/images/blog-02.png" class="card-img-top img-fluid transition"
+                                style="transition: all 0.5s ease; transform: scale(1);"
+                                onmouseover="this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                        </div>
+
+                        <h4 class="fw-semibold">
+                            Predictive Retailing
+                        </h4>
+                        <p class="mt-3" style="font-size: large">
+                            When Data Becomes Decision
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Blog Card 3 -->
+                <div class="col-md-6 col-lg-4 border py-3">
+                    <div class="card bg-transparent h-100 border-0">
+                        <div class="overflow-hidden rounded-4 mb-3">
+                            <img src="./assets/images/blog-03.png" class="card-img-top img-fluid transition"
+                                style="transition: all 0.5s ease; transform: scale(1);"
+                                onmouseover="this.style.transform='scale(1.1)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                        </div>
+
+                        <h4 class="fw-semibold">
+                            Beyond Omnichannel
+                        </h4>
+                        <p class="mt-3" style="font-size: large">
+                            Designing the Connected Retail Enterprise
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="" class="btn btn-primary ">Explore Retail Insights</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contect-sec text-white">
+        <div class="text-right top-to-bottom">
+            <h2>
+                Transform Retail. Power Growth. <br>
+                Build the Future
+            </h2>
+            <p>
+                Partner with Artisans to design intelligent retail systems that anticipate demand, orchestrate
+                seamlessly, and deliver
+                measurable outcomes.
+            </p>
+            <a class="btn btn-white" href="contact-us">
+                <span class="gradiant-text">Request a Platform Demo</span>
+            </a><br>
+            <a class="btn btn-white" href="contact-us">
+                <span class="gradiant-text">Connect with a Retail Transformation Strategist</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-white">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 mt-5">
+                    <a class="navbar-brand mb-5" href="#">
+                        <img src="./assets/images/logo.png" alt="logo" width="300">
+                    </a>
+                </div>
+                <div class="col-12 col-sm-4">
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        10-1, Menara Infiniti,<br>
+                        Jalan SS 6/3, Kelana Jaya,<br>
+                        47301 Petaling Jaya, Selangor,<br>
+                        Malaysia.
+                    </p>
+                    <p>
+                        <i class="fa fa-map-marker mr-2" aria-hidden="true"></i>
+                        1108-9, The Spire 2, BRTS,<br> 150 Feet Ring Rd, Near Shital Park,<br> Opposite Plexus Med Care,
+                        Shastri Nagar,<br> Rajkot, Gujarat 360006. <br>India
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope mr-2" aria-hidden="true"></i>
+                        <a href="mailto:support@artisanscloud.com.my"
+                            class="text-white">support@artisanscloud.com.my</a>
+                    </p>
+                    <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                        <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a>
+                    </p>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <p>
+                        <b>Company</b>
+                    </p>
+                    <ul>
+                        <li><a href="platform">Platform</a></li>
+                        <li><a href="artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="automation">Automation</a></li>
+                        <li><a href="resources">Resources</a></li>
+                        <li><a href="about">About artisans</a></li>
+                        <li><a href="Integrations">Integrations</a></li>
+                        <li><a href="contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-3">
+                    <p>
+                        <b>Our Solutions</b>
+                    </p>
+                    <ul>
+                        <li><a href="merchandise-planning">Merchandise Planning</a></li>
+                        <li><a href="assortment-planning">Assortment Planning</a></li>
+                        <li><a href="unified-commerce">Unified Commerce</a></li>
+                        <li><a href="distributed-order-management">Distributed Order Management</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-sm-2">
+                    <ul>
+                        <li style="margin-top: 20px;"></li>
+                        <li class="pt-md-3"></li>
+                        <!-- <li><a href="POS.html">Enterprise Point of Sales</a></li> -->
+                        <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience
+                                Management</a></li>
+                        <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
+                        <li><a href="solution">Composable Commerce</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-4 pb-md-0 pb-2">
+                        <p><a href="#">Terms & Conditions</a> <span class="gradiant-text px-2">|</span> <a
+                                href="#">Privacy Policy</a></p>
+                    </div>
+                    <div class="col-12 col-md-4  pb-md-0 pb-2">
+                        <p class="text-center">© <span id="copyright-year">2024</span>
+                            artisans. All right reserved.</p>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <ul class="social-icons">
+                            <li><a href="https://www.linkedin.com/company/artisanscommercecloud/"><i
+                                        class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="content-btn">
+        <a href="contact-us">Contact Us</a>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var stickyNavTop = $('header').offset().top;
+            var stickyNav = function () {
+                var scrollTop = $(window).scrollTop();
+                if (scrollTop > 1) {
+                    $('header').addClass('fixed-top');
+                    $('header').addClass('sticky');
+                } else {
+                    $('header').removeClass('fixed-top');
+                    $('header').removeClass('sticky');
+                }
+            };
+            stickyNav();
+            $(window).scroll(function () {
+                stickyNav();
+            });
+            const $dropdown = $(".dropdown");
+            const $dropdownToggle = $(".dropdown-toggle");
+            const $dropdownMenu = $(".dropdown-menu");
+            const showClass = "show";
+            $(window).on("load resize", function () {
+                if (this.matchMedia("(min-width: 768px)").matches) {
+                    $dropdown.hover(function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    }, function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    });
+                } else {
+                    $dropdown.off("mouseenter mouseleave");
+                }
+            });
+        });
+
+        function fadeInAnimation() {
+            var reveals = document.querySelectorAll(".fadeInAnimation");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    //reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", fadeInAnimation);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./assets/js/slider.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.center').slick({
+                centerMode: true,
+                dots: false,
+                centerPadding: '0',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
+
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1
+                    }
+                }]
+            });
+        });
+    </script>
+</body>
+
+</html>
