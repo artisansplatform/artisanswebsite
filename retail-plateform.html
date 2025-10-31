@@ -34,6 +34,12 @@
     <link rel="stylesheet" href="./assets/css/custom-style.css">
 </head>
 <style>
+    html,
+    body {
+        overflow-x: hidden !important;
+        font-family: 'Poppins', sans-serif;
+    }
+
     .img-fixed-size {
         height: 150px;
         width: auto !important;
@@ -62,83 +68,66 @@
         margin-bottom: -32vh !important;
     }
 
-    /* Responsive styles */
-    @media (max-width: 767px) {
+    /* Tablet Styles */
+    @media (min-width: 768px) and (max-width: 991px) {
         .custom-blue-bg {
             height: auto;
-            min-height: 100vh;
+            padding-bottom: 80px;
         }
 
         .tab-sec {
-            padding: 5vh 0 !important;
-        }
-
-        .img-fixed-size {
-            height: 100px;
-            padding-left: 10px;
-        }
-
-        .navbar-brand img {
-            max-width: 200px !important;
-        }
-
-        h1 {
-            font-size: 1.75rem !important;
-        }
-
-        h2 {
-            font-size: 1.5rem !important;
-        }
-
-        h3 {
-            font-size: 1.25rem !important;
-        }
-
-        h4 {
-            font-size: 1.1rem !important;
+            padding: 10vh 0 !important;
         }
 
         .banner-sec .row {
-            padding: 1rem !important;
+            padding: 3rem 1rem !important;
+        }
+
+        .img-fixed-size {
+            height: 120px;
+            padding-left: 15px;
+        }
+
+        h1 {
+            font-size: 2.2rem !important;
+            line-height: 2.5rem !important;
+        }
+
+        h2 {
+            font-size: 2rem !important;
+            line-height: 2.3rem !important;
+        }
+
+        h3 {
+            font-size: 1.7rem !important;
+            line-height: 2rem !important;
+        }
+
+        h4 {
+            font-size: 1.4rem !important;
+            line-height: 1.7rem !important;
         }
 
         .card h4 {
-            font-size: 1rem !important;
+            font-size: 1.2rem !important;
+        }
+
+        .card-body p {
+            font-size: 0.95rem !important;
         }
 
         .card-img-top.ml-2 {
-            margin-left: 0 !important;
-            width: 80px !important;
-            height: 80px !important;
+            width: 90px !important;
+            height: 90px !important;
         }
 
-        .card-img-top img {
-            height: 60px !important;
+        .contect-sec {
+            padding: 8vh 4vw 20vh 8vw !important;
+            margin-bottom: -20vh !important;
         }
 
-        .text-right {
-            text-align: center !important;
-        }
-
-        .text-left {
-            text-align: center !important;
-        }
-
-        .pr-md-5 {
-            padding-right: 0 !important;
-        }
-
-        .pl-md-5 {
-            padding-left: 0 !important;
-        }
-
-        .pr-4 {
-            padding-right: 15px !important;
-        }
-    }
-
-    @media (max-width: 991px) {
-        .tab-sec {
+        .gray-tab-sec,
+        .leverage-sec {
             padding: 10vh 0 !important;
         }
 
@@ -149,7 +138,355 @@
 
         .card.flex-row img {
             max-width: 100px !important;
+            margin: 0 auto 1rem;
+        }
+
+        .borders-left:before,
+        .borders-right:before {
+            display: none;
+        }
+
+        .logo-sec h3 {
+            text-align: center !important;
+        }
+
+        .logo-sec p {
+            text-align: center !important;
+        }
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 767px) {
+        .custom-blue-bg {
+            height: auto;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        .tab-sec {
+            padding: 5vh 0 10vh !important;
+            background-size: cover !important;
+        }
+
+        .gray-tab-sec {
+            padding: 5vh 0 10vh !important;
+            background-size: cover !important;
+        }
+
+        .img-fixed-size {
+            height: 80px;
+            padding-left: 5px;
+        }
+
+        .navbar-brand img {
+            max-width: 180px !important;
+        }
+
+        h1 {
+            font-size: 1.75rem !important;
+            line-height: 2rem !important;
+        }
+
+        h2 {
+            font-size: 1.5rem !important;
+            line-height: 1.8rem !important;
+        }
+
+        h3 {
+            font-size: 1.3rem !important;
+            line-height: 1.6rem !important;
+        }
+
+        h4 {
+            font-size: 1.1rem !important;
+            line-height: 1.4rem !important;
+        }
+
+        h5 {
+            font-size: 1rem !important;
+            line-height: 1.3rem !important;
+        }
+
+        p {
+            font-size: 0.95rem !important;
+        }
+
+        .banner-sec .row {
+            padding: 1rem 0.5rem !important;
+        }
+
+        .banner-sec h1 {
+            margin-bottom: 1rem;
+        }
+
+        .banner-sec p {
+            margin-bottom: 1rem;
+        }
+
+        .banner-sec .btn {
+            font-size: 0.85rem !important;
+            padding: 10px 20px !important;
+            margin: 0.5rem 0 !important;
+            width: auto;
+            display: inline-block;
+        }
+
+        .card h4 {
+            font-size: 1rem !important;
+        }
+
+        .card-body p {
+            font-size: 0.85rem !important;
+        }
+
+        .card-img-top.ml-2 {
+            margin-left: 0 !important;
+            width: 70px !important;
+            height: 70px !important;
+        }
+
+        .card-img-top img {
+            height: 50px !important;
+        }
+
+        .text-right {
+            text-align: center !important;
+        }
+
+        .text-left {
+            text-align: center !important;
+        }
+
+        .pr-md-5,
+        .pl-md-5 {
+            padding-right: 1rem !important;
+            padding-left: 1rem !important;
+        }
+
+        .pr-4,
+        .pl-4 {
+            padding-right: 1rem !important;
+            padding-left: 1rem !important;
+        }
+
+        .card.flex-row {
+            flex-direction: column !important;
+            text-align: center;
+        }
+
+        .card.flex-row img {
+            max-width: 80px !important;
+            margin: 0 auto 1rem;
+        }
+
+        .contect-sec {
+            padding: 5vh 2rem 15vh 2rem !important;
+            margin-bottom: -15vh !important;
+            width: 100vw;
+        }
+
+        .contect-sec h2 {
+            font-size: 1.3rem !important;
+            line-height: 1.6rem !important;
+        }
+
+        .contect-sec .btn {
+            font-size: 0.8rem !important;
+            padding: 8px 16px !important;
+            margin: 0.5rem 0 !important;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .borders-left:before,
+        .borders-right:before {
+            display: none;
+        }
+
+        .logo-sec h3 {
+            text-align: center !important;
+            font-size: 1.2rem !important;
+        }
+
+        .logo-sec p {
+            text-align: center !important;
+            padding-left: 0 !important;
+        }
+
+        .logo-sec .row {
+            margin-top: 2rem !important;
+        }
+
+        /* Slider adjustments for mobile */
+        .slick-prev,
+        .slick-next {
+            top: -6vh !important;
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        .slick-prev {
+            right: 40px !important;
+        }
+
+        .slick-next {
+            right: 5px !important;
+        }
+
+        /* Section spacing */
+        section {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        .artisans-sec {
+            margin-top: 2rem !important;
+            padding-top: 2rem !important;
+        }
+
+        .case-sec {
+            margin-top: 2rem !important;
+        }
+
+        /* Card news items in slider */
+        .card-news {
+            margin: 0 0.5rem;
+        }
+
+        .card-news .card-body {
+            padding: 1rem 0.75rem !important;
+        }
+
+        /* Center slider properly */
+        .center.slider {
+            padding: 1rem 0.5rem !important;
+        }
+
+        /* Blog cards */
+        .col-md-6.col-lg-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Images */
+        img.w-100 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* AI section */
+        .col-12.col-md-6 img {
+            max-width: 90% !important;
             margin: 0 auto;
+            display: block;
+        }
+
+        /* API section */
+        .api-sec .shadow.round {
+            padding: 1.5rem !important;
+        }
+
+        .check-list li {
+            width: 100% !important;
+            padding-left: 35px !important;
+            font-size: 0.9rem !important;
+        }
+
+        /* Footer adjustments */
+        footer .row {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+
+        footer p,
+        footer ul li {
+            font-size: 0.85rem !important;
+        }
+
+        /* Architecture cards */
+        .row.g-4>div {
+            margin-bottom: 1rem;
+        }
+
+        /* Order adjustments */
+        .order-md-2 {
+            order: 1;
+        }
+
+        .col-12.col-md-6.order-md-2 {
+            margin-bottom: 1rem;
+        }
+    }
+
+    /* Very small mobile devices */
+    @media (max-width: 575px) {
+        .navbar-brand img {
+            max-width: 150px !important;
+        }
+
+        h1 {
+            font-size: 1.5rem !important;
+            line-height: 1.8rem !important;
+        }
+
+        h2 {
+            font-size: 1.3rem !important;
+            line-height: 1.6rem !important;
+        }
+
+        h3 {
+            font-size: 1.15rem !important;
+            line-height: 1.4rem !important;
+        }
+
+        h4 {
+            font-size: 1rem !important;
+            line-height: 1.3rem !important;
+        }
+
+        .banner-sec .btn {
+            font-size: 0.75rem !important;
+            padding: 8px 16px !important;
+        }
+
+        .img-fixed-size {
+            height: 60px;
+        }
+
+        .card-img-top.ml-2 {
+            width: 60px !important;
+            height: 60px !important;
+        }
+
+        .contect-sec {
+            padding: 3vh 1rem 10vh 1rem !important;
+        }
+
+        .btn {
+            font-size: 0.75rem !important;
+            padding: 8px 16px !important;
+        }
+    }
+
+    /* Large Desktop Styles */
+    @media (min-width: 1200px) and (max-width: 1599px) {
+        .img-fixed-size {
+            height: 140px;
+        }
+
+        .card-img-top.ml-2 {
+            width: 95px !important;
+            height: 95px !important;
+        }
+    }
+
+    /* Extra Large Desktop */
+    @media (min-width: 1600px) {
+        .container {
+            max-width: 1400px;
+        }
+
+        .img-fixed-size {
+            height: 160px;
         }
     }
 </style>
@@ -746,7 +1083,8 @@
             </div>
             <div class="row align-items-center mt-5">
                 <div class="col-12 col-md-6 pl-md-5 pl-0 order-md-2">
-                    <p class="pl-4">We partner with leading retail enterprises and luxury brands worldwide, empowering them to
+                    <p class="pl-4">We partner with leading retail enterprises and luxury brands worldwide, empowering
+                        them to
                         modernize commerce, scale
                         globally and lead in customer experience. Our track record spans multi-billion-dollar retailers
                         who use the platform to
@@ -795,7 +1133,8 @@
                 <div class="col-md-6 col-lg-4 border py-3">
                     <div class="card bg-transparent border-0 h-100">
                         <div class="overflow-hidden rounded-4 mb-3">
-                            <img src="./assets/images/predictive-retailing.png" class="card-img-top img-fluid transition"
+                            <img src="./assets/images/predictive-retailing.png"
+                                class="card-img-top img-fluid transition"
                                 style="transition: all 0.5s ease; transform: scale(1);"
                                 onmouseover="this.style.transform='scale(1.1)'"
                                 onmouseout="this.style.transform='scale(1)'">
