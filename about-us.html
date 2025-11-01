@@ -602,7 +602,7 @@
             var stickyNavTop = $('header').offset().top;
             var stickyNav = function () {
                 var scrollTop = $(window).scrollTop();
-                if (scrollTop > 1) {
+                if (scrollTop > 500) {
                     $('header').addClass('fixed-top');
                     $('header').addClass('sticky');
                 } else {
