@@ -34,6 +34,11 @@
     <link rel="stylesheet" href="./assets/css/custom-style.css">
 </head>
 <style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .img-fixed-size {
         height: 150px;
         width: 150px !important;
@@ -249,13 +254,16 @@
 
     <section class="left-right-image-sec py-5">
         <div class="container">
-            <div class="row align-items-center pb-5 ">
+            <h2 class="mb-3 text-center">
+                Our <span class="gradiant-text">Differentiator</span>
+            </h2>
+            <div class="row align-items-center">
                 <div class="col-md-6 how-img pr-5">
                     <img src="./assets/images/engineer-systems.png" width="60%" alt="logo">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="pt-md-0 pt-4">We engineer systems that think
-                    </h2>
+                    <b class="pt-md-0 pt-4">We engineer systems that think
+                    </b>
                     <p>We integrate advanced AI, data engineering and business architecture to design self-learning
                         ecosystems capable of
                         sensing, predicting, and adapting continuously. Our approach blends world-class enterprise
@@ -567,6 +575,29 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+            // Navbar toggle logic for small screens
+            const navbarToggler = document.querySelector(".navbar-toggler");
+            const navbarMenu = document.querySelector("#navbarNavDropdown");
+            const navbarIcon = navbarToggler.querySelector("i");
+
+            navbarToggler.addEventListener("click", function () {
+                const isExpanded = navbarMenu.classList.contains("show");
+
+                if (isExpanded) {
+                    document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                        menu.classList.remove("show");
+                    });
+                    navbarMenu.classList.remove("show");
+                    navbarToggler.setAttribute("aria-expanded", "false");
+                    navbarIcon.classList.remove("fa-times");
+                    navbarIcon.classList.add("fa-bars");
+                } else {
+                    navbarMenu.classList.add("show");
+                    navbarToggler.setAttribute("aria-expanded", "true");
+                    navbarIcon.classList.remove("fa-bars");
+                    navbarIcon.classList.add("fa-times");
+                }
+            });
 
             var stickyNavTop = $('header').offset().top;
             var stickyNav = function () {
