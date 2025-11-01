@@ -2,271 +2,124 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Intelligence Solutions | artisans</title>
+    <!-- SEO Meta Tags -->
+    <title>Data Intelligence | Artisans Cloud</title>
     <meta name="description"
-        content="Unlock the power of Business Intelligence with artisans. Transform data into actionable insights, leverage real-time analytics, and make smarter decisions to drive business growth.">
-    <meta name="keywords"
-        content="business intelligence, BI solutions, data analytics, BI dashboards, real-time analytics, data visualization, reporting tools, KPI tracking, data-driven decisions, Power BI, Tableau, SSRS, SSIS, big data solutions">
-    <meta name="author" content="artisans">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Business Intelligence Solutions | artisans">
+        content="Explore Enterprise AI solutions by Artisans Cloud. Accelerate decisions, automate complexity, and deliver measurable business value with AI.">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Enterprise AI | Artisans Cloud">
     <meta property="og:description"
-        content="Empower your business with data-driven decisions using artisans' Business Intelligence solutions. Gain real-time insights, visualize KPIs, and optimize performance.">
+        content="Discover how Artisans Cloud transforms AI strategy into enterprise reality. Learn about our production-ready intelligence for sustainable business impact.">
+    <meta property="og:url" content="https://artisanscloud.com/cognitive-automation">
+    <meta property="og:image" content="https://artisanscloud.com/assets/images/enterprise-ai-banner.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://artisanscloud.com/business-intelligence">
-    <meta property="og:locale" content="en_US">
-    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-    <!--Font-awesome-css-->
+
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,700&family=Poppins:wght@400;500;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/custom-style.css" />
-    <style>
-        html,
-        body {
-            overflow-x: hidden;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .card-body {
-            color: black;
-        }
-
-        .card {
-            width: 100%;
-            margin: auto auto;
-            min-height: 170px;
-            max-height: 170px;
-        }
-
-        .card-img-left {
-            width: 18%;
-            height: 10%;
-        }
-
-        /* BI Section Wrapper */
-        .bi-section {
-            background-color: #ffffff;
-            padding: 80px 20px;
-            padding-top: 40px;
-        }
-
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(to right, #27BEE2, #1A2B50);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Section Header */
-        .bi-exclusive-header,
-        .bi-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #1A2B50;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .bi-exclusive-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: #27BEE2;
-        }
-
-        .bi-exclusive-header p {
-            color: #6C757D;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Grid Layout */
-        .bi-exclusive-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .bi-exclusive-card {
-            background: #F1F4F8;
-            border-radius: 10px;
-            padding: 30px;
-            transition: transform 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-
-        .bi-exclusive-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .bi-exclusive-card h3 {
-            color: #1A2B50;
-            display: flex;
-            align-items: center;
-            font-size: 1.40rem;
-            font-weight: 600;
-        }
-
-        .bi-exclusive-card h3 i {
-            margin-right: 10px;
-            font-size: 1.6rem;
-        }
-
-        .bi-exclusive-card p {
-            color: #444;
-            line-height: 1.6;
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        .accordion-toggle:after {
-            transition: transform 0.3s ease;
-        }
-
-        .accordion-toggle.collapsed:after {
-            transform: rotate(0deg);
-        }
-
-        .accordion-toggle:not(.collapsed):after {
-            transform: rotate(180deg);
-        }
-
-        .achievements-list {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .achievements-list .highlight {
-            font-weight: 700;
-            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-            padding-bottom: 2px;
-            display: inline-block;
-        }
-
-        .achievements-list .highlight::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #12d9e3, #8d67f5, #f74ddd);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        .achievements-list .highlight:hover::after {
-            height: 4px;
-            background: linear-gradient(90deg, #f74ddd, #8d67f5, #12d9e3);
-        }
-
-        @media (max-width: 992px) {
-            .bi-exclusive-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .col-md-6 {
-                padding-left: 30px;
-                padding-right: 30px;
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .bi-section {
-                padding: 60px 15px;
-            }
-
-            .bi-section {
-                padding-top: 0px;
-                margin-top: -20%;
-            }
-
-            .bi-section h2 {
-                font-size: 2rem;
-            }
-
-            .bi-exclusive-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .card {
-                min-height: 240px;
-                max-height: 240px;
-            }
-
-            .card-img-left {
-                margin-top: 14px;
-                width: 30%;
-                height: 40%;
-            }
-
-            .pull-up {
-                margin-top: -100px !important;
-            }
-
-            .gray-tab-sec {
-                padding: 0 !important;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .bi-section h2 {
-                font-size: 1.8rem;
-            }
-        }
-
-        @media screen and (min-width: 1366px) {
-            #accordion .faq {
-                padding-right: 6%;
-            }
-
-            #accordion h5.collapsed:after,
-            #accordion h5:after {
-                right: 1px;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .kpi-img-col {
-                width: 45% !important;
-                flex: 0 0 45% !important;
-                max-width: 45% !important;
-            }
-
-            .kpi-text-col {
-                width: 55% !important;
-                flex: 0 0 55% !important;
-                max-width: 55% !important;
-            }
-        }
-    </style>
-
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/countrySelect.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/custom-style.css">
 </head>
+<style>
+    html,
+    body {
+        overflow-x: hidden !important;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .custom-blue-bg {
+        height: 98vh;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 215px;
+        height: 290px;
+        max-height: 500px;
+        background-color: var(--white);
+        border-radius: 10px;
+        box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s;
+        cursor: pointer;
+        box-sizing: border-box;
+        padding: 10px !important;
+        text-align: center;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+            -4px -4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-image-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 180px;
+        margin-bottom: 12px;
+        max-height: 130px;
+        overflow: hidden;
+        color: whitesmoke;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: default;
+        line-clamp: 1;
+    }
+
+    .card-des {
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        line-clamp: 3;
+        margin: 0;
+        font-size: 15px;
+        cursor: default;
+    }
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 35vh;
+    }
+
+    @media (min-width: 768px) and (max-width: 1180px) {
+        .card-container {
+            margin-top: 7% !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+
+    .tab-sec {
+        padding: 14vh 0 !important;
+    }
+</style>
 
 <body>
-    <section class="blue-bg">
+    <section class="custom-blue-bg">
         <header>
             <div class="container">
                 <nav class="navbar navbar-expand-md py-4 fadeInAnimation active">
@@ -311,8 +164,7 @@
                                         <div class="custom-dropdown-menu gaps">
                                             <a class="custom-dropdown-item sub-item"
                                                 href="unified-commerce">Overview</a>
-                                            <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of
-                                                Sales</a>
+                                            <!-- <a class="custom-dropdown-item sub-item" href="POS">Enterprise Point of Sales</a> -->
                                             <a class="custom-dropdown-item sub-item" href="d2c-ecommerce">D2C
                                                 eCommerce</a>
                                             <a class="custom-dropdown-item sub-item"
@@ -348,194 +200,274 @@
         <div class="banner-sec">
             <div class="container">
                 <div class="row p-4">
-                    <div class="col-12 col-md-7 text-white fadeInAnimation active">
-                        <h1>Transform Your Data into <span class="gradiant-text">Insights that Drive Smart
-                                Decisions</span></h1>
-                        <p>Our Business Intelligence solutions unify your data, deliver real-time analytics, and empower
-                            you with
-                            actionable insights. Make faster, smarter decisions and drive growth with confidence.</p>
-                        <a class="btn btn-primary my-2" href="contact-us">BOOK A 30 MINUTES DEMO</a>
+                    <div class="col-12 col-md-7 text-white  fadeInAnimation active">
+                        <h1>Data Intelligence : Transforming Enterprise
+                            <span class="gradiant-text">
+                                Data into Intelligent Action.
+                            </span>
+                        </h1>
+                        <p>We build modern data ecosystems that unify, automate, and activate enterprise intelligence.
+                            Artisans transforms static
+                            reports into dynamic, decision-ready foresight, connecting every layer of the business.</p>
+                        <div>
+                            <a class="btn btn-primary my-2" href="contact-us">
+                                Explore Data Intelligence Solutions</a>
+                        </div>
                     </div>
                     <div class="col-12 col-md-5">
-                        <img src="./assets/images/new-page-banner.webp" alt="Business Intelligence" class="w-100">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="left-right-image-sec">
-        <div class="container">
-            <div class="row align-items-center pb-md-3">
-                <div class="col-md-6 how-img kpi-img-col">
-                    <img src="./assets/images/kpi.webp" alt="KPI Dashboard" class="mb-4 img-fluid" />
-                </div>
-                <div class="col-md-6 kpi-text-col">
-                    <h2>Our Track Record</h2> <br>
-                    <p style="margin-top: -40px;">Over the years, we've partnered with top players in the supply chain
-                        and
-                        manufacturing sectors to streamline their business processes, design robust data systems, and
-                        implement centralized data warehouses. With more than four decades of experience in Business
-                        Intelligence, we've supported clients in reconciling revenue, minimizing financial leakage, and
-                        enhancing efficiency through effective KPI monitoring and dashboards.</p>
-                    <div class="achievements-list">
-                        <p><span class="highlight">Reporting Tools:</span> SSRS, Crystal Reports, Business Objects</p>
-                        <p><span class="highlight">Analytics Platforms:</span> Power BI, SSAS, Tableau, QlikView,
-                            SpagoBI
-                        </p>
-                        <p><span class="highlight">ETL Solutions:</span> SSIS, Oracle Data Integrator, Informatica,
-                            Talend
-                        </p>
-                        <p><span class="highlight">Big Data Technologies:</span> Hadoop, MongoDB, Apache Spark</p>
+                        <img src="./assets/images/data-intelligence-banner.png" alt="logo"
+                            class="w-100 fadeInAnimation active">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="gray-tab-sec">
+    <section class="artisans-sec mt-md-5 pt-md-5 mt-0 pt-0 text-center">
         <div class="container">
-            <div class="row align-items-center pb-5 pb-md-3">
-                <div class="col-md-6 how-img order-md-2 pt-5">
-                    <img src="./assets/images/etl-analytics-illustration.webp" alt="ETL and Analytics Illustration"
-                        class="w-100">
-                </div>
-                <div class="col-md-6 pr-4">
-                    <h2>Our Deliverables</h2>
-                    <p>With extensive experience across logistics, supply chain management, and manufacturing
-                        industries, we
-                        have successfully executed high-performance business intelligence solutions for a wide range of
-                        clients.</p>
-
-                    <p><b>Our Key Offerings Include:</b></p>
-                    <p>» Business Process Optimization</p>
-                    <p>» Data Warehousing Solutions</p>
-                    <p>» Machine Learning-Based Data Modeling & Analytics</p>
-                    <p>» ETL Development & System Integration</p>
-                    <p>» Voice-Enabled BI Solutions</p>
-                    <p class="pb-5">» Tiered Support Helpdesk – 24/7, 16/5, or 8/5 Coverage</p>
-                </div>
+            <div class="col-12 pb-5 m-auto">
+                <h2 class="mb-3 font-3">
+                    Our <span class="gradiant-text">Approach</span>
+                </h2>
+                <h4>
+                    From Data Silos to Enterprise-Ready Intelligence.
+                </h4>
+                <p>Artisans helps enterprises modernise how they manage, process, and operationalise data. We work from
+                    architecture design
+                    to deployment, building governed, scalable systems that make data accessible, interpretable, and
+                    actionable across the
+                    enterprise. Our focus transcends technology, centred instead on creating continuous intelligence
+                    pipelines that
+                    seamlessly connect data, analytics, and operations into one resilient ecosystem.</p>
             </div>
-        </div>
     </section>
 
-    <section class="bi-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 m-auto text-center">
-                    <h2 class="mb-md-5 font-3">
-                        <span class="gradiant-text">BI Development</span> – Center of Excellence
-                    </h2>
-                    <div class="bi-exclusive-grid">
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-chess" style="color: #12d9e3;"></i> Strategic Alignment</h3>
-                            <p>Our framework ensures cohesive application performance by aligning business processes,
-                                enabling effective change management, and streamlining day-to-day operations through
-                                automation.</p>
-                        </div>
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-balance-scale" style="color: #1fcde6;"></i> Governance</h3>
-                            <p>We facilitate smooth collaboration between onsite and offshore teams by managing
-                                relationships, addressing escalations, and ensuring delivery within agreed SLAs.</p>
-                        </div>
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-project-diagram" style="color: #8d67f5;"></i> Project Expertise</h3>
-                            <p>Our combined experience spans nearly a century in data warehousing, serving over 20
-                                clients—primarily in supply chain and logistics—with tailored BI solutions.</p>
-                        </div>
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-hands-helping" style="color: #a458ef;"></i> Reliable Support</h3>
-                            <p>We take pride in delivering every project on time—maintaining a consistent record of zero
-                                delays in our delivery schedules.</p>
-                        </div>
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-chalkboard-teacher" style="color: #d347e5;"></i> Learning & Training
-                            </h3>
-                            <p>Our e-Learning services support onboarding, certification, and compliance through
-                                easy-to-follow self-paced materials, while offering guidance for new users.</p>
-                        </div>
-                        <div class="bi-exclusive-card">
-                            <h3><i class="fas fa-rocket" style="color: #f74ddd;"></i> Scalable Enhancements</h3>
-                            <p>Our Continuous Integration/Continuous Deployment (CI/CD) practices are designed to adapt
-                                to
-                                evolving business needs without disrupting ongoing operations.</p>
-                        </div>
+    <section class="container">
+        <h2 class="text-center">
+            Architecting the <span class="gradiant-text">data foundation</span>
+        </h2>
+        <h4 class="text-center">
+            Architecting the Core Infrastructure of Decision Intelligence.
+        </h4>
+        <p class="text-center">
+            We design and implement data foundations engineered for agility, trust, and scalability. Our expertise spans
+            modern data
+            architecture, integration, and governance—ensuring your enterprise can act on intelligence, not just store
+            information.
+        </p>
+        <h4 class="text-center mt-5">
+            Core Capabilities
+        </h4>
+        <div class="card-container pb-5">
+            <div class="card">
+                <div class="icon row justify-content-center">
+                    <div class="card-image-container"
+                        style="background-color: #12d9e37a; display: flex; justify-content: center; align-items: center; height: 80px;">
+                        <img src="assets/images/core-capabilities-01.png" alt="Data Mesh & Unified Fabric"
+                            style="max-width: 90%; max-height: 100%; object-fit: contain;">
                     </div>
                 </div>
+                <p class="card-title">Data Mesh & Unified Fabric</p>
+                <p class="card-des">
+                    Decentralised data ownership with enterprise-wide discoverability and governance.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <section id="accordion" style="padding-bottom: 10% !important; margin-bottom: -10% !important;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-xl-5">
-                    <img src="./assets/images/small-logo.png" alt="logo" width="100">
-                    <h2>Case Study <br>
-                        <h2>
-                            <h4><span class="second-gradiant-text"> Explore our recent insights and works.</span></h4>
-                </div>
-                <div class="col-12 col-xl-7">
-                    <div class="faq position-relative fadeInAnimation">
-                        <div class="accordion-item">
-                            <div id="headingOne">
-                                <h5 class="accordion-toggle" data-target="#collapseOne">Revenue Reconciliation for a 3PL
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="accordion-content collapse show" aria-labelledby="headingOne">
-                                <div class="content-body">
-                                    <p>We supported a leading 3PL company in Europe by implementing BI dashboards across
-                                        multiple business levels. This enabled
-                                        improved operational visibility and financial reconciliation, helping
-                                        stakeholders make better, data-driven decisions.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div id="headingTwo">
-                                <h5 class="accordion-toggle collapsed" data-target="#collapseTwo">Dashboards for an
-                                    Agricultural Cooperative</h5>
-                            </div>
-                            <div id="collapseTwo" class="accordion-content collapse" aria-labelledby="headingTwo">
-                                <div class="content-body">
-                                    <p>We collaborated with a UK-based agricultural cooperative to design BI dashboards
-                                        and reports. These tools empowered them
-                                        to conduct more effective market research and provide valuable insights to the
-                                        farming community.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <div id="headingThree">
-                                <h5 class="accordion-toggle collapsed" data-target="#collapseThree">Wellness Data Mart
-                                    for an Insurance Provider</h5>
-                            </div>
-                            <div id="collapseThree" class="accordion-content collapse" aria-labelledby="headingThree">
-                                <div class="content-body">
-                                    <p>We built a cloud-based BI platform for a major health insurance provider,
-                                        enabling them to generate integrated reports
-                                        from various wearable devices. This helped enhance their wellness analytics
-                                        capabilities and decision-making.</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="card">
+                <div class="icon row justify-content-center">
+                    <div class="card-image-container"
+                        style="background-color: #f74ddd82; display: flex; justify-content: center; align-items: center; height: 80px;">
+                        <img src="assets/images/core-capabilities-02.png" alt="Data Pipelines & Orchestration"
+                            style="max-width: 100%; padding-left: 3px; max-height: 80%; object-fit: contain;">
                     </div>
                 </div>
+                <p class="card-title">Data Pipelines & Orchestration</p>
+                <p class="card-des">
+                    Automated ingestion, transformation, and delivery across complex enterprise systems.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon row justify-content-center">
+                    <div class="card-image-container"
+                        style="background-color: #da4f6880; display: flex; justify-content: center; align-items: center; height: 80px;">
+                        <img src="assets/images/core-capabilities-03.png" alt="Metadata & Lineage Management"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding-left: 8px;">
+                    </div>
+                </div>
+                <p class="card-title">Metadata & Lineage Management</p>
+                <p class="card-des">
+                    Complete traceability for audit-ready transparency and operational control.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon row justify-content-center">
+                    <div class="card-image-container"
+                        style="background-color: #8d67f582; display: flex; justify-content: center; align-items: center; height: 80px;">
+                        <img src="assets/images/core-capabilities-04.png" alt="Data Quality & Trust Frameworks"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 3px;">
+                    </div>
+                </div>
+                <p class="card-title">Data Quality & Trust Frameworks</p>
+                <p class="card-des">
+                    Continuous validation for accuracy, integrity, and reliability.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon row justify-content-center">
+                    <div class="card-image-container"
+                        style="background-color: #1267e37d; display: flex; justify-content: center; align-items: center; height: 80px;">
+                        <img src="assets/images/core-capabilities-05.png" alt="Cloud & Hybrid Deployments"
+                            style="max-width: 100%; max-height: 80%; object-fit: contain; padding: 2px; padding-top: 0px;">
+                    </div>
+                </div>
+                <p class="card-title">Cloud & Hybrid Deployments</p>
+                <p class="card-des">
+                    Optimised architecture for scalability, performance, and cost efficiency.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="contect-sec text-white">
-        <div class="text-right top-to-bottom">
-            <h2>
-                Transform Data into Decisions,<br>
-                Unlock Insights that Drive Growth,<br>
-                Power Your Business Intelligence with Ease.
+    <section class="tab-sec text-white mt-3">
+        <div class="container py-5">
+            <h2 class="text-center font-3 pt-5">Intelligent insights <span class="gradiant-text">decision systems</span>
             </h2>
+            <h4 class="text-center">
+                From Dashboards to Decision Systems.
+            </h4>
+            <p class="text-center">
+                We bring intelligence closer to decision-makers by integrating advanced analytics and
+                AI within business workflows.
+                Artisans builds insight systems that move beyond static reporting - transforming data into real-time,
+                contextual
+                guidance.
+            </p>
 
+            <div class="row align-items-center py-md-5 py-2">
+                <div class="col-12 pr-md-5 pr-0">
+                    <h4 class="text-center">
+                        What We Build
+                    </h4>
+                    <div class="col-12 col-md-10 m-auto">
+                        <ul id="tabs" class="nav nav-tabs">
+                            <li>
+                                <a data-toggle="tab" data-target="#tab1" class="btn active" href="">
+                                    Executive Dashboards
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab2" class="btn" href="">
+                                    Cognitive Reporting Layers
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab3" class="btn" href="">Predictive & Prescriptive
+                                    Models</a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" data-target="#tab4" class="btn" href="">Embedded Decision
+                                    Frameworks</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div class="tab-content pl-md-5 pl-0">
+                            <div id="tab1" class="tab-pane show active">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle p-3"
+                                    style="width: 94px; height: 94px; background-color: #67e9f5e6; ">
+                                    <img src="./assets/images/decision-system-01.png" class="img-fluid"
+                                        alt="Executive Dashboards">
+                                </div>
+                                <br>
+                                <h3>Executive Dashboards</h3>
+                                <p>
+                                    Unified visibility into performance metrics and predictive insights.
+                                </p>
+                            </div>
+                            <div id="tab2" class="tab-pane">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle p-3"
+                                    style="width: 94px; height: 94px; background-color: #67f59ce6; ">
+                                    <img src="./assets/images/decision-system-02.png" class="img-fluid"
+                                        alt="Cognitive Reporting Layers">
+                                </div>
+                                <br>
+                                <h3>Cognitive Reporting Layers</h3>
+                                <p>Automated analytics that explain, not just display, what’s happening and why.</p>
+                            </div>
+                            <div id="tab3" class="tab-pane">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle p-3"
+                                    style="width: 94px; height: 94px; background-color: #6771f5e6; ">
+                                    <img src="./assets/images/decision-system-03.png" class="img-fluid"
+                                        alt="Predictive & Prescriptive Models">
+                                </div>
+                                <br>
+                                <h3>Predictive & Prescriptive Models</h3>
+                                <p>AI-driven recommendations to anticipate and optimise outcomes.</p>
+                            </div>
+                            <div id="tab4" class="tab-pane">
+                                <div class="d-flex justify-content-center align-items-center rounded-circle p-3"
+                                    style="width: 94px; height: 94px; background-color: #f567ece6; ">
+                                    <img src="./assets/images/decision-system-04.png" class="img-fluid"
+                                        alt="Embedded Decision Frameworks">
+                                </div>
+                                <br>
+                                <h3>Embedded Decision Frameworks</h3>
+                                <p>Integrations that deliver intelligence directly into ERP, CRM, or custom enterprise
+                                    applications.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center">Every deployment is engineered for <strong>velocity, clarity, and absolute
+                    accountability</strong>—enabling faster, data-driven
+                action across all critical functions.</p>
+        </div>
+    </section>
+
+    <section class="left-right-image-sec data-driven-section py-5">
+        <div class="container">
+            <!-- First Row -->
+            <h2 class="text-center">
+                Co-building intelligence with <span class="gradiant-text">enterprises</span>
+            </h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 how-img order-md-2">
+                    <img src="./assets/images/enterprise-intelligence.png" alt="Enterprise" class="custom-image"
+                        style="float: right; margin-right: 20px;">
+                </div>
+                <div class="col-md-6 pr-5">
+                    <h3 class="pt-md-0 pt-4">Partnering to Design the Future of Enterprise Intelligence.</h3>
+                    <p>
+                        Artisans works alongside enterprise teams to co-architect data and intelligence systems that
+                        evolve with business needs.
+                        We combine deep domain expertise with engineering precision to build solutions that are owned,
+                        operated, and
+                        continuously refined by our clients.
+                    </p>
+                    <p>
+                        Our partnerships go beyond delivery—we help organisations establish data culture, governance
+                        frameworks, and IP
+                        co-creation models that sustain long-term innovation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contect-sec text-white mt-5">
+        <div class="text-right top-to-bottom py-5">
+            <h2>Build the Data Foundation for Intelligent Growth.
+            </h2>
+            <p>Artisans unites data engineering, analytics, and automation into a single continuum of intelligence. We
+                enable
+                enterprises to transform data into a living system—always learning, always guiding, always advancing.
+            </p>
             <a class="btn btn-white" href="contact-us">
-                <span class="gradiant-text">Contact Us</span>
+                <span class="gradiant-text">Start Your Data Intelligence Journey</span>
             </a>
         </div>
     </section>
@@ -545,7 +477,7 @@
             <div class="row py-5">
                 <div class="col-12 mt-5">
                     <a class="navbar-brand mb-5" href="#">
-                        <img src="./assets/images/logo.png" alt="logo" width="300" />
+                        <img src="./assets/images/logo.png" alt="logo" width="300">
                     </a>
                 </div>
                 <div class="col-12 col-sm-4">
@@ -566,8 +498,7 @@
                         <a href="mailto:support@artisanscloud.com.my"
                             class="text-white">support@artisanscloud.com.my</a>
                     </p>
-                    <p>
-                        <i class="fa fa-phone mr-2" aria-hidden="true"></i>
+                    <p><i class="fa fa-phone mr-2" aria-hidden="true"></i>
                         <a href="tel:+60 (3) 6412 7632" class="text-white">+60 (3) 6412 7632</a>
                     </p>
                 </div>
@@ -602,7 +533,7 @@
                     <ul>
                         <li style="margin-top: 20px;"></li>
                         <li class="pt-md-3"></li>
-                        <li><a href="POS.html">Enterprise Point of Sales</a></li>
+                        <!-- <li><a href="POS.html">Enterprise Point of Sales</a></li> -->
                         <li class="text-nowrap"><a href="customer-xperience-management">Customer Xperience
                                 Management</a></li>
                         <li><a href="d2c-ecommerce">D2C eCommerce</a></li>
@@ -615,18 +546,12 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-12 col-md-4 pb-md-0 pb-2">
-                        <p>
-                            <a href="#">Terms & Conditions</a>
-                            <span class="gradiant-text px-2">|</span>
-                            <a href="#">Privacy Policy</a>
-                        </p>
+                        <p><a href="#">Terms & Conditions</a> <span class="gradiant-text px-2">|</span> <a
+                                href="#">Privacy Policy</a></p>
                     </div>
-                    <div class="col-12 col-md-4 pb-md-0 pb-2">
-                        <p class="text-center">
-                            © <span id="copyright-year">2024</span>
-                            artisans. All right
-                            reserved.
-                        </p>
+                    <div class="col-12 col-md-4  pb-md-0 pb-2">
+                        <p class="text-center">© <span id="copyright-year">2024</span>
+                            artisans. All right reserved.</p>
                     </div>
                     <div class="col-12 col-md-4">
                         <ul class="social-icons">
@@ -638,217 +563,94 @@
             </div>
         </div>
     </footer>
+
     <div class="content-btn">
         <a href="contact-us">Contact Us</a>
     </div>
+
     <script type="text/javascript">
-        // Debounce function
-        function debounce(func, wait) {
-            let timeout;
-            return function (...args) {
-                clearTimeout(timeout);
-                timeout = setTimeout(() => {
-                    func.apply(this, args);
-                }, wait);
-            };
-        }
-
-        // Throttle function
-        function throttle(func, wait) {
-            let timeout;
-            return function (...args) {
-                if (!timeout) {
-                    func.apply(this, args);
-                    timeout = setTimeout(() => {
-                        timeout = null;
-                    }, wait);
-                }
-            };
-        }
-
-        // Accordion
-        const accordion = {
-            init: function () {
-                const accordionToggles = document.querySelectorAll('.accordion-toggle');
-                accordionToggles.forEach((toggle) => {
-                    toggle.addEventListener('click', function () {
-                        const targetId = this.getAttribute('data-target');
-                        const targetContent = document.querySelector(targetId);
-                        // Close all other open accordion contents smoothly
-                        document.querySelectorAll('.accordion-content').forEach((content) => {
-                            if (content !== targetContent && content.classList.contains('show')) {
-                                smoothClose(content);
-                            }
-                        });
-                        // Collapse other toggles
-                        document.querySelectorAll('.accordion-toggle').forEach((t) => {
-                            if (t !== toggle) {
-                                t.classList.add('collapsed');
-                            }
-                        });
-                        // Toggle clicked accordion smoothly
-                        if (targetContent.classList.contains('show')) {
-                            smoothClose(targetContent);
-                            toggle.classList.add('collapsed');
-                        } else {
-                            smoothOpen(targetContent);
-                            toggle.classList.remove('collapsed');
-                        }
-                    });
-                });
-
-                // Smoothly open accordion content
-                function smoothOpen(element) {
-                    element.style.display = 'block';
-                    element.style.overflow = 'hidden';  // Prevent overflow during animation
-                    const height = element.scrollHeight + 'px';
-                    element.style.height = '0px';
-                    element.offsetHeight;  // Trigger reflow
-                    element.style.transition = 'height 0.4s ease';
-                    element.style.height = height;
-                    element.addEventListener('transitionend', function handler() {
-                        element.style.height = 'auto';   // Reset height after animation
-                        element.style.overflow = '';     // Reset overflow
-                        element.classList.add('show');   // Mark as open
-                        element.style.transition = '';
-                        element.removeEventListener('transitionend', handler);
-                    });
-                }
-                // Smoothly close accordion content
-                function smoothClose(element) {
-                    element.style.overflow = 'hidden';  // Prevent overflow during animation
-                    element.style.height = element.scrollHeight + 'px';
-
-                    element.offsetHeight;  // Trigger reflow
-
-                    element.style.transition = 'height 0.4s ease';
-                    element.style.height = '0px';
-
-                    element.addEventListener('transitionend', function handler() {
-                        element.style.transition = '';
-                        element.classList.remove('show');  // Mark as closed
-                        element.style.display = 'none';    // Hide content
-                        element.style.overflow = '';       // Reset overflow
-                        element.removeEventListener('transitionend', handler);
-                    });
-                }
-            },
-        };
-        accordion.init();
-        // DOM Ready
-        document.addEventListener("DOMContentLoaded", function () {
-            // Sticky Header
-            var stickyNavTop = document.querySelector("header").offsetTop;
-
-            function stickyNav() {
-                var scrollTop = window.scrollY;
+        $(document).ready(function () {
+            var stickyNavTop = $('header').offset().top;
+            var stickyNav = function () {
+                var scrollTop = $(window).scrollTop();
                 if (scrollTop > 1) {
-                    document.querySelector("header").classList.add("fixed-top", "sticky");
+                    $('header').addClass('fixed-top');
+                    $('header').addClass('sticky');
                 } else {
-                    document.querySelector("header").classList.remove("fixed-top", "sticky");
+                    $('header').removeClass('fixed-top');
+                    $('header').removeClass('sticky');
                 }
-            }
-
+            };
             stickyNav();
-            window.addEventListener("scroll", debounce(stickyNav, 100));
-
-            // Dropdown hover for desktop
-            function handleDropdowns() {
-                if (window.innerWidth >= 768) {
-                    document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                        dropdown.addEventListener("mouseenter", function () {
-                            this.classList.add("show");
-                            this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "true");
-                            this.querySelector(".dropdown-menu").classList.add("show");
-                        });
-                        dropdown.addEventListener("mouseleave", function () {
-                            this.classList.remove("show");
-                            this.querySelector(".dropdown-toggle").setAttribute("aria-expanded", "false");
-                            this.querySelector(".dropdown-menu").classList.remove("show");
-                        });
+            $(window).scroll(function () {
+                stickyNav();
+            });
+            const $dropdown = $(".dropdown");
+            const $dropdownToggle = $(".dropdown-toggle");
+            const $dropdownMenu = $(".dropdown-menu");
+            const showClass = "show";
+            $(window).on("load resize", function () {
+                if (this.matchMedia("(min-width: 768px)").matches) {
+                    $dropdown.hover(function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    }, function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
                     });
                 } else {
-                    document.querySelectorAll(".dropdown .dropdown-toggle").forEach(function (dropdownToggle) {
-                        dropdownToggle.addEventListener("click", function (e) {
-                            e.preventDefault();
-                            const dropdownMenu = this.nextElementSibling;
-                            const isOpen = dropdownMenu.classList.contains("show");
-
-                            document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                                menu.classList.remove("show");
-                            });
-
-                            if (!isOpen) {
-                                dropdownMenu.classList.add("show");
-                            } else {
-                                dropdownMenu.classList.remove("show");
-                            }
-                        });
-                    });
-                }
-            }
-
-            handleDropdowns();
-            window.addEventListener("resize", throttle(handleDropdowns, 200));
-
-            // Navbar Toggler for Mobile
-            const navbarToggler = document.querySelector(".navbar-toggler");
-            const navbarMenu = document.querySelector("#navbarNavDropdown");
-            const navbarIcon = navbarToggler.querySelector("i");
-
-            navbarToggler.addEventListener("click", function () {
-                const isExpanded = navbarMenu.classList.contains("show");
-
-                if (isExpanded) {
-                    document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                        menu.classList.remove("show");
-                    });
-                    navbarMenu.classList.remove("show");
-                    navbarToggler.setAttribute("aria-expanded", "false");
-                    navbarIcon.classList.remove("fa-times");
-                    navbarIcon.classList.add("fa-bars");
-                } else {
-                    navbarMenu.classList.add("show");
-                    navbarToggler.setAttribute("aria-expanded", "true");
-                    navbarIcon.classList.remove("fa-bars");
-                    navbarIcon.classList.add("fa-times");
+                    $dropdown.off("mouseenter mouseleave");
                 }
             });
+        });
 
-            // Scroll-triggered animation
-            function animateElements(className) {
-                var reveals = document.querySelectorAll(className);
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 50;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add("active");
-                    }
+        function fadeInAnimation() {
+            var reveals = document.querySelectorAll(".fadeInAnimation");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    //reveals[i].classList.remove("active");
                 }
             }
+        }
+        window.addEventListener("scroll", fadeInAnimation);
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./assets/js/slider.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="./assets/css/slider.css">
+    <script type="text/javascript">
+        $(document).on('ready', function () {
+            $('.center').slick({
+                centerMode: true,
+                dots: false,
+                centerPadding: '0',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
 
-            window.addEventListener("scroll", debounce(function () {
-                animateElements(".fadeInAnimation");
-                animateElements(".right-to-left");
-                animateElements(".left-to-right");
-            }, 100));
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 3
+                    }
+                }, {
+                    breakpoint: 480,
+                    settings: {
 
-            function animate() {
-                requestAnimationFrame(animate);
-                animateElements(".fadeInAnimation");
-                animateElements(".right-to-left");
-                animateElements(".left-to-right");
-            }
-            animate();
-
-            // Update copyright year
-            const copyrightYearElement = document.getElementById("copyright-year");
-            if (copyrightYearElement) {
-                copyrightYearElement.textContent = new Date().getFullYear();
-            }
-
-            accordion.init();
+                        centerMode: true,
+                        centerPadding: '0',
+                        slidesToShow: 1
+                    }
+                }]
+            });
         });
     </script>
 </body>
