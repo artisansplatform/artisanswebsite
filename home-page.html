@@ -235,8 +235,6 @@
                                         <div>
                                             <a class="btn btn-primary my-2" href="contact-us">Explore Our
                                                 Capabilities</a>
-                                            <br>
-                                            <a class="btn btn-primary my-2" href="contact-us">Partner with Us</a>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -525,7 +523,7 @@
                         <div style="height: 200px;" class="col-md-6">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-success rounded">
-                                <h5 class="fw-bold text-dark mb-2">$X Millions in cost avoidance</h5>
+                                <h5 class="fw-bold text-dark mb-2">Significant cost avoidance</h5>
                                 <p class="text-muted mb-0" style="font-size: 1.05rem;">
                                     Achieved through AI-driven cognitive automation.
                                 </p>
@@ -652,10 +650,6 @@
             <a class="btn btn-white" href="contact-us">
                 <span class="gradiant-text">Connect with Us</span>
             </a>
-            <br>
-            <a class="btn btn-white" href="contact-us">
-                <span class="gradiant-text">Request a Consultation</span>
-            </a>
         </div>
     </section>
 
@@ -756,6 +750,30 @@
     </div>
 
     <script type="text/javascript">
+
+        // Navbar toggle logic for small screens
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarMenu = document.querySelector("#navbarNavDropdown");
+        const navbarIcon = navbarToggler.querySelector("i");
+
+        navbarToggler.addEventListener("click", function () {
+            const isExpanded = navbarMenu.classList.contains("show");
+
+            if (isExpanded) {
+                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
+                    menu.classList.remove("show");
+                });
+                navbarMenu.classList.remove("show");
+                navbarToggler.setAttribute("aria-expanded", "false");
+                navbarIcon.classList.remove("fa-times");
+                navbarIcon.classList.add("fa-bars");
+            } else {
+                navbarMenu.classList.add("show");
+                navbarToggler.setAttribute("aria-expanded", "true");
+                navbarIcon.classList.remove("fa-bars");
+                navbarIcon.classList.add("fa-times");
+            }
+        });
 
         const carousel = {
             init: function () {
