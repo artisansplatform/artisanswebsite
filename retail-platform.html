@@ -65,18 +65,22 @@
         padding: 20vh 0 !important;
     }
 
-    .contect-sec {
-        padding: 10vh 5vw 30vh 10vw;
-        margin-bottom: -32vh !important;
-    }
-
     .bg-light {
         background: #f5f0fea6 !important;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1025px) {
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+        .tab-sec {
+            padding: 8vh 0 28vh 0 !important;
+        }
         .custom-blue-bg {
-            height: 100vh;
+            height: 115vh;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 78vh;
         }
     }
 </style>
@@ -93,7 +97,7 @@
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fa fa-bars" aria-hidden="true"></i>
-                        <i class="fa fa-close" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
@@ -292,7 +296,7 @@
             <h4 class="text-white text-center">Architecture Highlights</h4>
             <div class="row g-4 justify-content-center">
                 <!-- Card 1 -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <div class="card h-100 border-0 shadow-sm flex-row align-items-start rounded bg-light">
                         <img src="./assets/images/architecture-01.png" class="img-fluid rounded-start p-3"
                             alt="Unified Data Fabric" style="max-width: 120px; height: auto;">
@@ -307,7 +311,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <div class="card h-100 border-0 shadow-sm flex-row align-items-start rounded bg-light">
                         <img src="./assets/images/architecture-02.png" class="img-fluid rounded-start p-3"
                             alt="Cognitive Intelligence Layer" style="max-width: 120px; height: auto;">
@@ -764,7 +768,7 @@
     </section>
 
     <section class="contect-sec text-white">
-        <div class="text-right top-to-bottom">
+        <div class="text-right fadeInAnimation">
             <h2>
                 Transform Retail. Power Growth. <br>
                 Build the Future
@@ -892,7 +896,7 @@
             $(window).scroll(function () {
                 stickyNav();
             });
-            const $dropdown = $(".dropdown");
+            const $dropdown = $(".custom-dropdown");
             const $dropdownToggle = $(".dropdown-toggle");
             const $dropdownMenu = $(".dropdown-menu");
             const showClass = "show";

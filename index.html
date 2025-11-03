@@ -178,7 +178,7 @@
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fa fa-bars" aria-hidden="true"></i>
-                        <i class="fa fa-close" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
@@ -790,30 +790,6 @@
 
     <script type="text/javascript">
 
-        // Navbar toggle logic for small screens
-        const navbarToggler = document.querySelector(".navbar-toggler");
-        const navbarMenu = document.querySelector("#navbarNavDropdown");
-        const navbarIcon = navbarToggler.querySelector("i");
-
-        navbarToggler.addEventListener("click", function () {
-            const isExpanded = navbarMenu.classList.contains("show");
-
-            if (isExpanded) {
-                document.querySelectorAll(".dropdown-menu").forEach(function (menu) {
-                    menu.classList.remove("show");
-                });
-                navbarMenu.classList.remove("show");
-                navbarToggler.setAttribute("aria-expanded", "false");
-                navbarIcon.classList.remove("fa-times");
-                navbarIcon.classList.add("fa-bars");
-            } else {
-                navbarMenu.classList.add("show");
-                navbarToggler.setAttribute("aria-expanded", "true");
-                navbarIcon.classList.remove("fa-bars");
-                navbarIcon.classList.add("fa-times");
-            }
-        });
-
         const carousel = {
             init: function () {
                 const slideContainer = document.querySelector('.slide-container');
@@ -915,6 +891,27 @@
             stickyNav();
             $(window).scroll(function () {
                 stickyNav();
+            });
+            const $dropdown = $(".custom-dropdown");
+            const $dropdownToggle = $(".dropdown-toggle");
+            const $dropdownMenu = $(".dropdown-menu");
+            const showClass = "show";
+            $(window).on("load resize", function () {
+                if (this.matchMedia("(min-width: 768px)").matches) {
+                    $dropdown.hover(function () {
+                        const $this = $(this);
+                        $this.addClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "true");
+                        $this.find($dropdownMenu).addClass(showClass);
+                    }, function () {
+                        const $this = $(this);
+                        $this.removeClass(showClass);
+                        $this.find($dropdownToggle).attr("aria-expanded", "false");
+                        $this.find($dropdownMenu).removeClass(showClass);
+                    });
+                } else {
+                    $dropdown.off("mouseenter mouseleave");
+                }
             });
         });
 
