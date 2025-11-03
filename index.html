@@ -102,6 +102,10 @@
             align-items: center;
         }
 
+        .custom-margin-top {
+            padding-top: 0;
+        }
+
         #next-btn,
         #prev-btn {
             cursor: pointer;
@@ -136,19 +140,27 @@
 
         @media screen and (max-width: 425px) {
             .slide-controls {
-            top: 92%;
+                top: 92%;
+            }
+
+            .custom-margin-top {
+                margin-top: 27px;
+            }
+
+            .tab-sec {
+                padding: 0 0 13vh 0 !important;
             }
         }
 
         @media screen and (min-width: 426px) and (max-width: 768px) {
             .slide-controls {
-            top: 67%;
+                top: 67%;
             }
         }
 
         @media screen and (min-width: 769px) and (max-width: 1024px) {
             .slide-controls {
-            top: 70%;
+                top: 70%;
             }
         }
     </style>
@@ -439,7 +451,7 @@
                     Transformation.</span></h2>
             <div class="row align-items-center">
                 <!-- Left Column -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="col-xl-6 mb-4 mb-lg-0">
                     <h3 class="fw-bold display-6 mb-3 text-dark">
                         We bring three strengths to every engagement
                     </h3>
@@ -453,7 +465,7 @@
                 </div>
 
                 <!-- Right Column -->
-                <div class="col-lg-6">
+                <div class="col-xl-6">
 
                     <div class="row g-3 justify-content-center">
                         <div style="height: 200px;" class="col-md-6">
@@ -469,7 +481,7 @@
                             </div>
                         </div>
 
-                        <div style="height: 200px;" class="col-md-6 mt-sm-3">
+                        <div style="height: 200px;" class="col-md-6 pt-0 custom-margin-top">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-success rounded">
                                 <h5 class="fw-bold text-dark mb-2">Sector Expertise</h5>
