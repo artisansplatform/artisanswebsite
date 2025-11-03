@@ -68,6 +68,26 @@
     .bg-light {
         background: #f5f0fea6 !important;
     }
+
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+        .tab-sec {
+            padding: 8vh 0 28vh 0 !important;
+        }
+
+        .custom-blue-bg {
+            height: 130vh;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 78vh;
+        }
+
+        .gray-tab-sec {
+            padding: 50px 0 200px !important;
+        }
+    }
 </style>
 
 <body>
@@ -202,7 +222,7 @@
 
             <div class="row g-4 justify-content-center">
                 <!-- Card 1 -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <div class="card h-100 border-0 shadow-sm flex-row align-items-start rounded bg-light">
                         <img src="./assets/images/pillor-01.png" class="img-fluid rounded-start p-3"
                             alt="Limited Collaboration" style="max-width: 120px; height: auto;">
@@ -219,7 +239,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-md-6">
+                <div class="col-md-6 mt-4">
                     <div class="card h-100 border-0 shadow-sm flex-row align-items-start rounded bg-light">
                         <img src="./assets/images/pillor-02.png" class="img-fluid rounded-start p-3"
                             alt="Supply Chain Visibility" style="max-width: 120px; height: auto;">
@@ -284,7 +304,7 @@
         <div class="container">
             <div class="row align-items-center pb-5 pb-md-3">
                 <div class="col-md-6 how-img order-md-2 pt-5 d-flex justify-content-center">
-                    <img src="./assets/images/our-impact.png" alt="ETL and Analytics Illustration">
+                    <img src="./assets/images/our-impact.png" class="img-fluid" alt="ETL and Analytics Illustration">
                 </div>
                 <div class="col-md-6 pr-4">
                     <h2>Our Impact</h2>
@@ -308,7 +328,7 @@
         </div>
     </section>
 
-    <section class="mt-5 pt-5 fadeInAnimation">
+    <section class="pt-5 fadeInAnimation">
         <div class="row p-0">
             <div class="col-md-6 how-img p-0 pr-5">
                 <img src="./assets/images/vision-mission.png" alt="logo" class="w-100" />
