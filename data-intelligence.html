@@ -120,6 +120,32 @@
     .tab-sec {
         padding: 14vh 0 !important;
     }
+
+    @media (max-width: 425px) {
+        .custom-blue-bg {
+            height: 110vh;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        .custom-blue-bg {
+            height: 72vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 72vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
 </style>
 
 <body>
@@ -440,8 +466,8 @@
             </h2>
             <div class="row align-items-center">
                 <div class="col-md-6 how-img order-md-2">
-                    <img src="./assets/images/enterprise-intelligence.png" alt="Enterprise" class="custom-image"
-                        style="float: right; margin-right: 20px;">
+                    <img src="./assets/images/enterprise-intelligence.png" alt="Enterprise"
+                        class="custom-image img-fluid" style="float: right; margin-right: 20px;">
                 </div>
                 <div class="col-md-6 pr-5">
                     <h3 class="pt-md-0 pt-4">Partnering to Design the Future of Enterprise Intelligence.</h3>
