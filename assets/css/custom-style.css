@@ -263,7 +263,7 @@ header a.nav-link.active {
 }
 
 header .nav-item {
-    padding: 0 16px;
+    padding: 0 8px;
 }
 
 header.fixed-top {
