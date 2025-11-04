@@ -65,11 +65,6 @@
         padding: 20vh 0 !important;
     }
 
-    .contect-sec {
-        padding: 10vh 5vw 30vh 10vw;
-        margin-bottom: -32vh !important;
-    }
-
     .card {
         display: flex;
         flex-direction: column;
@@ -165,6 +160,29 @@
 
     .tab-sec {
         padding: 10vh 0 !important;
+    }
+
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+        .tab-sec {
+            padding: 8vh 0 28vh 0 !important;
+        }
+
+        .custom-blue-bg {
+            height: 120vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 78vh;
+        }
+        .card-container {
+            height: auto;
+        }
     }
 </style>
 
@@ -496,7 +514,7 @@
                 <!-- Right Column -->
                 <div class="col-lg-6">
                     <div class="row g-3">
-                        <div style="height: 200px;" class="col-md-6">
+                        <div style="height: 200px;" class="col-md-6 mt-3">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-primary rounded">
                                 <h5 class="fw-bold text-dark mb-2">
@@ -510,7 +528,7 @@
                             </div>
                         </div>
 
-                        <div style="height: 200px;" class="col-md-6">
+                        <div style="height: 200px;" class="col-md-6 mt-3">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-success rounded">
                                 <h5 class="fw-bold text-dark mb-2">
