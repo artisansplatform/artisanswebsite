@@ -1824,11 +1824,11 @@ background-size: 100% 100%;
         width: 170px;
     }
 
-    .collapsed .fa-close {
+    .collapsed .fa-times {
         display: none;
     }
 
-    .fa-close {
+    .fa-times {
         display: block;
     }
 

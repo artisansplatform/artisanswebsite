@@ -120,6 +120,35 @@
     .tab-sec {
         padding: 14vh 0 !important;
     }
+
+    @media (max-width: 425px) {
+        .custom-blue-bg {
+            height: 110vh;
+        }
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        .custom-blue-bg {
+            height: 120vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 72vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
 </style>
 
 <body>
@@ -134,7 +163,7 @@
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fa fa-bars" aria-hidden="true"></i>
-                        <i class="fa fa-close" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
@@ -440,8 +469,8 @@
             </h2>
             <div class="row align-items-center">
                 <div class="col-md-6 how-img order-md-2">
-                    <img src="./assets/images/enterprise-intelligence.png" alt="Enterprise" class="custom-image"
-                        style="float: right; margin-right: 20px;">
+                    <img src="./assets/images/enterprise-intelligence.png" alt="Enterprise"
+                        class="custom-image img-fluid" style="float: right; margin-right: 20px;">
                 </div>
                 <div class="col-md-6 pr-5">
                     <h3 class="pt-md-0 pt-4">Partnering to Design the Future of Enterprise Intelligence.</h3>
@@ -577,7 +606,7 @@
             var stickyNavTop = $('header').offset().top;
             var stickyNav = function () {
                 var scrollTop = $(window).scrollTop();
-                if (scrollTop > 1) {
+                if (scrollTop > 500) {
                     $('header').addClass('fixed-top');
                     $('header').addClass('sticky');
                 } else {
@@ -589,7 +618,7 @@
             $(window).scroll(function () {
                 stickyNav();
             });
-            const $dropdown = $(".dropdown");
+            const $dropdown = $(".custom-dropdown");
             const $dropdownToggle = $(".dropdown-toggle");
             const $dropdownMenu = $(".dropdown-menu");
             const showClass = "show";

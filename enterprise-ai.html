@@ -65,11 +65,6 @@
         padding: 20vh 0 !important;
     }
 
-    .contect-sec {
-        padding: 10vh 5vw 30vh 10vw;
-        margin-bottom: -32vh !important;
-    }
-
     .card {
         display: flex;
         flex-direction: column;
@@ -166,6 +161,50 @@
     .tab-sec {
         padding: 10vh 0 !important;
     }
+
+    @media screen and (min-width: 425px) and (max-width: 768px) {
+        .tab-sec {
+            padding: 8vh 0 28vh 0 !important;
+        }
+
+        .custom-blue-bg {
+            height: 120vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .custom-blue-bg {
+            height: 78vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+
+        .tab-sec {
+            padding: 0 0 13vh 0 !important;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .custom-blue-bg {
+            height: 140vh;
+        }
+
+        .card-container {
+            height: auto;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .tab-sec .tab-content {
+            padding-bottom: 29px;
+        }
+    }
 </style>
 
 <body>
@@ -180,7 +219,7 @@
                         data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fa fa-bars" aria-hidden="true"></i>
-                        <i class="fa fa-close" aria-hidden="true"></i>
+                        <i class="fa fa-times" aria-hidden="true"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ml-auto">
@@ -496,7 +535,7 @@
                 <!-- Right Column -->
                 <div class="col-lg-6">
                     <div class="row g-3">
-                        <div style="height: 200px;" class="col-md-6">
+                        <div style="height: 200px;" class="col-md-6 mt-3">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-primary rounded">
                                 <h5 class="fw-bold text-dark mb-2">
@@ -510,7 +549,7 @@
                             </div>
                         </div>
 
-                        <div style="height: 200px;" class="col-md-6">
+                        <div style="height: 200px;" class="col-md-6 mt-3">
                             <div
                                 class="p-4 bg-white rounded-4 shadow-sm h-100 border-start border-4 border-success rounded">
                                 <h5 class="fw-bold text-dark mb-2">
@@ -702,7 +741,7 @@
             var stickyNavTop = $('header').offset().top;
             var stickyNav = function () {
                 var scrollTop = $(window).scrollTop();
-                if (scrollTop > 1) {
+                if (scrollTop > 500) {
                     $('header').addClass('fixed-top');
                     $('header').addClass('sticky');
                 } else {
@@ -714,7 +753,7 @@
             $(window).scroll(function () {
                 stickyNav();
             });
-            const $dropdown = $(".dropdown");
+            const $dropdown = $(".custom-dropdown");
             const $dropdownToggle = $(".dropdown-toggle");
             const $dropdownMenu = $(".dropdown-menu");
             const showClass = "show";
