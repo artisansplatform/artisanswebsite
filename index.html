@@ -64,103 +64,15 @@
             height: 90vh;
         }
 
-        .tab-sec {
-            padding: 4vh 0 !important;
-        }
-
-        .slide-container {
-            margin: 0 auto;
-            width: 100%;
-            height: auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            height: 100%;
-        }
-
-        .carousel-slide {
-            min-width: 100%;
-            position: relative;
-        }
-
-        .carousel-slide img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide-controls {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .custom-margin-top {
-            padding-top: 0;
-        }
-
-        #next-btn,
-        #prev-btn {
-            cursor: pointer;
-            background: transparent;
-            font-size: 30px;
-            border: none;
-            padding: 10px;
-            color: white;
-        }
-
-        #next-btn:focus,
-        #prev-btn:focus {
-            outline: none;
-        }
-
-        .slide-content {
-            position: absolute;
-            top: 50%;
-            left: 50px;
-            transform: translateY(-50%);
-            font-size: 60px;
-            color: white;
-        }
-
-        #next-btn {
-            margin-right: 100px;
-        }
-
-        #prev-btn {
-            margin-left: 100px;
-        }
-
-        @media screen and (max-width: 425px) {
-            .slide-controls {
-                top: 104%;
-            }
-
-            .custom-margin-top {
-                margin-top: 27px;
-            }
-
+        @media (max-width: 767px) {
             .tab-sec {
-                padding: 0 0 13vh 0 !important;
+                padding: 50px 0 100px !important;
             }
         }
 
-        @media screen and (min-width: 426px) and (max-width: 768px) {
-            .slide-controls {
-                top: 90%;
-            }
-        }
-
-        @media screen and (min-width: 769px) and (max-width: 1024px) {
-            .slide-controls {
-                top: 70%;
+        @media screen and (min-width: 768px) {
+            .tab-sec {
+                padding: 4vh 0 !important;
             }
         }
     </style>
@@ -249,117 +161,119 @@
             </div>
         </header>
         <div class="banner-sec">
-            <div class="container">
-                <div class="row p-4">
-                    <div class="slide-container">
-                        <div class="slides">
-
-                            <div class="carousel-slide px-2">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 text-white fadeInAnimation">
-                                        <h1>
-                                            Architects of the <span class="gradiant-text">Intelligent Enterprise</span>
-                                        </h1>
-                                        <p>
-                                            We unify data, intelligence, and enterprise workflows, transforming
-                                            complexity
-                                            into an
-                                            engine of strategic advantage.
-                                            <br>
-                                            Artisans builds the adaptive digital foundation that powers predictive
-                                            decision-making,
-                                            operational agility, and
-                                            sustained margin expansion.
-                                        </p>
-                                        <div>
-                                            <a class="btn btn-primary my-2" href="contact-us">Explore Our
-                                                Capabilities</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <img fetchpriority="low" src="./assets/images/home-page-banner.png"
-                                            alt="Home Page Banner" class="fadeInAnimation">
+            <div id="bannerCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row p-4">
+                                <div class="col-12 col-md-6 text-white fadeInAnimation">
+                                    <h1>
+                                        Architects of the <span class="gradiant-text">Intelligent Enterprise</span>
+                                    </h1>
+                                    <p>
+                                        We unify data, intelligence, and enterprise workflows, transforming
+                                        complexity
+                                        into an
+                                        engine of strategic advantage.
+                                        <br>
+                                        Artisans builds the adaptive digital foundation that powers predictive
+                                        decision-making,
+                                        operational agility, and
+                                        sustained margin expansion.
+                                    </p>
+                                    <div>
+                                        <a class="btn btn-primary my-2" href="contact-us">Explore Our
+                                            Capabilities</a>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="carousel-slide px-2">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 text-white fadeInAnimation">
-                                        <h1>
-                                            Streamline and Optimize Supply Chain Planning <span
-                                                class="gradiant-text">and
-                                                Unified Commerce Operations
-                                            </span>
-                                        </h1>
-                                        <p>
-                                            Achieve seamless integration of supply, demand, merchandising, and
-                                            operations
-                                            planning with the <br> power of artisans' Al-driven unified retail platform.
-                                        </p>
-                                        <a class="btn btn-primary  mt-md-4" href="contact-us">Book A 30 MINUTES DEMO</a>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <img fetchpriority="high" src="./assets/images/banner-image.png"
-                                            alt="Banner Image" class="w-100 fadeInAnimation">
-                                    </div>
+                                <div class="col-12 col-md-6">
+                                    <img fetchpriority="low" src="./assets/images/home-page-banner.png"
+                                        alt="Home Page Banner" class="fadeInAnimation w-100">
                                 </div>
                             </div>
-
-                            <div class="carousel-slide px-2">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 text-white fadeInAnimation">
-                                        <h1>
-                                            Effortlessly Curate and Control
-                                            <span class="gradiant-text">Unique Product Experiences to Boost
-                                                conversions.</span>
-                                        </h1>
-                                        <p>
-                                            Streamline delivery of customized product data and content to ensure
-                                            that every touchpoint receives tailored information, allowing you to
-                                            launch products faster than ever before.
-                                        </p>
-                                        <a class="btn btn-primary mt-md-4" href="contact-us">Get in Touch</a>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <img fetchpriority="low" src="./assets/images/productexperiencemanagement.png"
-                                            alt="Product Experience Management" class="w-100 fadeInAnimation">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="carousel-slide px-2">
-                                <div class="row">
-                                    <div class="col-12 col-md-6 text-white fadeInAnimation">
-                                        <h1>
-                                            Master the Art of Seamless Order Fulfillment in
-                                            <span class="gradiant-text">Multi-Channel Commerce</span>
-                                        </h1>
-                                        <p>
-                                            Be more adaptable and responsive than ever before and achieve optimal
-                                            efficiency with the modular technology designed explicitly for
-                                            retailers like you.
-                                        </p>
-                                        <a class="btn btn-primary  mt-md-4" href="contact-us">Get in Touch</a>
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                                        <img fetchpriority="low" src="./assets/images/distributed-order-management.png"
-                                            alt="Distributed Order Management" class="w-100 fadeInAnimation">
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                    <div class="slide-controls">
-                        <button id="prev-btn">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button id="next-btn">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row p-4">
+                                <div class="col-12 col-md-6 text-white fadeInAnimation">
+                                    <h1>
+                                        Streamline and Optimize Supply Chain Planning <span class="gradiant-text">and
+                                            Unified Commerce Operations
+                                        </span>
+                                    </h1>
+                                    <p>
+                                        Achieve seamless integration of supply, demand, merchandising, and
+                                        operations
+                                        planning with the <br> power of artisans' Al-driven unified retail platform.
+                                    </p>
+                                    <a class="btn btn-primary  mt-md-4" href="contact-us">Book A 30 MINUTES DEMO</a>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img fetchpriority="high" src="./assets/images/banner-image.png" alt="Banner Image"
+                                        class="w-100 fadeInAnimation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row p-4">
+                                <div class="col-12 col-md-6 text-white fadeInAnimation">
+                                    <h1>
+                                        Effortlessly Curate and Control
+                                        <span class="gradiant-text">Unique Product Experiences to Boost
+                                            conversions.</span>
+                                    </h1>
+                                    <p>
+                                        Streamline delivery of customized product data and content to ensure
+                                        that every touchpoint receives tailored information, allowing you to
+                                        launch products faster than ever before.
+                                    </p>
+                                    <a class="btn btn-primary mt-md-4" href="contact-us">Get in Touch</a>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img fetchpriority="low" src="./assets/images/productexperiencemanagement.png"
+                                        alt="Product Experience Management" class="w-100 fadeInAnimation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row p-4">
+                                <div class="col-12 col-md-6 text-white fadeInAnimation">
+                                    <h1>
+                                        Master the Art of Seamless Order Fulfillment in
+                                        <span class="gradiant-text">Multi-Channel Commerce</span>
+                                    </h1>
+                                    <p>
+                                        Be more adaptable and responsive than ever before and achieve optimal
+                                        efficiency with the modular technology designed explicitly for
+                                        retailers like you.
+                                    </p>
+                                    <a class="btn btn-primary  mt-md-4" href="contact-us">Get in Touch</a>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <img fetchpriority="low" src="./assets/images/distributed-order-management.png"
+                                        alt="Distributed Order Management" class="w-100 fadeInAnimation">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div>
+                    <a class="carousel-control-prev d-none d-xl-flex" href="#bannerCarousel" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#bannerCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -788,92 +702,6 @@
     </div>
 
     <script type="text/javascript">
-
-        const carousel = {
-            init: function () {
-                const slideContainer = document.querySelector('.slide-container');
-                const slides = document.querySelector('.slides');
-                const nextBtn = document.getElementById('next-btn');
-                const prevBtn = document.getElementById('prev-btn');
-                const interval = 8000;
-
-                let carouselSlides = document.querySelectorAll('.carousel-slide');
-                let index = 1;
-                let slideId;
-                let isTransitioning = false;
-
-                const firstClone = carouselSlides[0].cloneNode(true);
-                const lastClone = carouselSlides[carouselSlides.length - 1].cloneNode(true);
-
-                firstClone.id = 'first-clone';
-                lastClone.id = 'last-clone';
-
-                slides.append(firstClone);
-                slides.prepend(lastClone);
-
-                const slideWidth = carouselSlides[index].clientWidth;
-
-                slides.style.transform = `translateX(${-slideWidth * index}px)`;
-
-                const startSlide = () => {
-                    slideId = setInterval(() => {
-                        moveToNextSlide();
-                    }, interval);
-                };
-
-                const getSlides = () => document.querySelectorAll('.carousel-slide');
-
-                slides.addEventListener('transitionend', () => {
-                    isTransitioning = false;
-                    carouselSlides = getSlides();
-                    if (carouselSlides[index].id === firstClone.id) {
-                        slides.style.transition = 'none';
-                        index = 1;
-                        slides.style.transform = `translateX(${-slideWidth * index}px)`;
-                    }
-
-                    if (carouselSlides[index].id === lastClone.id) {
-                        slides.style.transition = 'none';
-                        index = carouselSlides.length - 2;
-                        slides.style.transform = `translateX(${-slideWidth * index}px)`;
-                    }
-                });
-
-                const moveToNextSlide = () => {
-                    if (isTransitioning) return;
-                    isTransitioning = true;
-                    carouselSlides = getSlides();
-                    if (index >= carouselSlides.length - 1) return;
-                    index++;
-                    slides.style.transition = '.8s ease-out';
-                    slides.style.transform = `translateX(${-slideWidth * index}px)`;
-                };
-
-                const moveToPreviousSlide = () => {
-                    if (isTransitioning) return;
-                    isTransitioning = true;
-                    if (index <= 0) return;
-                    index--;
-                    slides.style.transition = '.8s ease-out';
-                    slides.style.transform = `translateX(${-slideWidth * index}px)`;
-                };
-
-                slideContainer.addEventListener('mouseenter', () => {
-                    clearInterval(slideId);
-                });
-
-                slideContainer.addEventListener('mouseleave', startSlide);
-                nextBtn.addEventListener('click', moveToNextSlide);
-                prevBtn.addEventListener('click', moveToPreviousSlide);
-
-                startSlide();
-            },
-        };
-
-        // Initialize carousel and other scripts on page load
-        document.addEventListener('DOMContentLoaded', function () {
-            carousel.init();
-        });
 
         $(document).ready(function () {
 
